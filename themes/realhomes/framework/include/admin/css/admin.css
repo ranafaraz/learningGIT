@@ -1,0 +1,411 @@
+/**
+ * Real Homes admin page styles
+ */
+.realhomes-page-wrap {
+    position: relative;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.realhomes-page-wrap p {
+    font-size: inherit;
+}
+
+.realhomes-page-wrap h1,
+.realhomes-page-wrap h2,
+.realhomes-page-wrap h3,
+.realhomes-page-wrap h4,
+.realhomes-page-wrap h5 {
+    margin-top: 0;
+}
+
+.realhomes-page-wrap .title {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    line-height: 1.1;
+    color: #32373c;
+}
+
+.realhomes-page-inner-wrap {
+    padding: 0 30px 30px;
+}
+
+.realhomes-page-inner-wrap .description {
+    margin-bottom: 20px;
+}
+
+.realhomes-page-inner-wrap .description p {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+/*--------------------------
+ Inspiry admin page layout
+ -------------------------*/
+.realhomes-page-wrap .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.realhomes-page-wrap .col-1,
+.realhomes-page-wrap .col-2,
+.realhomes-page-wrap .col-3,
+.realhomes-page-wrap .col-4,
+.realhomes-page-wrap .col-6 {
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 860px) {
+
+    .realhomes-page-wrap .col-2,
+    .realhomes-page-wrap .col-3,
+    .realhomes-page-wrap .col-4,
+    .realhomes-page-wrap .col-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .realhomes-page-wrap .col-3 {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+
+    .realhomes-page-wrap .col-4 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .realhomes-page-wrap .col-6 {
+        flex: 0 0 16.6666%;
+        max-width: 16.6666%;
+    }
+}
+
+/*--------------------------
+ Design tab styles
+ -------------------------*/
+.realhomes-page-wrap img {
+    max-width: 100%;
+}
+
+.realhomes-page-wrap .rh_design__img {
+    margin: 0;
+    box-sizing: border-box;
+    border: 5px solid #e5e5e5;
+    transition: border ease 200ms;
+}
+
+.realhomes-page-wrap input[type=radio].hide {
+    display: none;
+}
+
+.realhomes-page-wrap .rh_design__radio:checked + img {
+    border-color: #36506b;
+}
+
+.realhomes-page-wrap .rh_design__label {
+    display: block;
+}
+
+/*--------------------------
+ Plugins tab styles
+ -------------------------*/
+@media (min-width: 992px) {
+    .inspiry-plugin-filter {
+        float: right;
+    }
+}
+
+.inspiry-plugin-filter ul {
+    margin: 0 -4px 15px;
+}
+
+.inspiry-plugin-filter li {
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.inspiry-plugin-filter li a {
+    text-decoration: none;
+}
+
+.inspiry-plugin-filter li a:focus {
+    box-shadow: none;
+}
+
+.inspiry-plugin-filter li a.active,
+.inspiry-plugin-filter li a.focus,
+.inspiry-plugin-filter li a.hover {
+    color: #124964;
+}
+
+.realhomes-plugins-content-wrap .row {
+    clear: both;
+}
+
+.realhomes-plugins-content-wrap .col-1,
+.realhomes-plugins-content-wrap .col-2,
+.realhomes-plugins-content-wrap .col-3,
+.realhomes-plugins-content-wrap .col-4,
+.realhomes-plugins-content-wrap .col-6 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.inspiry-plugin-card {
+    position: relative;
+    padding: 0;
+    margin: 10px 0;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.inspiry-plugin-card-top {
+    overflow: hidden;
+    padding: 15px 15px 0;
+}
+
+.inspiry-plugin-card .plugin-icon {
+    position: static;
+    margin: 0 0 15px 0;
+}
+
+@media (min-width: 420px) {
+    .inspiry-plugin-card .plugin-icon {
+        float: left;
+        margin-right: 15px;
+    }
+}
+
+.inspiry-plugin-card .name,
+.inspiry-plugin-card .desc {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.inspiry-plugin-card .desc {
+    margin-bottom: 15px;
+}
+
+.inspiry-plugin-card .action-links {
+    display: inline-block;
+    position: static;
+    float: right;
+    width: auto;
+    margin: 0;
+    padding: 4px 0;
+}
+
+.inspiry-plugin-card .plugin-action-buttons {
+    float: none;
+    margin: 0;
+}
+
+.inspiry-plugin-card .plugin-action-buttons li {
+    margin-bottom: 0;
+}
+
+.inspiry-plugin-card .plugin-action-buttons li .button {
+    margin: 0;
+}
+
+.inspiry-plugin-card h3 {
+    margin: 0 0 12px;
+    font-size: 17px;
+    color: #0073aa;
+}
+
+.inspiry-plugin-card a {
+    text-decoration: none;
+}
+
+.inspiry-plugin-card-description p {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    font-size: 13px;
+}
+
+.inspiry-plugin-tags span {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    vertical-align: middle;
+    color: #999;
+}
+
+.inspiry-plugin-tags .plugin-required {
+    color: #dc3232;
+}
+
+.inspiry-plugin-card-footer {
+    padding: 2px 15px;
+}
+
+.inspiry-plugin-card-footer .authors {
+    display: inline-block;
+    padding: 10px 0;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+@media (max-width: 520px) {
+}
+
+/*--------------------------
+ Feedback tab styles
+ -------------------------*/
+.inspiry-feedback-form .field-wrap {
+    margin-top: 0;
+}
+
+.inspiry-feedback-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.inspiry-feedback-form input[type="text"],
+.inspiry-feedback-form input[type="email"] {
+    min-height: 38px;
+}
+
+.inspiry-feedback-form input[type="text"],
+.inspiry-feedback-form input[type="email"],
+.inspiry-feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+}
+
+.inspiry-feedback-form textarea {
+    display: block;
+    min-height: 140px;
+}
+
+.inspiry-feedback-form .inspiry-form-required-items {
+    display: block;
+    text-align: right;
+}
+
+.inspiry-feedback-form-success:empty,
+.inspiry-feedback-form-error:empty {
+    display: none;
+}
+
+.inspiry-feedback-form-success {
+    color: #00aa00;
+}
+
+.inspiry-feedback-form-error {
+    color: red;
+}
+
+/*--------------------------
+ Help tab styles
+ -------------------------*/
+.inspiry-note {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    color: #000;
+}
+
+.inspiry-postbox {
+    margin: 10px 0;
+}
+
+.inspiry-postbox a {
+    text-decoration: none;
+}
+
+.inspiry-postbox .inspiry-quick-links .dashicons {
+    vertical-align: middle;
+    font-size: 17px;
+}
+
+.inspiry-postbox-header {
+    overflow: hidden;
+    padding: 12px 15px;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+    background-color: #f3f3f3;
+}
+
+.inspiry-postbox-header .dashicons {
+    display: inline-block;
+    font-size: 21px;
+    margin-right: 8px;
+    vertical-align: sub;
+    /*color: #fb641c;*/
+}
+
+.inspiry-postbox-header .title {
+    font-size: 18px;
+    margin: 0;
+    line-height: 1;
+}
+
+.inspiry-postbox .inspiry-postbox-inside {
+    padding: 15px 15px 1px;
+    margin: 0;
+    font-size: 14px;
+}
+
+.inspiry-postbox .inspiry-postbox-inside h3 {
+    font-size: 16px;
+}
+
+.inspiry-postbox .inspiry-postbox-heading {
+    margin-bottom: 8px;
+}
+
+.inspiry-postbox .inspiry-postbox-posts {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.inspiry-postbox .inspiry-postbox-inside li {
+    margin-bottom: 8px;
+}
+
+.inspiry-postbox .inspiry-postbox-inside li:last-child {
+    margin-bottom: 0;
+}
+
+.inspiry-postbox-posts li p {
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+.inspiry-postbox-footer {
+    overflow: hidden;
+    padding: 0 15px;
+    margin: 0;
+    border-top: 1px solid #eee;
+}
+
+.inspiry-postbox-footer ul li:first-child {
+    padding-left: 0;
+    border: none;
+}
+
+.inspiry-postbox-footer ul li {
+    display: inline-block;
+    padding: 0 10px;
+    margin: 0;
+    line-height: initial;
+    border-left: 1px solid #ddd;
+}

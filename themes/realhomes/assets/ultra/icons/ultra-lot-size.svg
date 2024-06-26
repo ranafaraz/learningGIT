@@ -1,0 +1,15 @@
+<svg class="rh-ultra-dark" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="24" height="24" xml:space="preserve">
+  <style>
+    .lot-st0{opacity:.3}
+  </style>
+  <g class="lot-st0">
+    <path d="M5.4 5.6L1.6 6.9v-5l.3-.3L7 1.5 5.6 5.4v.2h-.2z"/>
+  </g>
+  <g class="lot-st0">
+    <path d="M18.6 18.4l3.8-1.3v5l-.2.3h-5.1l1.3-3.8v-.2z"/>
+  </g>
+  <g>
+    <path d="M22.6 15.5l-4.2 1.4L7.1 5.7l1.4-4.2L7.1 0H1.4L0 1.4v5.7l1.4 1.4 4.2-1.4 11.3 11.3-1.4 4.2 1.4 1.4h5.7l1.4-1.4v-5.7l-1.4-1.4zM5.2 5v.1l-.2.1-3 1v-4l.2-.2 4-.1-1 3.1zM22 21.7l-.2.2-4 .1 1.1-3v-.1h.1l3-1.1v3.9z"/>
+  </g>
+  <path d="M10 0h2v2h-2zM14 0h2v2h-2zM18 0h2v2h-2zM22 0h2v2h-2zM22 4h2v2h-2zM22 8h2v2h-2zM22 12h2v2h-2zM12 22h2v2h-2zM8 22h2v2H8zM4 22h2v2H4zM0 22h2v2H0zM0 18h2v2H0zM0 14h2v2H0zM0 10h2v2H0z"/>
+</svg>

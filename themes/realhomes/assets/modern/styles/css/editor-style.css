@@ -1,0 +1,127 @@
+.editor-styles-wrapper {
+    font-size: 15px !important;
+}
+
+.editor-styles-wrapper,
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+    font-family: "Rubik", sans-serif !important;
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.editor-styles-wrapper h1 {
+    font-size: 40px;
+}
+
+.editor-styles-wrapper h2 {
+    font-size: 36px;
+}
+
+.editor-styles-wrapper h3 {
+    font-size: 18px;
+}
+
+.editor-styles-wrapper h4 {
+    font-size: 16px;
+}
+
+.editor-styles-wrapper h5 {
+    font-size: 14px;
+}
+
+.editor-styles-wrapper h6 {
+    font-size: 12px;
+}
+
+.editor-styles-wrapper a {
+    color: #444;
+    text-decoration: none;
+}
+
+.editor-styles-wrapper a:hover {
+    color: #ea723d;
+}
+
+.editor-styles-wrapper blockquote p {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.editor-styles-wrapper blockquote {
+    position: relative;
+    margin: 0 0 30px;
+    padding: 34px 36px !important;
+    border-width: 5px !important;
+    border-color: #1ea69a !important;
+    background-color: rgba(30, 166, 154, 0.1);
+}
+
+.editor-styles-wrapper code,
+.editor-styles-wrapper pre {
+    font-family: monospace, monospace;
+}
+
+.editor-styles-wrapper dl dt {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #1a1a1a;
+}
+
+.editor-styles-wrapper dl dd {
+    font-size: 15px;
+    line-height: 2;
+    margin-bottom: 15px;
+}
+
+.editor-styles-wrapper ul,
+.editor-styles-wrapper ol {
+    margin: 0 0 10px;
+    padding: 0 0 0 30px;
+    line-height: 2;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.editor-styles-wrapper li {
+    font-size: 15px;
+}
+
+.editor-styles-wrapper ul li,
+.editor-styles-wrapper ol li {
+    margin-bottom: 10px;
+}
+
+.editor-styles-wrapper table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.editor-styles-wrapper td,
+.editor-styles-wrapper th {
+    padding: 5px;
+    border: 1px solid #cecece;
+    background-color: white;
+}
+
+.schedule-time-list {
+    font-size: 13px;
+    text-align: center;
+}

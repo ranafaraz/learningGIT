@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #1db2ff;
+        stroke-linecap: round;
+        stroke-width: 2px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Shape_5_copy_2" data-name="Shape 5 copy 2" class="cls-1" d="M16,4h6"/>
+  <image id="Vector_Smart_Object_copy_4" data-name="Vector Smart Object copy 4" x="1" y="4" width="18" height="18" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAABKElEQVQ4jZ2SMU4DMRBFHxahJnUEVWpygRQUkQhcAWgo03CQ0ERClGkQFwABQaKgCLdIhUQdaiIBGvQtGe94V+Q39vqP345nZmPn9ptEQ2AE9IE2sATmwBUwo0YRtAVMgeOa2BvgDPj0zKA1QlbABdBTRj19r+RPS3+xjOw5jwo+Ap6duAHwALSAQ++ZQTUxTQoQdD7RfuQFBBXWdF1KO/P7nhlUC9NbAyj67aS2f0BL7XcbQNH/AL480Fz70wZQ9F89M2jYTOfqjqeBfNNlCTTTsLXU4jGwB2xrHSetfypN+H8m2yAHwDuwDyzyjNDYn2jY7pIGWGHvdT4UpAO8AF0vo9Kz8+50BenkmVXmIVGlxbpklyuZ1YFKcmHrgHLYrzbXBKUwgMUP0+RJr63CgGkAAAAASUVORK5CYII="/>
+</svg>

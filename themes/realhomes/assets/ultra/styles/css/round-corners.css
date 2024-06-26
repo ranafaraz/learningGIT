@@ -1,0 +1,215 @@
+.realhomes-round-corners .rh-ultra-thumb-count,
+.realhomes-round-corners .rh-ultra-property-carousel-thumb,
+.realhomes-round-corners .rh_ultra_prop_card__meta,
+.realhomes-round-corners #scroll-top {
+  border-radius: var(--rh-round-corner-general-xsmall);
+}
+.realhomes-round-corners .hentry,
+.realhomes-round-corners .item-box,
+.realhomes-round-corners .agent-card,
+.realhomes-round-corners .agency-card,
+.realhomes-round-corners .rh-partners-item,
+.realhomes-round-corners .wp-block-quick-and-easy-faqs-faqs-filterable-accordion .qe-faq-toggle,
+.realhomes-round-corners .qae-faqs-toggle-container .qe-faq-toggle,
+.realhomes-round-corners .rh-partners-item:before,
+.realhomes-round-corners .rh-ultra-main-menu li ul,
+.realhomes-round-corners .rh-ultra-list-card,
+.realhomes-round-corners .rh-ultra-property-card.rh-half-map-card,
+.realhomes-round-corners .rh-ultra-menu-user-profile .rh-ultra-modal,
+.realhomes-round-corners .rh-ultra-menu-user-profile .rh_modal__dashboard > a,
+.realhomes-round-corners .map-info-window .thumb-link img,
+.realhomes-round-corners .bootstrap-select.rh-ultra-select-dropdown > .dropdown-menu,
+.realhomes-round-corners .bootstrap-select.rh-ultra-select-dropdown .dropdown-menu li,
+.realhomes-round-corners .rh-ultra-property-slider-container,
+.realhomes-round-corners .rh-ultra-property-thumb,
+.realhomes-round-corners .sat_property-thumbnail,
+.realhomes-round-corners .rh-compare-properties-head,
+.realhomes-round-corners .rh_compare_img_inner,
+.realhomes-round-corners .rh-ultra-property-carousel-thumb-box,
+.realhomes-round-corners .energy-performance .epc-details, .realhomes-round-corners.single-post .entry-thumbnail-wrapper, .realhomes-round-corners.single-post .entry-thumbnail-wrapper img, .realhomes-round-corners.single-post .entry-thumbnail-wrapper figure, .realhomes-round-corners.single-post .entry-thumbnail-wrapper figure img, .realhomes-round-corners.single-post .entry-thumbnail-wrapper .post-video, .realhomes-round-corners.single-post .entry-thumbnail-wrapper .post-video img, .realhomes-round-corners.single-post .entry-thumbnail-wrapper .gallery-post-slider, .realhomes-round-corners.single-post .entry-thumbnail-wrapper .gallery-post-slider img {
+  border-radius: var(--rh-round-corner-general-small);
+}
+@media (max-width: 767px) {
+  .realhomes-round-corners div.rh_wrapper_floating_features .rh_compare {
+    border-radius: var(--rh-round-corner-general-small) var(--rh-round-corner-general-small) 0 0;
+  }
+}
+.realhomes-round-corners .rh-compare-properties-head .thumbnail img {
+  border-radius: var(--rh-round-corner-general-small) var(--rh-round-corner-general-small) 0 0;
+}
+.realhomes-round-corners .energy-performance .energy-class li:first-of-type {
+  border-top-left-radius: var(--rh-round-corner-general-small);
+  border-bottom-left-radius: var(--rh-round-corner-general-small);
+}
+.realhomes-round-corners .energy-performance .energy-class li:last-of-type {
+  border-top-right-radius: var(--rh-round-corner-general-small);
+  border-bottom-right-radius: var(--rh-round-corner-general-small);
+}
+.realhomes-round-corners .rh-ultra-property-thumb-box {
+  border-radius: 0 0 var(--rh-round-corner-general-small) var(--rh-round-corner-general-small);
+}
+.realhomes-round-corners .rh-ultra-list-card .rh-thumb-with-bg,
+.realhomes-round-corners .rh-ultra-property-card.rh-half-map-card .rh-thumb-with-bg {
+  border-radius: var(--rh-round-corner-general-small) 0 0 var(--rh-round-corner-general-small);
+}
+.realhomes-round-corners.rtl .rh-ultra-list-card .rh-thumb-with-bg,
+.realhomes-round-corners.rtl .rh-ultra-property-card.rh-half-map-card .rh-thumb-with-bg {
+  border-radius: 0 var(--rh-round-corner-general-small) var(--rh-round-corner-general-small) 0;
+}
+.realhomes-round-corners .entry-thumbnail-wrapper figure,
+.realhomes-round-corners .entry-thumbnail-wrapper figure img,
+.realhomes-round-corners .entry-thumbnail-wrapper .post-video,
+.realhomes-round-corners .entry-thumbnail-wrapper .post-video img,
+.realhomes-round-corners .entry-thumbnail-wrapper .gallery-post-slider,
+.realhomes-round-corners .entry-thumbnail-wrapper .gallery-post-slider img {
+  border-radius: var(--rh-round-corner-general-small) var(--rh-round-corner-general-small) 0 0;
+}
+.realhomes-round-corners .rh-ultra-property-card-thumb a,
+.realhomes-round-corners .rh-ultra-status-box a,
+.realhomes-round-corners .rh-ultra-status-box span,
+.realhomes-round-corners .rh-ultra-media-count .rh-media,
+.realhomes-round-corners .map-info-window,
+.realhomes-round-corners #property_map,
+.realhomes-round-corners .rh_property__walkscore,
+.realhomes-round-corners .rh_property_video_inner,
+.realhomes-round-corners .rh_property__common_note p,
+.realhomes-round-corners .rh_property__yelp_wrap .yelp-error,
+.realhomes-round-corners .floor-plans-accordions,
+.realhomes-round-corners .rh-floor-content-wrapper,
+.realhomes-round-corners .rh-property-virtual-tour-inner-wrap iframe,
+.realhomes-round-corners .rh_property__attachments li a,
+.realhomes-round-corners .rh_property__mc_wrap .mc_cost ul li,
+.realhomes-round-corners .rh-compare-properties-wrapper {
+  border-radius: var(--rh-round-corner-general-medium);
+}
+.realhomes-round-corners .rh_compare {
+  border-radius: var(--rh-round-corner-general-medium) 0 0 var(--rh-round-corner-general-medium);
+}
+.realhomes-round-corners .rh-ultra-main-menu li a,
+.realhomes-round-corners .rh-ultra-menu-user-profile .user-icon,
+.realhomes-round-corners .rh-ultra-menu-user-profile .rh_user__avatar img,
+.realhomes-round-corners .rh_property__mc_wrap .rh_property__mc,
+.realhomes-round-corners .rh_property__mc_wrap .rh_property__mc .rh-mc-slider-fields,
+.realhomes-round-corners .rh_property__mc_wrap .rh_property__mc .rh_mc_field button,
+.realhomes-round-corners .rh-ultra-form,
+.realhomes-round-corners .ere-ultra-side-properties-wrapper .ere-ultra-side-properties {
+  border-radius: var(--rh-round-corner-general-large);
+}
+.realhomes-round-corners .rh_floating_compare_button {
+  border-radius: var(--rh-round-corner-general-large) 0 0 var(--rh-round-corner-general-large);
+}
+.realhomes-round-corners .rh_compare_open .rh_floating_compare_button {
+  border-radius: var(--rh-round-corner-general-large) 0 0 0;
+}
+.realhomes-round-corners .rh-btn,
+.realhomes-round-corners button,
+.realhomes-round-corners .pages-navigation a,
+.realhomes-round-corners .tagcloud a,
+.realhomes-round-corners .rh-ultra-submit a,
+.realhomes-round-corners .widget .wp-block-tag-cloud a,
+.realhomes-round-corners .rh-form button,
+.realhomes-round-corners .rh-form input[type=submit],
+.realhomes-round-corners .post-password-form button,
+.realhomes-round-corners .post-password-form input[type=submit],
+.realhomes-round-corners .wpcf7-form button,
+.realhomes-round-corners .wpcf7-form input[type=submit],
+.realhomes-round-corners .wpforms-form button,
+.realhomes-round-corners .wpforms-form input[type=submit],
+.realhomes-round-corners .rh-ultra-button,
+.realhomes-round-corners .rh_fixed_side_bar_compare .rh_compare__submit,
+.realhomes-round-corners .rh_sat_field.tour-type .middle-fields,
+.realhomes-round-corners .rh_sat_field.tour-type .middle-fields .tour-field label,
+.realhomes-round-corners .rh-floor-tabs-wrapper .rh-floor-plan-tab,
+.realhomes-round-corners .rh_property__similar_properties .similar-properties-filters-wrapper a,
+.realhomes-round-corners .rh-ultra-footer-number,
+.realhomes-round-corners .rh-ultra-property-slider-wrapper .slick-arrow,
+.realhomes-round-corners .fancybox-navigation .fancybox-button,
+.realhomes-round-corners .rh-ultra-property-tag,
+.realhomes-round-corners .rh-ultra-price,
+.realhomes-round-corners .rh-inspiry-gdpr label,
+.realhomes-round-corners .rh_inspiry_gdpr label,
+.realhomes-round-corners .comment-form-cookies-consent label,
+.realhomes-round-corners .ere-ultra-side-properties-wrapper .rh-ultra-slider-nav .owl-nav button.owl-prev,
+.realhomes-round-corners .ere-ultra-side-properties-wrapper .rh-ultra-slider-nav .owl-nav button.owl-next,
+.realhomes-round-corners .widget .wp-block-search .wp-block-search__inside-wrapper,
+.realhomes-round-corners .widget .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input,
+.realhomes-round-corners div.rh-ultra-thumb-action-box ul,
+.realhomes-round-corners .searchform input[type=text],
+.realhomes-round-corners .searchform input[type=submit],
+.realhomes-round-corners section.ere_widget_contact_form .ere-submit-button-container .ajax-loader,
+.realhomes-round-corners .searchform div {
+  border-radius: var(--rh-round-corner-general-xlarge);
+}
+.realhomes-round-corners .pagination a,
+.realhomes-round-corners .rh_pagination a,
+.realhomes-round-corners .rh_filter_pagination a,
+.realhomes-round-corners .property-gallery-item-media-container a,
+.realhomes-round-corners .rh-agent-thumb-title-wrapper .agent-image,
+.realhomes-round-corners .rh-agent-thumb-title-wrapper .agent-image img,
+.realhomes-round-corners .inspiry-post-nav .entry-image,
+.realhomes-round-corners .commentlist .avatar,
+.realhomes-round-corners .agent-thumbnail img,
+.realhomes-round-corners .agency-thumbnail img,
+.realhomes-round-corners .agent-thumbnail,
+.realhomes-round-corners .agent-thumbnail > a,
+.realhomes-round-corners .agency-thumbnail,
+.realhomes-round-corners .agency-thumbnail > a,
+.realhomes-round-corners .site-footer-contacts,
+.realhomes-round-corners .entry-thumbnail-wrapper .post-author img,
+.realhomes-round-corners .agents-list-widget .agent-list-item figure img {
+  border-radius: var(--rh-round-corner-general-xxlarge);
+}
+.realhomes-round-corners .inspiry-post-nav.inspiry-post-prev {
+  border-radius: 0 var(--rh-round-corner-general-xxlarge) var(--rh-round-corner-general-xxlarge) 0;
+}
+.realhomes-round-corners .inspiry-post-nav.inspiry-post-next {
+  border-radius: var(--rh-round-corner-general-xxlarge) 0 0 var(--rh-round-corner-general-xxlarge);
+}
+.realhomes-round-corners .rh-ultra-form-field-wrapper,
+.realhomes-round-corners .rh-ultra-action-buttons .favorite-btn-wrap a,
+.realhomes-round-corners .rh-ultra-action-buttons .favorite-btn-wrap span,
+.realhomes-round-corners .rh-ultra-action-buttons .add-to-compare-span a,
+.realhomes-round-corners .rh-ultra-action-buttons .add-to-compare-span span,
+.realhomes-round-corners .rh-ultra-action-buttons.rh-ultra-action-dark .add-to-compare-span a,
+.realhomes-round-corners .rh-ultra-action-buttons.rh-ultra-action-dark .add-to-compare-span span,
+.realhomes-round-corners .rh-ultra-property-slider-container .rh-ultra-thumb-action-box .share,
+.realhomes-round-corners .rh-ultra-property-slider-container .rh-ultra-thumb-action-box .print,
+.realhomes-round-corners #ui-datepicker-div,
+.realhomes-round-corners #ui-datepicker-div > div,
+.realhomes-round-corners #ui-datepicker-div td span,
+.realhomes-round-corners #ui-datepicker-div td a,
+.realhomes-round-corners .rh-map-canvas,
+.realhomes-round-corners .rh-ultra-contact-details {
+  border-radius: var(--rh-round-corner-misc-small);
+}
+.realhomes-round-corners .rh-ultra-properties-half-map .rh-ultra-half-map #listing-map {
+  border-radius: 0 var(--rh-round-corner-misc-small) 0 0;
+}
+.realhomes-round-corners.rtl .rh-ultra-properties-half-map .rh-ultra-half-map #listing-map {
+  border-radius: var(--rh-round-corner-misc-small) 0 0 0;
+}
+.realhomes-round-corners .rh-ultra-main-menu li ul li a {
+  border-radius: var(--rh-round-corner-misc-dropdown-items);
+}
+.realhomes-round-corners .rh-ultra-property-card-two,
+.realhomes-round-corners .property-gallery-item-media-container,
+.realhomes-round-corners .property-gallery-item figure,
+.realhomes-round-corners .property-gallery-item figure img,
+.realhomes-round-corners .property-gallery-item-media-container:before {
+  border-radius: var(--rh-round-corner-property-card-grid-two);
+}
+.realhomes-round-corners .rh-ultra-property-card-two-thumb img {
+  border-radius: var(--rh-round-corner-property-card-grid-two-thumb);
+}
+.realhomes-round-corners .rh-ultra-property-card-two-link {
+  border-radius: var(--rh-round-corner-property-card-grid-two-button);
+}
+.realhomes-round-corners .rh-ultra-form-field > label,
+.realhomes-round-corners .rh-inspiry-gdpr .gdpr-checkbox-label,
+.realhomes-round-corners .rh_inspiry_gdpr .gdpr-checkbox-label,
+.realhomes-round-corners .comment-form-cookies-consent .gdpr-checkbox-label,
+.realhomes-round-corners #comments .logged-in-as,
+.realhomes-round-corners #comments .comment-notes {
+  padding-right: 0;
+  padding-left: 0;
+}

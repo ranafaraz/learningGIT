@@ -1,0 +1,876 @@
+/*
+ * Easy Real Estate Plugin's Admin Styles
+ */
+
+#toplevel_page_easy-real-estate .wp-menu-image img {
+    width: 24px;
+    padding: 5px 0 0;
+}
+
+@media ( min-width: 1024px) {
+    .wp-picker-open + span.wp-picker-input-wrap {
+        width: auto;
+    }
+}
+
+/*
+ * Additional details meta box CSS
+ */
+.rwmb-tab-panel-details .rwmb-clone {
+    margin-bottom: 0;
+}
+
+.rwmb-tab-panel-details .rwmb-clone label {
+    width: 46%;
+}
+
+.rwmb-tab-panel-details .rwmb-clone .rwmb-clone-icon {
+    top: 4px;
+}
+
+.rwmb-tab-panel-details .rwmb-clone .remove-clone {
+    position: static;
+}
+
+.rwmb-tab-panel-details .rwmb-clone .remove-clone {
+    margin-top: 6px;
+}
+
+.rwmb-tab-panel-details .rwmb-clone .rwmb-text-list-label {
+    display: none;
+}
+
+/*
+ * Additional details meta box CSS
+ */
+.inspiry-detail {
+    overflow: hidden;
+    margin: 5px 0;
+}
+
+.detail-placeholder {
+    margin: 5px 0;
+    background: #fafafa;
+    height: 29px;
+}
+
+.inspiry-detail label {
+    display: block;
+}
+
+.inspiry-detail input[type="text"] {
+    width: 97%;
+}
+
+.inspiry-detail-control {
+    width: 3%;
+    float: left;
+    color: #aaa;
+}
+
+.sort-detail {
+    cursor: move;
+}
+
+.sort-detail:hover {
+    color: #666;
+}
+
+.inspiry-detail-title {
+    width: 34%;
+    float: left;
+}
+
+.inspiry-detail-value {
+    width: 60%;
+    float: left;
+}
+
+.inspiry-details-wrapper a {
+    color: #aaa;
+}
+
+.inspiry-details-wrapper a:hover,
+.inspiry-details-wrapper a:focus {
+    color: #666;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.inspiry-details-wrapper .dashicons {
+    text-decoration: none;
+    margin-top: 3px;
+}
+
+@media all and ( max-width: 1200px ) {
+
+    .inspiry-detail-control {
+        width: 4%;
+    }
+
+    .inspiry-detail-title {
+        width: 34%;
+    }
+
+    .inspiry-detail-value {
+        width: 58%;
+    }
+
+}
+
+@media all and ( max-width: 500px ) {
+
+    .inspiry-detail-control {
+        width: 5%;
+    }
+
+    .inspiry-detail-title {
+        width: 32%;
+    }
+
+    .inspiry-detail-value {
+        width: 58%;
+    }
+
+    .inspiry-details-wrapper .dashicons {
+        margin-top: 8px;
+    }
+
+}
+
+/*
+ * Social Network Styles
+ */
+.inspiry-ere-sn-tr label {
+    display: block;
+}
+
+.inspiry-ere-sn-tr td > div {
+    display: inherit;
+}
+
+.inspiry-ere-sn-field {
+}
+
+.inspiry-ere-sn-field.hide {
+    display: none !important;
+}
+
+.inspiry-ere-sn-actions {
+    margin-left: 5px;
+}
+
+.inspiry-ere-sn-actions .hide {
+    display: none;
+}
+
+.inspiry-ere-add-sn {
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.inspiry-ere-add-sn:hover,
+.inspiry-ere-add-sn:focus {
+    box-shadow: none;
+    outline: 0;
+}
+
+.inspiry-ere-sn-btn {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: orange;
+    color: #fff;
+}
+
+.inspiry-ere-sn-btn:hover,
+.inspiry-ere-sn-btn:focus {
+    box-shadow: none;
+    outline: 0;
+    background-color: red;
+    color: #fff;
+}
+
+label[for=REAL_HOMES_tour_video_url] span {
+    color: red;
+}
+
+label[for=REAL_HOMES_tour_video_image] span {
+    color: red;
+}
+
+#REAL_HOMES_tour_video_image-description span {
+    color: red;
+}
+
+#REAL_HOMES_tour_video_url-description span {
+    color: red;
+}
+
+#REAL_HOMES_tour_video_url_divider {
+    margin-top: 50px;
+}
+
+/*
+ * Properties Filters
+ */
+.actions #prop_id_admin_filter {
+    height: 28px;
+    margin-right: 6px;
+}
+
+body.rtl .actions #prop_id_admin_filter {
+    margin-right: 0;
+    margin-left: 6px;
+    float: right;
+}
+
+/*
+ * Switch Styles
+ */
+#property-meta-box .rwmb-switch-label {
+    padding: 7px;
+    height: 27px;
+}
+
+#property-meta-box .rwmb-switch-on,
+#property-meta-box .rwmb-switch-off {
+    margin: 0 7px;
+    text-transform: capitalize;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+#property-meta-box .rwmb-switch-off {
+    color: #6c7781;
+}
+
+#property-meta-box .rwmb-switch-slider:before {
+    width: 20px;
+    height: 23px;
+}
+
+#property-meta-box .rwmb-switch:checked + .rwmb-switch-status .rwmb-switch-slider:before {
+    left: calc(100% - 22px);
+}
+
+.ere-price-preview.hide,
+.ere-price-preview:empty {
+    display: none;
+}
+
+.ere-price-preview.overlap {
+    top: 4px;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.ere-price-preview {
+    position: absolute;
+    left: 2px;
+    top: 31px;
+    padding: 2px 8px;
+    transition: top 0.3s ease-in-out;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(126, 136, 147, 0.9);
+    background: #ffffff;
+}
+
+/*
+ * Energy Performance Classes Settings 
+ */
+.energy-classes-settings {
+    max-width: 500px;
+}
+
+.energy-classes-settings > h2 {
+    margin-top: 40px;
+}
+
+.energy-classes-settings tr th,
+.energy-classes-settings tr td {
+    width: 50%;
+    padding: 10px 0px;
+}
+
+.energy-classes-settings tr td input {
+    width: 85%;
+}
+
+.energy-classes-settings tr td .remove-epc-class {
+    text-decoration: navajowhite;
+    margin-top: 5px;
+    color: #ccc;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.energy-classes-settings .add-epc-class {
+    margin: 10px 0 0 20px;
+}
+
+.energy-classes-settings tr td .remove-epc-class:hover {
+    color: #dc3232;
+}
+
+.energy-classes-settings tr td .reorder-epc-class {
+    cursor: move;
+    background: url(../images/icons/drag_icon.gif) no-repeat;
+    height: 23px;
+    width: 15px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.energy-classes-settings .epc-class {
+    background-color: #fff;
+}
+
+.energy-classes-settings .epc-class.dragging {
+    opacity: 1 !important;
+    background-color: #fdf8e4;
+    cursor: move;
+}
+
+.energy-classes-settings tr td .wp-picker-container {
+    width: auto;
+    float: left;
+}
+
+.energy-classes-settings tr td .wp-picker-container.wp-picker-active + .remove-epc-class {
+    display: none;
+}
+
+.energy-classes-settings .wp-picker-input-wrap {
+    width: auto;
+}
+
+.energy-classes-settings .wp-picker-input-wrap label {
+    float: left;
+}
+
+.energy-classes-settings .wp-picker-input-wrap .button {
+    width: auto;
+}
+
+.energy-classes-settings .wp-picker-holder {
+    position: absolute;
+}
+
+.energy-classes-settings .wp-picker-holder .iris-square-handle {
+    cursor: pointer;
+}
+
+/*
+ * Properties Table Thumbnail Column Styles
+ */
+.ere-properties-table-thumbnail-wrap {
+    display: block;
+    position: relative;
+    max-width: 130px;
+    text-align: center;
+}
+
+.ere-properties-table-no-thumbnail {
+    display: block;
+    padding: 50px 5px;
+    background: #e6e6e6;
+}
+
+.ere-properties-table-thumbnail-wrap .ere-featured-property {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 4px;
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+    background: #005177;
+    color: #fff;
+}
+
+.ere-properties-table-thumbnail-wrap a {
+    display: block;
+}
+
+.ere-properties-table-thumbnail-wrap img {
+    max-width: 100%;
+    height: auto;
+}
+
+/**
+ * User Settings Styles
+ */
+
+.main-settings-section {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+}
+
+.main-settings-section:not(:first-of-type) > div {
+    display: none;
+}
+
+.main-settings-section h3.main-head {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 200ms linear;
+}
+
+.main-settings-section h3.main-head:after {
+    content: '';
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-left: 6px solid #000000;
+    border-bottom: 6px solid transparent;
+    transition: all 200ms linear;
+}
+
+.main-settings-section h3.main-head:hover,
+.main-settings-section h3.main-head.active {
+    opacity: 1;
+}
+
+.main-settings-section h3.main-head.active:after {
+    top: 1px;
+    transform: rotate(90deg);
+}
+
+/* User approval styles */
+.user-approval-wrap .user-approval-options {
+    overflow: hidden;
+    position: relative;
+    padding: 0 10px;
+    margin: 0 0 10px;
+}
+
+.user-pre-options-wrap {
+    border-bottom: 1px solid #eaeaea;
+}
+
+.user-approval-wrap .user-approval-options .inner-main-heading {
+    font-size: 16px;
+    border-bottom: 1px solid #eaeaea;
+    margin: 0 0 10px;
+    padding: 15px 0 10px;
+}
+
+.user-approval-wrap .user-pre-options-wrap .left,
+.user-approval-wrap .user-pre-options-wrap .right {
+    padding: 10px 0;
+}
+
+.user-approval-wrap .user-pre-options-wrap .left {
+    width: 25%;
+    padding-right: 20px;
+    box-sizing: border-box;
+    float: left;
+    clear: left;
+}
+
+.user-approval-wrap .user-pre-options-wrap .right {
+    float: left;
+    width: 75%;
+}
+
+.user-approval-wrap .user-pre-options-wrap .right p {
+    margin: 0;
+}
+
+.user-approval-wrap .user-pre-options-wrap .right input[type=text] {
+    min-width: 270px;
+}
+
+.user-approval-wrap .user-pre-options-wrap .left > label,
+.user-approval-wrap .user-pre-options-wrap .left > .label {
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+.user-approval-wrap .submit {
+    clear: both;
+    margin: 10px 0 30px;
+}
+
+.user-approval-wrap .user-approval-list {
+    padding: 5px;
+    border: 1px solid #eaeaea;
+}
+
+.user-approval-wrap .ere-users-approval-columns-head,
+.user-approval-wrap .ere-users-approval-users-list .user-item ul {
+    display: flex;
+    margin: 0;
+}
+
+.user-approval-wrap .ere-users-approval-users-list {
+    margin: 0;
+}
+
+.user-approval-wrap .ere-users-approval-columns-head li {
+    padding: 8px 10px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.user-approval-wrap .ere-users-approval-users-list > li {
+    background-color: #fafafa;
+    transition: all 150ms linear;
+}
+
+.user-approval-wrap .ere-users-approval-users-list > li:hover {
+    background-color: #f6f6f6;
+}
+
+.user-approval-wrap .ere-users-approval-users-list .user-item ul li {
+    padding: 8px 10px;
+    margin: 0;
+    line-height: 30px;
+}
+
+.user-approval-wrap .ere-users-approval-columns-head li.user-id,
+.user-approval-wrap .ere-users-approval-users-list li.user-id {
+    width: 5%;
+}
+
+.user-approval-wrap .ere-users-approval-columns-head li.user-login,
+.user-approval-wrap .ere-users-approval-columns-head li.user-name,
+.user-approval-wrap .ere-users-approval-users-list li.user-login,
+.user-approval-wrap .ere-users-approval-users-list li.user-name {
+    width: 15%;
+}
+
+.user-approval-wrap .ere-users-approval-columns-head li.user-email,
+.user-approval-wrap .ere-users-approval-users-list li.user-email {
+    width: 35%;
+}
+
+.user-approval-wrap .ere-users-approval-columns-head li.user-status,
+.user-approval-wrap .ere-users-approval-users-list li.user-status {
+    width: 15%;
+}
+
+.user-approval-wrap .ere-users-approval-columns-head li.user-action,
+.user-approval-wrap .ere-users-approval-users-list li.user-action {
+    width: 15%;
+    position: relative;
+}
+
+.user-approval-wrap .ere-users-approval-users-list .user-status {
+    font-weight: bold;
+    text-transform:capitalize;
+}
+
+.user-approval-wrap .ere-users-approval-users-list .user-status.denied {
+    color: red;
+}
+
+.user-approval-wrap .ere-users-approval-users-list .user-status.approved {
+    color: green;
+}
+
+.user-approval-wrap .ere-users-approval-users-list .user-status.pending {
+    color: grey;
+}
+
+.user-approval-wrap .ere-users-approval-users-list li .button-primary {
+    transition: all 200ms linear;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    color: #fff;
+}
+
+.user-approval-wrap .ere-users-approval-users-list li .button-primary.denied {
+    background-color: #8c8c8c;
+}
+
+.user-approval-wrap .ere-users-approval-users-list li .button-primary.denied:hover {
+    background-color: #4c4c4c;
+}
+
+.user-approval-wrap .ere-users-approval-users-list li.user-action .loader {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    vertical-align: top;
+    height: 30px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.user-approval-wrap .ere-users-approval-users-list li.user-action .loader.visible {
+    display: block;
+}
+
+.ere-users-approval-filters {
+    position: absolute;
+    right: 0;
+    top: 1px;
+    display: flex;
+    justify-content: right;
+}
+
+.ere-users-approval-filters li {
+    position: relative;
+    top: 0;
+    margin-right: 10px;
+    border: 1px solid #eaeaea;
+    border-bottom: none;
+    border-radius: 2px;
+    background-color: #eaeaea;
+    transition: all 200ms linear;
+}
+
+.ere-users-approval-filters li:hover:not(.current) {
+    top: 1px;
+}
+
+.ere-users-approval-filters li a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px 10px;
+    color: #333;
+}
+
+.ere-users-approval-filters li:not(.current) {
+    cursor: pointer;
+}
+
+.ere-users-approval-filters li.current {
+    background-color: #ffffff;
+}
+
+.ere-no-user-notice {
+    font-size: 16px;
+    text-align: center;
+    margin: 30px auto 20px;
+    font-weight: bold;
+}
+
+.ere-no-user-image {
+    display: block;
+    margin: 0 auto;
+}
+
+.pagination-loader {
+    display: none;
+    margin: 20px 0 10px;
+    text-align: center;
+}
+
+.user-pagination {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.user-pagination .num {
+    display: inline-block;
+    margin: 0 5px;
+    width: 30px;
+    height: 30px;
+    transition: all 200ms linear;
+}
+
+.user-pagination .num:not(.current):not(:hover) {
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #999999;
+}
+
+/* option fields wrap settings */
+.main-options-wrap {
+    overflow: hidden;
+}
+
+.main-options-wrap .left {
+    width: 220px;
+    padding-right: 20px;
+    float: left;
+}
+
+.main-options-wrap .right {
+    float: left;
+}
+
+/* User Roles setting page styles */
+.user-role-options {
+    padding-bottom: 20px;
+}
+
+.user-role-tabs {
+    display: flex;
+    position: relative;
+    padding: 0 0 0 10px;
+    margin: 0 0 10px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+#realhomes-settings-wrap .settings-content .form-wrapper .user-role-tabs label {
+    display: block;
+    position: relative;
+    padding: 8px 15px;
+    border: 1px solid #eaeaea;
+    border-bottom: none;
+    background-color: #eee;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0 5px 0;
+    cursor: pointer;
+    transition: all 200ms linear;
+}
+
+.user-role-tabs label input {
+    display: none;
+}
+
+#realhomes-settings-wrap .settings-content .form-wrapper .user-role-tabs label.current {
+    background-color: #ffffff;
+    margin-bottom: -1px;
+}
+
+#realhomes-settings-wrap .settings-content .form-wrapper .user-role-tabs label:hover {
+    background-color: #ffffff;
+}
+
+.form-table h4 {
+    margin: 0;
+}
+.form-table .desc {
+    font-weight: normal;
+    margin-bottom: 10px;
+    font-size: 11px;
+}
+
+.role-setting-wrap:not(.current) {
+    display: none;
+}
+
+.inner-options.user-roles li {
+    display: inline-block;
+}
+
+.inner-options.user-roles li p {
+    margin: 0;
+}
+
+/* Fancy radio/checkbox option */
+.fancy-radio-option input[type="radio"] {
+    display: none;
+}
+
+.fancy-radio-option input[type=radio]:not(:checked) + label {
+    background-color: #f6f7f7;
+    border-color: #bbbbbb;
+    color: #666666;
+}
+
+.wp-core-ui .fancy-checkbox-option label {
+    position: relative;
+    padding-left: 30px;
+}
+
+.fancy-checkbox-option input[type="checkbox"] {
+    display: none;
+}
+
+.fancy-checkbox-option label i {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background-color: #fff;
+    border: 1px solid #666666;
+    border-radius: 2px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: #fff;
+    text-indent: -9999px;
+    font-size: 0;
+    line-height: 16px;
+    text-align: center;
+    font-weight: bold;
+    opacity: 0.6;
+}
+
+.fancy-checkbox-option input[type=checkbox]:not(:checked) + label {
+    background-color: #f6f7f7;
+    border-color: #bbbbbb;
+    color: #666666;
+}
+
+.fancy-checkbox-option input[type=checkbox]:checked + label i {
+    color: #666666;
+    text-indent: 0;
+    font-size: 17px;
+    opacity: 1;
+}
+
+
+.roles-cb-allow label {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 2.15384615;
+    min-height: 30px;
+    border: 1px solid #2271b1;
+    padding: 0 10px;
+    margin: 0;
+    background-color: #f6f7f7;
+    border-radius: 3px;
+    color: #2271b1;
+    box-sizing: border-box;
+    transition: all 200ms linear;
+}
+
+.roles-cb-allow label:has(input[type=radio]:checked) {
+    background-color: #2271b1;
+    color: #fff;
+}
+
+.roles-cb-allow label input[type=radio] {
+    display: none;
+}
+
+.ere-user-options-wrap hr {
+    border: none;
+    border-top: 1px solid #efefef;
+}
+
+.role-capabilities-list {
+    max-width: 1000px;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.role-capabilities-list li {
+    float: left;
+    width: 49.5%;
+    margin: 0 0 30px;
+}
+
+.role-capabilities-list li:nth-child(2n+1) {
+    clear: left;
+}
+
+.role-capabilities-list li .option-head h4 {
+    margin: 0 0 5px;
+}
+
+.role-capabilities-list li .option-head .desc {
+    font-size: 12px;
+    margin: 0 0 10px;
+}

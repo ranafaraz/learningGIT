@@ -1,0 +1,116 @@
+.editor-styles-wrapper {
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.625 !important;
+}
+
+.editor-styles-wrapper,
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+    font-family: "DM Sans", sans-serif;
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.editor-styles-wrapper h1 {
+    font-size: 28px;
+}
+
+@media (min-width: 768px) {
+    .editor-styles-wrapper h1 {
+        font-size: 32px;
+    }
+}
+
+.editor-styles-wrapper h2 {
+    font-size: 24px;
+}
+
+@media (min-width: 768px) {
+    .editor-styles-wrapper h2 {
+        font-size: 28px;
+    }
+}
+
+.editor-styles-wrapper h3 {
+    font-size: 21px;
+}
+
+@media (min-width: 768px) {
+    .editor-styles-wrapper h3 {
+        font-size: 24px;
+    }
+}
+
+.editor-styles-wrapper h4 {
+    font-size: 20px;
+}
+
+.editor-styles-wrapper h5 {
+    font-size: 18px;
+}
+
+.editor-styles-wrapper h6 {
+    font-size: 16px;
+}
+
+.editor-styles-wrapper a {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.editor-styles-wrapper a:hover {
+    color: #1db2ff;
+}
+
+.editor-styles-wrapper blockquote p {
+    margin: 0;
+}
+
+.editor-styles-wrapper blockquote {
+    position: relative;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.4;
+    padding-left: 36px !important;
+    padding-right: 36px !important;
+    border-width: 5px !important;
+    border-color: #1db2ff !important;
+
+    color: #1a1a1a;
+}
+
+/* Quote */
+.editor-styles-wrapper .wp-block-quote {
+    padding-top: 34px !important;
+    padding-bottom: 34px !important;
+    background-color: rgba(29, 178, 255, 0.05);
+}
+
+.editor-styles-wrapper table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.editor-styles-wrapper td,
+.editor-styles-wrapper th {
+    padding: 5px;
+    border: 1px solid #b1b1b1;
+    background-color: white;
+}

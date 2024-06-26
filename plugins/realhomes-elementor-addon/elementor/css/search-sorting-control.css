@@ -1,0 +1,46 @@
+/*
+ * RHEA Search Sorting Control Styles
+ */
+.rhea_sorting_control_wrapper ul li {
+    font-size: 14px;
+    font-weight: 500;
+    cursor: move;
+    border-radius: 4px;
+    background: #e1e1e1;
+    color: #000;
+}
+
+.rhea_sorting_control_wrapper ul li:not(:first-child) {
+    margin-top: 5px;
+}
+
+.rhea_sorting_control_wrapper ul li:hover {
+    background: #d1d1d1;
+}
+
+.rhea_sorting_control_wrapper ul li label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.rhea_sorting_control_wrapper ul li label input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.rhea_sorting_control_wrapper ul li label input[type=checkbox]:checked {
+    background: #000000;
+    border: none;
+}
+
+.rhea_sorting_control_wrapper ul li label input[type=checkbox]:disabled {
+    cursor: no-drop;
+}

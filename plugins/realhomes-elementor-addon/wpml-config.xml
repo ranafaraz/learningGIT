@@ -1,0 +1,1418 @@
+<wpml-config>
+    <elementor-widgets>
+        <widget name="rhea-ultra-search-form-widget">
+            <fields>
+                <field>advance_search_button_label</field>
+                <field>search_button_label</field>
+                <field>advance_features_text</field>
+                <field>rhea_location_title_1</field>
+                <field>rhea_location_ph_1</field>
+                <field>location_count_placeholder</field>
+                <field>rhea_location_title_2</field>
+                <field>rhea_location_ph_2</field>
+                <field>rhea_location_title_3</field>
+                <field>rhea_location_ph_3</field>
+                <field>rhea_location_title_4</field>
+                <field>rhea_location_ph_4</field>
+                <field>rhea_ajax_input_placeholder</field>
+                <field>rhea_no_result_matched</field>
+                <field>property_status_label</field>
+                <field>property_status_placeholder</field>
+                <field>status_count_placeholder</field>
+                <field>property_types_label</field>
+                <field>property_types_placeholder</field>
+                <field>types_count_placeholder</field>
+                <field>min_bed_label</field>
+                <field>min_bed_placeholder</field>
+                <field>min_bed_drop_down_value</field>
+                <field>min_bath_label</field>
+                <field>min_bath_placeholder</field>
+                <field>min_bath_drop_down_value</field>
+                <field>slider_field_label</field>
+                <field>slider_range_label</field>
+                <field>slider_range_from</field>
+                <field>slider_range_to</field>
+                <field>min_price_label</field>
+                <field>min_price_placeholder</field>
+                <field>max_price_label</field>
+                <field>max_price_placeholder</field>
+                <field>min_price_drop_down_value</field>
+                <field>max_price_drop_down_value</field>
+                <field>min_rent_price_drop_down_value</field>
+                <field>max_rent_price_drop_down_value</field>
+                <field>garages_label</field>
+                <field>garages_placeholder</field>
+                <field>garages_drop_down_value</field>
+                <field>agent_label</field>
+                <field>agent_placeholder</field>
+                <field>agent_count_placeholder</field>
+                <field>agency_label</field>
+                <field>agency_placeholder</field>
+                <field>agency_count_placeholder</field>
+                <field>min_area_label</field>
+                <field>min_area_placeholder</field>
+                <field>max_area_label</field>
+                <field>max_area_placeholder</field>
+                <field>area_units_placeholder</field>
+                <field>area_units_title_attr</field>
+                <field>min_lot_size_label</field>
+                <field>min_lot_size_placeholder</field>
+                <field>max_lot_size_label</field>
+                <field>max_lot_size_placeholder</field>
+                <field>lot_size_units_placeholder</field>
+                <field>lot_size_units_title_attr</field>
+                <field>keyword_label</field>
+                <field>keyword_placeholder</field>
+                <field>property_id_label</field>
+                <field>property_id_placeholder</field>
+                <field>additional_field_any_text</field>
+                <field>prefix_placeholder</field>
+                <field>rhea_select_search_template</field>
+                <field>default_status_select</field>
+                <field>default_types_select</field>
+                <field>slider_min_price</field>
+                <field>slider_max_price</field>
+                <field>postfix_placeholder</field>
+            </fields>
+        </widget>
+        <widget name="rhea-ultra-search-form-2-widget">
+            <fields>
+                <field>advance_search_button_label</field>
+                <field>search_button_label</field>
+                <field>advance_features_text</field>
+                <field>rhea_location_title_1</field>
+                <field>rhea_location_ph_1</field>
+                <field>location_count_placeholder</field>
+                <field>rhea_location_title_2</field>
+                <field>rhea_location_ph_2</field>
+                <field>rhea_location_title_3</field>
+                <field>rhea_location_ph_3</field>
+                <field>rhea_location_title_4</field>
+                <field>rhea_location_ph_4</field>
+                <field>rhea_ajax_input_placeholder</field>
+                <field>rhea_no_result_matched</field>
+                <field>property_status_label</field>
+                <field>property_status_placeholder</field>
+                <field>status_count_placeholder</field>
+                <field>property_types_label</field>
+                <field>property_types_placeholder</field>
+                <field>types_count_placeholder</field>
+                <field>min_bed_label</field>
+                <field>min_bed_placeholder</field>
+                <field>min_bed_drop_down_value</field>
+                <field>min_bath_label</field>
+                <field>min_bath_placeholder</field>
+                <field>min_bath_drop_down_value</field>
+                <field>slider_field_label</field>
+                <field>slider_range_label</field>
+                <field>slider_range_from</field>
+                <field>slider_range_to</field>
+                <field>min_price_label</field>
+                <field>min_price_placeholder</field>
+                <field>max_price_label</field>
+                <field>max_price_placeholder</field>
+                <field>min_price_drop_down_value</field>
+                <field>max_price_drop_down_value</field>
+                <field>min_rent_price_drop_down_value</field>
+                <field>max_rent_price_drop_down_value</field>
+                <field>garages_label</field>
+                <field>garages_placeholder</field>
+                <field>garages_drop_down_value</field>
+                <field>agent_label</field>
+                <field>agent_placeholder</field>
+                <field>agent_count_placeholder</field>
+                <field>agency_label</field>
+                <field>agency_placeholder</field>
+                <field>agency_count_placeholder</field>
+                <field>min_area_label</field>
+                <field>min_area_placeholder</field>
+                <field>max_area_label</field>
+                <field>max_area_placeholder</field>
+                <field>area_units_placeholder</field>
+                <field>area_units_title_attr</field>
+                <field>min_lot_size_label</field>
+                <field>min_lot_size_placeholder</field>
+                <field>max_lot_size_label</field>
+                <field>max_lot_size_placeholder</field>
+                <field>lot_size_units_placeholder</field>
+                <field>lot_size_units_title_attr</field>
+                <field>keyword_label</field>
+                <field>keyword_placeholder</field>
+                <field>property_id_label</field>
+                <field>property_id_placeholder</field>
+                <field>additional_field_any_text</field>
+                <field>prefix_placeholder</field>
+                <field>rhea_select_search_template</field>
+                <field>advance_features_text_alignment</field>
+                <field>default_status_select</field>
+                <field>default_types_select</field>
+                <field>slider_min_price</field>
+                <field>slider_max_price</field>
+                <field>postfix_placeholder</field>
+            </fields>
+        </widget>
+        <widget name="rhea-ultra-properties-widget-1">
+            <fields>
+                <field>rhea_add_meta_select</field>
+                <field>ere_property_featured_label</field>
+                <field>ere_property_fav_label</field>
+                <field>ere_property_fav_added_label</field>
+                <field>ere_property_compare_label</field>
+                <field>ere_property_compare_added_label</field>
+                <field>ere_property_rvt_date_added_label</field>
+                <field>select_agent</field>
+                <field>property-feature</field>
+                <field>property-type</field>
+                <field>property-city</field>
+                <field>property-status</field>
+            </fields>
+            <fields-in-item items_of="rhea_add_meta_select">
+                <field>rhea_meta_repeater_label</field>
+                <field>_id</field>
+            </fields-in-item>
+            <fields-in-item items_of="property-feature"/>
+            <fields-in-item items_of="property-type"/>
+            <fields-in-item items_of="property-city"/>
+            <fields-in-item items_of="property-status"/>
+        </widget>
+        <widget name="rhea-ultra-city">
+            <fields>
+                <field>rhea_properties_view_all</field>
+                <field>rhea_properties_label</field>
+                <field>rhea_property_location_select</field>
+                <field>rhea_city_label</field>
+            </fields>
+        </widget>
+        <widget name="rhea-ultra-news">
+            <fields>
+                <field>ere_news_grid_thumb_sizes</field>
+                <field>category</field>
+                <field>post_tag</field>
+                <field>post_format</field>
+                <field>translation_priority</field>
+                <field>by-label</field>
+                <field>read-more-text</field>
+            </fields>
+            <fields-in-item items_of="category"/>
+            <fields-in-item items_of="post_tag"/>
+            <fields-in-item items_of="post_format"/>
+            <fields-in-item items_of="translation_priority"/>
+        </widget>
+        <widget name="inspiry-testimonial-ultra-widget">
+            <fields>
+                <field>style</field>
+                <field>rhea_testimonials</field>
+                <field>testimonials_section_title</field>
+                <field>testimonials</field>
+            </fields>
+            <fields-in-item items_of="rhea_testimonials">
+                <field>rhea_testimonial_author</field>
+                <field>rhea_testimonial_text_strong</field>
+                <field>rhea_testimonial_text</field>
+                <field>_id</field>
+                <field>rhea_testimonial_author_designation</field>
+            </fields-in-item>
+            <fields-in-item items_of="testimonials">
+                <field>testimonial_author</field>
+                <field>heading</field>
+                <field>text</field>
+                <field>_id</field>
+                <field>testimonial_author_designation</field>
+            </fields-in-item>
+        </widget>
+        <widget name="rhea-ultra-featured-properties">
+            <fields>
+                <field>ere_property_featured_label</field>
+                <field>property_build_label</field>
+                <field>ere_property_fav_label</field>
+                <field>ere_property_fav_added_label</field>
+                <field>ere_property_compare_label</field>
+                <field>ere_property_compare_added_label</field>
+                <field>rhea_add_meta_select</field>
+            </fields>
+            <fields-in-item items_of="rhea_add_meta_select">
+                <field>rhea_meta_repeater_label</field>
+                <field>_id</field>
+            </fields-in-item>
+        </widget>
+        <widget name="rhea-ultra-agents-widget">
+            <fields>
+                <field>rhea_agent</field>
+                <field>view-profile-text</field>
+                <field>listed-properties-single-text</field>
+                <field>listed-properties-text</field>
+            </fields>
+            <fields-in-item items_of="rhea_agent"/>
+        </widget>
+        <widget name="rhea-ultra-main-properties-slider">
+            <fields>
+                <field>properties_list</field>
+                <field>rhea_add_meta_select</field>
+                <field>ere_property_featured_label</field>
+                <field>ere_property_build_label</field>
+            </fields>
+            <fields-in-item items_of="properties_list">
+                <field>property_id</field>
+                <field>property_title</field>
+                <field>property_image>url</field>
+                <field>property_image>id</field>
+                <field>property_image>alt</field>
+                <field>property_image>source</field>
+                <field>property_image>size</field>
+                <field>_id</field>
+            </fields-in-item>
+            <fields-in-item items_of="rhea_add_meta_select">
+                <field>rhea_property_meta_display</field>
+                <field>rhea_meta_repeater_label</field>
+                <field>_id</field>
+            </fields-in-item>
+        </widget>
+        <widget name="rhea-ultra-services">
+            <fields>
+                <field>rhea_add_field_select</field>
+            </fields>
+            <fields-in-item items_of="rhea_add_field_select">
+                <field>_id</field>
+                <field>service_title</field>
+                <field>service_post_label</field>
+                <field>gallery</field>
+            </fields-in-item>
+        </widget>
+        <widget name="rhea-ultra-agent-card-widget">
+            <fields>
+                <field>agency_prefix</field>
+                <field>description_heading</field>
+                <field>progress_stats_heading</field>
+                <field>property_locations_label</field>
+                <field>property_types_label</field>
+                <field>property_status_label</field>
+            </fields>
+        </widget>
+        <widget name="rhea-ultra-agent-form-widget">
+            <fields>
+                <field>form_heading</field>
+                <field>name_field_label</field>
+                <field>name_field_placeholder</field>
+                <field>name_field_error_text</field>
+                <field>phone_field_label</field>
+                <field>phone_field_placeholder</field>
+                <field>email_field_label</field>
+                <field>email_field_placeholder</field>
+                <field>email_field_error_text</field>
+                <field>message_field_label</field>
+                <field>message_field_placeholder</field>
+                <field>message_field_error_text</field>
+                <field>button_text</field>
+            </fields>
+        </widget>
+
+        <!--Ultra Single Properties Widgets-->
+        <widget name="rhea-ultra-single-gallery">
+            <fields>
+                <field>layout</field>
+                <field>counter_label</field>
+            </fields>
+        </widget>
+        <widget name="rhea-ultra-single-property-slider">
+            <fields>
+                <field>ere_property_featured_label</field>
+                <field>property_fav_label</field>
+                <field>property_fav_added_label</field>
+                <field>ere_property_compare_label</field>
+                <field>ere_property_compare_added_label</field>
+                <field>ere_property_print_label</field>
+                <field>ere_property_share_label</field>
+                <field>ere_property_photos_label</field>
+            </fields>
+        </widget>
+        <widget name="rhea-ultra-single-property-slider-fullwidth">
+            <fields>
+                <field>ere_property_featured_label</field>
+                <field>property_fav_label</field>
+                <field>property_fav_added_label</field>
+                <field>ere_property_compare_label</field>
+                <field>ere_property_compare_added_label</field>
+                <field>ere_property_print_label</field>
+                <field>ere_property_share_label</field>
+                <field>ere_property_photos_label</field>
+            </fields>
+        </widget>
+        <widget name="rhea-ultra-single-property-description">
+            <fields>
+                <field>section_title</field>
+            </fields>
+        </widget>
+        <widget name="rhea-ultra-single-property-meta-icons">
+            <fields>
+                <field>section_title</field>
+                <field>property_id_label</field>
+            </fields>
+        </widget>
+        <widget name="rhea-ultra-single-property-additional-details">
+            <fields>
+                <field>section_title</field>
+            </fields>
+        </widget>
+        <widget name="rhea-ultra-single-property-common-note">
+            <fields>
+                <field>section_title</field>
+                <field>common_note_content</field>
+            </fields>
+        </widget>
+        <widget name="rhea-ultra-single-property-features">
+            <fields>
+                <field>section_title</field>
+            </fields>
+        </widget>
+        <widget name="rhea-ultra-single-property-attachments">
+            <fields>
+                <field>section_title</field>
+            </fields>
+        </widget>
+        <widget name="rhea-ultra-single-property-floor-plans">
+            <fields>
+                <field>section_title</field>
+            </fields>
+        </widget>
+        <widget name="rhea-ultra-single-property-video">
+            <fields>
+                <field>section_title</field>
+            </fields>
+        </widget>
+        <widget name="rhea-ultra-single-property-virtual-tour">
+            <fields>
+                <field>section_title</field>
+            </fields>
+        </widget>
+        <widget name="rhea-ultra-single-property-map">
+            <fields>
+                <field>section_title</field>
+            </fields>
+        </widget>
+        <widget name="rhea-ultra-single-property-walk-score">
+            <fields>
+                <field>section_title</field>
+            </fields>
+        </widget>
+        <widget name="rhea-ultra-single-property-nearby-places">
+            <fields>
+                <field>section_title</field>
+            </fields>
+        </widget>
+        <widget name="rhea-ultra-single-property-similar-properties">
+            <fields>
+                <field>section_title</field>
+            </fields>
+        </widget>
+        <widget name="rhea-ultra-single-property-agent">
+            <fields>
+                <field>section_title</field>
+                <field>agent_text</field>
+                <field>agent_know_more</field>
+                <field>agent_office_contact_label</field>
+                <field>agent_office_contact_mobile</field>
+                <field>agent_office_contact_fax</field>
+                <field>agent_office_contact_whatsapp</field>
+                <field>agent_office_contact_email</field>
+                <field>agent_name_placeholder</field>
+                <field>agent_email_placeholder</field>
+                <field>agent_phone_placeholder</field>
+                <field>agent_textarea_placeholder</field>
+                <field>agent_submit_button_text</field>
+            </fields>
+        </widget>
+        <widget name="rhea-ultra-single-property-energy-performance">
+            <fields>
+                <field>section_title</field>
+            </fields>
+        </widget>
+        <widget name="rhea-ultra-single-property-mortgage-calculator">
+            <fields>
+                <field>section_title</field>
+            </fields>
+        </widget>
+        <widget name="rhea-ultra-single-property-analytics">
+            <fields>
+                <field>section_title</field>
+            </fields>
+        </widget>
+        <widget name="rhea-ultra-single-property-schedule-tour">
+            <fields>
+                <field>section_title</field>
+                <field>sta_date_label</field>
+                <field>sta_in_person_label</field>
+                <field>sta_video_chat_label</field>
+                <field>sta_name_label</field>
+                <field>sta_phone_label</field>
+                <field>sta_email_label</field>
+                <field>sta_message_label</field>
+                <field>sta_schedule_label</field>
+            </fields>
+        </widget>
+
+        <!--Modern Widgets-->
+        <widget name="ere-section-title-widget">
+            <fields>
+                <field>ere_top_title</field>
+                <field>ere_main_title</field>
+                <field>ere_description</field>
+            </fields>
+        </widget>
+        <widget name="rhea-list-layout-properties-widget">
+            <fields>
+                <field>property-feature</field>
+                <field>property-type</field>
+                <field>property-city</field>
+                <field>property-status</field>
+                <field>ere_property_featured_label</field>
+                <field>ere_property_view_prop_label</field>
+                <field>ere_property_fav_label</field>
+                <field>ere_property_fav_added_label</field>
+                <field>ere_property_compare_label</field>
+                <field>ere_property_compare_added_label</field>
+                <field>ere_agent_prefix_text</field>
+                <field>rhea_add_meta_select</field>
+            </fields>
+            <fields-in-item items_of="property-feature"/>
+            <fields-in-item items_of="property-type"/>
+            <fields-in-item items_of="property-city"/>
+            <fields-in-item items_of="property-status"/>
+            <fields-in-item items_of="rhea_add_meta_select">
+                <field>rhea_meta_repeater_label</field>
+            </fields-in-item>
+        </widget>
+        <widget name="rhea-properties-widget">
+            <fields>
+                <field>property-feature</field>
+                <field>property-type</field>
+                <field>property-city</field>
+                <field>property-status</field>
+                <field>ere_property_featured_label</field>
+                <field>ere_property_view_prop_label</field>
+                <field>ere_property_fav_label</field>
+                <field>ere_property_fav_added_label</field>
+                <field>ere_property_compare_label</field>
+                <field>ere_property_compare_added_label</field>
+                <field>rhea_add_meta_select</field>
+            </fields>
+            <fields-in-item items_of="property-feature"/>
+            <fields-in-item items_of="property-type"/>
+            <fields-in-item items_of="property-city"/>
+            <fields-in-item items_of="property-status"/>
+            <fields-in-item items_of="rhea_add_meta_select">
+                <field>rhea_meta_repeater_label</field>
+            </fields-in-item>
+        </widget>
+        <widget name="rhea-properties-widget-2">
+            <fields>
+                <field>property-feature</field>
+                <field>property-type</field>
+                <field>property-city</field>
+                <field>property-status</field>
+                <field>ere_property_added_label</field>
+                <field>ere_property_added_ago_label</field>
+                <field>ere_property_featured_label</field>
+                <field>ere_property_fav_label</field>
+                <field>ere_property_fav_added_label</field>
+                <field>ere_property_compare_label</field>
+                <field>ere_property_compare_added_label</field>
+                <field>rhea_add_meta_select</field>
+                <field>rhea_property_status_select</field>
+            </fields>
+            <fields-in-item items_of="property-feature"/>
+            <fields-in-item items_of="property-type"/>
+            <fields-in-item items_of="property-city"/>
+            <fields-in-item items_of="property-status"/>
+            <fields-in-item items_of="rhea_add_meta_select">
+                <field>rhea_meta_repeater_label</field>
+            </fields-in-item>
+            <fields-in-item items_of="rhea_property_status_select">
+                <field>rhea_property_status_select_section</field>
+            </fields-in-item>
+        </widget>
+        <widget name="rhea-properties-widget-3">
+            <fields>
+                <field>property-feature</field>
+                <field>property-type</field>
+                <field>property-city</field>
+                <field>property-status</field>
+                <field>ere_property_added_label</field>
+                <field>ere_property_added_ago_label</field>
+                <field>ere_property_featured_label</field>
+                <field>ere_property_fav_label</field>
+                <field>ere_property_fav_added_label</field>
+                <field>ere_property_compare_label</field>
+                <field>ere_property_compare_added_label</field>
+                <field>rhea_add_meta_select</field>
+                <field>rhea_property_status_select</field>
+            </fields>
+            <fields-in-item items_of="property-feature"/>
+            <fields-in-item items_of="property-type"/>
+            <fields-in-item items_of="property-city"/>
+            <fields-in-item items_of="property-status"/>
+            <fields-in-item items_of="rhea_add_meta_select">
+                <field>rhea_meta_repeater_label</field>
+            </fields-in-item>
+            <fields-in-item items_of="rhea_property_status_select">
+                <field>rhea_property_status_select_section</field>
+            </fields-in-item>
+        </widget>
+        <widget name="rhea-properties-widget-4">
+            <fields>
+                <field>property-feature</field>
+                <field>property-type</field>
+                <field>property-city</field>
+                <field>property-status</field>
+                <field>ere_property_featured_label</field>
+                <field>ere_property_fav_label</field>
+                <field>ere_property_fav_added_label</field>
+                <field>ere_property_compare_label</field>
+                <field>ere_property_compare_added_label</field>
+                <field>rhea_add_meta_select</field>
+                <field>rhea_property_status_select</field>
+            </fields>
+            <fields-in-item items_of="property-feature"/>
+            <fields-in-item items_of="property-type"/>
+            <fields-in-item items_of="property-city"/>
+            <fields-in-item items_of="property-status"/>
+            <fields-in-item items_of="rhea_add_meta_select">
+                <field>rhea_meta_repeater_label</field>
+            </fields-in-item>
+            <fields-in-item items_of="rhea_property_status_select">
+                <field>rhea_property_status_select_section</field>
+            </fields-in-item>
+        </widget>
+        <widget name="rhea-properties-os-map-widget">
+            <fields>
+                <field>property-feature</field>
+                <field>property-type</field>
+                <field>property-city</field>
+                <field>property-status</field>
+            </fields>
+            <fields-in-item items_of="property-feature"/>
+            <fields-in-item items_of="property-type"/>
+            <fields-in-item items_of="property-city"/>
+            <fields-in-item items_of="property-status"/>
+        </widget>
+        <widget name="rhea-properties-google-map-widget">
+            <fields>
+                <field>property-feature</field>
+                <field>property-type</field>
+                <field>property-city</field>
+                <field>property-status</field>
+            </fields>
+            <fields-in-item items_of="property-feature"/>
+            <fields-in-item items_of="property-type"/>
+            <fields-in-item items_of="property-city"/>
+            <fields-in-item items_of="property-status"/>
+        </widget>
+        <widget name="properties-mapbox-widget">
+            <fields>
+                <field>property-feature</field>
+                <field>property-type</field>
+                <field>property-city</field>
+                <field>property-status</field>
+            </fields>
+            <fields-in-item items_of="property-feature"/>
+            <fields-in-item items_of="property-type"/>
+            <fields-in-item items_of="property-city"/>
+            <fields-in-item items_of="property-status"/>
+        </widget>
+        <widget name="ere-featured-properties-widget">
+            <fields>
+                <field>ere_property_featured_label</field>
+                <field>ere_property_added_label</field>
+                <field>ere_property_added_ago_label</field>
+                <field>ere_property_fav_label</field>
+                <field>ere_property_fav_added_label</field>
+                <field>ere_property_compare_label</field>
+                <field>ere_property_compare_added_label</field>
+                <field>rhea_add_meta_select</field>
+            </fields>
+            <fields-in-item items_of="rhea_add_meta_select">
+                <field>rhea_meta_repeater_label</field>
+            </fields-in-item>
+        </widget>
+        <widget name="ere-featured-properties-two-widget">
+            <fields>
+                <field>ere_property_added_label</field>
+                <field>ere_property_added_ago_label</field>
+                <field>ere_property_features_label</field>
+                <field>ere_property_fav_label</field>
+                <field>ere_property_fav_added_label</field>
+                <field>ere_property_compare_label</field>
+                <field>ere_property_compare_added_label</field>
+                <field>rhea_add_meta_select</field>
+            </fields>
+            <fields-in-item items_of="rhea_add_meta_select">
+                <field>rhea_meta_repeater_label</field>
+            </fields-in-item>
+        </widget>
+        <widget name="ere-featured-properties-three-widget">
+            <fields>
+                <field>ere_property_added_label</field>
+                <field>ere_property_added_ago_label</field>
+                <field>ere_property_fav_label</field>
+                <field>ere_property_fav_added_label</field>
+                <field>ere_property_compare_label</field>
+                <field>ere_property_compare_added_label</field>
+                <field>rhea_add_meta_select</field>
+            </fields>
+            <fields-in-item items_of="rhea_add_meta_select">
+                <field>rhea_meta_repeater_label</field>
+            </fields-in-item>
+        </widget>
+        <widget name="rhea-agent-widget">
+            <fields>
+                <field>select_agent</field>
+                <field>agent_designation</field>
+                <field>status_terms_list</field>
+                <field>additional_info_points</field>
+                <field>agent_excerpt</field>
+                <field>agent_phone</field>
+                <field>agent_email</field>
+                <field>agent_contact_button_text</field>
+                <field>agent_contact_button_url</field>
+            </fields>
+            <fields-in-item items_of="status_terms_list">
+                <field>taxonomy_term</field>
+                <field>term_custom_number</field>
+                <field>term_custom_title</field>
+            </fields-in-item>
+            <fields-in-item items_of="additional_info_points">
+                <field>additional_point_statement</field>
+            </fields-in-item>
+        </widget>
+
+        <widget name="ere-agents-widget-2">
+            <fields>
+                <field>rhea_agent</field>
+            </fields>
+            <fields-in-item items_of="rhea_agent">
+                <field>rhea_select_agent</field>
+                <field>rhea_agent_sub_title</field>
+                <field>rhea_agent_excerpt</field>
+                <field>rhea_agent_phone</field>
+                <field>rhea_agent_whatsapp</field>
+                <field>rhea_agent_email</field>
+            </fields-in-item>
+        </widget>
+        <widget name="rhea-agent-profile-widget">
+            <fields>
+                <field>image>url</field>
+                <field>image>id</field>
+                <field>image>size</field>
+                <field>image>alt</field>
+                <field>image>source</field>
+                <field>rhea_sa_pre_title</field>
+                <field>rhea_sa_title</field>
+                <field>rhea_sa_sub_title</field>
+                <field>rhea_sa_detail</field>
+                <field>rhea_sa_phone_label</field>
+                <field>rhea_sa_phone</field>
+                <field>rhea_sa_email_label</field>
+                <field>rhea_sa_email</field>
+                <field>rhea_sa_button_text</field>
+                <field>rhea_sa_button_url>url</field>
+            </fields>
+        </widget>
+
+        <widget name="rhea-agent-contact-form-widget">
+            <fields>
+                <field>rhea_acf_title</field>
+                <field>rhea_acf_sub_title</field>
+                <field>image>url</field>
+                <field>image>id</field>
+                <field>image>size</field>
+                <field>image>alt</field>
+                <field>image>source</field>
+                <field>rhea_acf_name_label</field>
+                <field>rhea_acf_name_placeholder</field>
+                <field>rhea_acf_email_label</field>
+                <field>rhea_acf_email_placeholder</field>
+                <field>rhea_acf_message_label</field>
+                <field>rhea_acf_message_placeholder</field>
+                <field>rhea_acf_button_text</field>
+                <field>rhea_contact_phone_label</field>
+                <field>rhea_contact_phone_number</field>
+                <field>rhea_contact_whatsapp_label</field>
+                <field>rhea_contact_whatsapp_number</field>
+                <field>rhea_contact_email_label</field>
+                <field>rhea_contact_email_id</field>
+                <field>rhea_contact_office_label</field>
+                <field>rhea_contact_office_address</field>
+                <field>rhea_contact_socials_label</field>
+            </fields>
+        </widget>
+        <widget name="rhea-agencies-widget">
+            <fields>
+                <field>view_all_button_text</field>
+                <field>view_all_button_url>url</field>
+            </fields>
+        </widget>
+        <widget name="rhea-inquiry-form">
+            <fields>
+                <field>rhea_add_field_select</field>
+                <field>rhea_submit_text</field>
+            </fields>
+            <fields-in-item items_of="rhea_add_field_select">
+                <field>rhea_field_label</field>
+                <field>rhea_field_placeholder</field>
+                <field>rhea_error_message</field>
+            </fields-in-item>
+        </widget>
+        <widget name="ere-news-widget-home">
+            <fields>
+                <field>category</field>
+                <field>post_tag</field>
+                <field>post_format</field>
+                <field>translation_priority</field>
+                <field>ere_news_in_label</field>
+                <field>ere_news_by_label</field>
+            </fields>
+            <fields-in-item items_of="category"/>
+            <fields-in-item items_of="post_tag"/>
+            <fields-in-item items_of="post_format"/>
+            <fields-in-item items_of="translation_priority"/>
+        </widget>
+        <widget name="ere-big-testimonial-widget">
+            <fields>
+                <field>testimonial_text</field>
+                <field>testimonial_name</field>
+                <field>testimonial_url>url</field>
+            </fields>
+        </widget>
+        <widget name="inspiry-testimonial-widget">
+            <fields>
+                <field>rhea_testimonials</field>
+            </fields>
+            <fields-in-item items_of="rhea_testimonials">
+                <field>rhea_testimonial_author</field>
+                <field>rhea_testimonial_author_designation</field>
+                <field>rhea_testimonial_author_thumb>url</field>
+                <field>rhea_testimonial_author_thumb>id</field>
+                <field>rhea_testimonial_author_thumb>size</field>
+                <field>rhea_testimonial_author_thumb>alt</field>
+                <field>rhea_testimonial_author_thumb>source</field>
+                <field>rhea_testimonial_text</field>
+            </fields-in-item>
+        </widget>
+        <widget name="inspiry-testimonial-three-widget">
+            <fields>
+                <field>rhea_testimonials</field>
+            </fields>
+            <fields-in-item items_of="rhea_testimonials">
+                <field>rhea_testimonial_author</field>
+                <field>rhea_testimonial_text</field>
+                <field>rhea_testimonial_author_designation</field>
+                <field>rhea_testimonial_author_thumb>url</field>
+                <field>rhea_testimonial_author_thumb>id</field>
+                <field>rhea_testimonial_author_thumb>size</field>
+                <field>rhea_testimonial_author_thumb>alt</field>
+                <field>rhea_testimonial_author_thumb>source</field>
+            </fields-in-item>
+        </widget>
+        <widget name="inspiry-testimonial-four-widget">
+            <fields>
+                <field>rhea_testimonials</field>
+            </fields>
+            <fields-in-item items_of="rhea_testimonials">
+                <field>rhea_testimonial_author</field>
+                <field>rhea_testimonial_text</field>
+                <field>rhea_testimonial_author_designation</field>
+                <field>rhea_testimonial_author_thumb>url</field>
+                <field>rhea_testimonial_author_thumb>id</field>
+                <field>rhea_testimonial_author_thumb>size</field>
+                <field>rhea_testimonial_author_thumb>alt</field>
+                <field>rhea_testimonial_author_thumb>source</field>
+            </fields-in-item>
+        </widget>
+        <widget name="inspiry-testimonial-five-widget">
+            <fields>
+                <field>rhea_testimonial_section_subtitle</field>
+                <field>rhea_testimonial_section_title</field>
+                <field>rhea_testimonials</field>
+            </fields>
+            <fields-in-item items_of="rhea_testimonials">
+                <field>rhea_testimonial_author</field>
+                <field>rhea_testimonial_text</field>
+                <field>rhea_testimonial_author_thumb>url</field>
+                <field>rhea_testimonial_author_thumb>id</field>
+                <field>rhea_testimonial_author_thumb>size</field>
+                <field>rhea_testimonial_author_thumb>alt</field>
+                <field>rhea_testimonial_author_thumb>source</field>
+            </fields-in-item>
+        </widget>
+        <widget name="ere-cta-widget">
+            <fields>
+                <field>cta_top_title</field>
+                <field>cta_main_title</field>
+                <field>cta_first_btn_title</field>
+                <field>cta_first_btn_url>url</field>
+                <field>cta_second_btn_title</field>
+                <field>cta_second_btn_url>url</field>
+                <field>cta_1_image>url</field>
+                <field>cta_1_image>id</field>
+                <field>cta_1_image>size</field>
+                <field>cta_1_image>alt</field>
+                <field>cta_1_image>source</field>
+            </fields>
+        </widget>
+        <widget name="ere-cta-two-widget">
+            <fields>
+                <field>cta_top_title</field>
+                <field>cta_main_title</field>
+                <field>cta_first_btn_title</field>
+                <field>cta_first_btn_url>url</field>
+                <field>cta_second_btn_title</field>
+                <field>cta_second_btn_url>url</field>
+                <field>cta_1_image>url</field>
+                <field>cta_1_image>id</field>
+                <field>cta_1_image>size</field>
+                <field>cta_1_image>alt</field>
+                <field>cta_1_image>source</field>
+            </fields>
+        </widget>
+        <widget name="ere-cta-three-widget">
+            <fields>
+                <field>cta_top_title</field>
+                <field>cta_main_description</field>
+                <field>cta__btn_title</field>
+                <field>cta_1_image>url</field>
+                <field>cta_1_image>id</field>
+                <field>cta_1_image>size</field>
+                <field>cta_1_image>alt</field>
+                <field>cta_1_image>source</field>
+            </fields>
+        </widget>
+        <widget name="rhea-login-modal-modern">
+            <fields>
+                <field>rhea_login_modal_avatar_text</field>
+                <field>rhea_login_welcome_label</field>
+                <field>rhea_login_profile_label</field>
+                <field>rhea_login_my_properties_label</field>
+                <field>rhea_login_favorites_label</field>
+                <field>rhea_login_compare_label</field>
+                <field>rhea_log_out_label</field>
+                <field>rhea_login_add_more_repeater</field>
+            </fields>
+            <fields-in-item items_of="rhea_login_add_more_repeater">
+                <field>rhea_link_text</field>
+                <field>rhea_page_url>url</field>
+            </fields-in-item>
+        </widget>
+        <widget name="rhea-modern-features-section-widget">
+            <fields>
+                <field>rhea_section_feature</field>
+            </fields>
+            <fields-in-item items_of="rhea_section_feature">
+                <field>section_image>url</field>
+                <field>section_image>id</field>
+                <field>section_image>size</field>
+                <field>section_image>alt</field>
+                <field>section_image>source</field>
+                <field>section_title</field>
+                <field>section_description</field>
+            </fields-in-item>
+        </widget>
+        <widget name="rhea-search-form-widget">
+            <fields>
+                <field>rhea_select_search_template</field>
+                <field>search_button_label</field>
+                <field>advance_popup_text</field>
+                <field>rhea_location_title_1</field>
+                <field>rhea_location_ph_1</field>
+                <field>location_count_placeholder</field>
+                <field>rhea_location_title_2</field>
+                <field>rhea_location_ph_2</field>
+                <field>rhea_location_title_3</field>
+                <field>rhea_location_ph_3</field>
+                <field>rhea_location_title_4</field>
+                <field>rhea_location_ph_4</field>
+                <field>rhea_ajax_input_placeholder</field>
+                <field>rhea_no_result_matched</field>
+                <field>hide_empty_location</field>
+                <field>property_status_label</field>
+                <field>property_status_placeholder</field>
+                <field>status_count_placeholder</field>
+                <field>show_status_in_tabs</field>
+                <field>default_status_select</field>
+                <field>property_types_label</field>
+                <field>property_types_placeholder</field>
+                <field>types_count_placeholder</field>
+                <field>show_types_in_tabs</field>
+                <field>types_in_tabs</field>
+                <field>default_types_select</field>
+                <field>min_bed_label</field>
+                <field>min_bed_placeholder</field>
+                <field>min_bed_drop_down_value</field>
+                <field>min_bath_label</field>
+                <field>min_bath_placeholder</field>
+                <field>min_bath_drop_down_value</field>
+                <field>slider_field_label</field>
+                <field>slider_range_label</field>
+                <field>slider_range_from</field>
+                <field>slider_range_to</field>
+                <field>slider_min_price</field>
+                <field>slider_max_price</field>
+                <field>min_price_label</field>
+                <field>min_price_placeholder</field>
+                <field>max_price_label</field>
+                <field>max_price_placeholder</field>
+                <field>min_price_drop_down_value</field>
+                <field>max_price_drop_down_value</field>
+                <field>min_rent_price_drop_down_value</field>
+                <field>max_rent_price_drop_down_value</field>
+                <field>garages_label</field>
+                <field>garages_placeholder</field>
+                <field>garages_drop_down_value</field>
+                <field>agency_label</field>
+                <field>agency_placeholder</field>
+                <field>agency_count_placeholder</field>
+                <field>set_multiple_agencies</field>
+                <field>agent_label</field>
+                <field>agent_placeholder</field>
+                <field>agent_count_placeholder</field>
+                <field>min_area_label</field>
+                <field>min_area_placeholder</field>
+                <field>max_area_label</field>
+                <field>max_area_placeholder</field>
+                <field>area_units_placeholder</field>
+                <field>area_units_title_attr</field>
+                <field>min_lot_size_label</field>
+                <field>min_lot_size_placeholder</field>
+                <field>max_lot_size_label</field>
+                <field>max_lot_size_placeholder</field>
+                <field>lot_size_units_placeholder</field>
+                <field>lot_size_units_title_attr</field>
+                <field>keyword_label</field>
+                <field>keyword_placeholder</field>
+                <field>property_id_label</field>
+                <field>property_id_placeholder</field>
+                <field>advance_features_text</field>
+                <field>features_label</field>
+                <field>features_placeholder</field>
+                <field>features_count_placeholder</field>
+                <field>additional_field_any_text</field>
+                <field>prefix_placeholder</field>
+                <field>postfix_placeholder</field>
+            </fields>
+            <fields-in-item items_of="types_in_tabs"/>
+        </widget>
+
+        <widget name="rhea-properties-cities-widget">
+            <fields>
+                <field>rhea_add_city_select</field>
+                <field>ere_property_singular_label</field>
+                <field>ere_property_plural_label</field>
+            </fields>
+            <fields-in-item items_of="rhea_add_city_select">
+                <field>rhea_property_location_select_section</field>
+                <field>rhea_city_label</field>
+                <field>image>url</field>
+                <field>image>id</field>
+                <field>image>size</field>
+                <field>image>alt</field>
+                <field>image>source</field>
+            </fields-in-item>
+        </widget>
+        <widget name="inspiry-hero-widget">
+            <fields>
+                <field>section_title</field>
+                <field>section_description</field>
+                <field>form_title</field>
+                <field>location_field_label</field>
+                <field>location_field_placeholder</field>
+                <field>type_field_label</field>
+                <field>type_field_placeholder</field>
+                <field>guest_field_label</field>
+                <field>guest_field_placeholder</field>
+                <field>submit_button_text</field>
+                <field>testimonial_content</field>
+                <field>testimonial_name</field>
+                <field>testimonial_image>url</field>
+                <field>testimonial_image>id</field>
+                <field>testimonial_image>size</field>
+                <field>testimonial_image>alt</field>
+                <field>testimonial_image>source</field>
+                <field>column_image>url</field>
+                <field>column_image>id</field>
+                <field>column_image>size</field>
+                <field>column_image>alt</field>
+                <field>column_image>source</field>
+            </fields>
+        </widget>
+        <widget name="rhea-how-it-works-widget">
+            <fields>
+                <field>rhea_hiw_section</field>
+            </fields>
+            <fields-in-item items_of="rhea_hiw_section">
+                <field>section_image>url</field>
+                <field>section_image>id</field>
+                <field>section_image>size</field>
+                <field>section_image>alt</field>
+                <field>section_image>source</field>
+                <field>section_title</field>
+                <field>section_description</field>
+            </fields-in-item>
+        </widget>
+        <widget name="inspiry-icon-list-widget">
+            <fields>
+                <field>icon_list</field>
+            </fields>
+            <fields-in-item items_of="icon_list">
+                <field>text</field>
+                <field>text_right</field>
+                <field>link>url</field>
+            </fields-in-item>
+        </widget>
+        <widget name="rhea-icon-box-widget">
+            <fields>
+                <field>title_text</field>
+                <field>description_text</field>
+                <field>link>url</field>
+            </fields>
+        </widget>
+        <widget name="inspiry-image-carousel-widget">
+            <fields>
+                <field>carousel</field>
+                <field>rhea_carousel_style_2</field>
+            </fields>
+            <fields-in-item items_of="carousel">
+                <field>id</field>
+                <field>url</field>
+            </fields-in-item>
+            <fields-in-item items_of="rhea_carousel_style_2">
+                <field>image>url</field>
+                <field>image>id</field>
+                <field>image>size</field>
+                <field>image>alt</field>
+                <field>image>source</field>
+                <field>title</field>
+                <field>label-bold</field>
+                <field>label</field>
+                <field>slide_url>url</field>
+            </fields-in-item>
+        </widget>
+        <widget name="inspiry-image-gallery-widget">
+            <fields>
+                <field>single_gallery</field>
+                <field>multiple_galleries</field>
+                <field>all_filter_label</field>
+            </fields>
+            <fields-in-item items_of="single_gallery">
+                <field>id</field>
+                <field>url</field>
+            </fields-in-item>
+            <fields-in-item items_of="multiple_galleries">
+                <field>gallery_title</field>
+                <field>gallery_images</field>
+            </fields-in-item>
+        </widget>
+        <widget name="inspiry-accordion-widget">
+            <fields>
+                <field>tabs</field>
+            </fields>
+            <fields-in-item items_of="tabs">
+                <field>tab_title</field>
+                <field>tab_content</field>
+            </fields-in-item>
+        </widget>
+        <widget name="inspiry-tabs-widget">
+            <fields>
+                <field>tabs_nav_title</field>
+                <field>tabs</field>
+            </fields>
+            <fields-in-item items_of="tabs">
+                <field>tab_title</field>
+                <field>tab_content</field>
+            </fields-in-item>
+        </widget>
+        <widget name="rhea-schedule-tour-form-widget">
+            <fields>
+                <field>section_subtitle</field>
+                <field>section_title</field>
+                <field>name_field_label</field>
+                <field>email_field_label</field>
+                <field>date_field_label</field>
+                <field>message_field_label</field>
+                <field>button_text</field>
+                <field>agent_thumb>url</field>
+                <field>agent_thumb>id</field>
+                <field>agent_thumb>size</field>
+                <field>agent_thumb>alt</field>
+                <field>agent_thumb>source</field>
+                <field>agent_name</field>
+                <field>agent_designation</field>
+                <field>contact_number</field>
+                <field>contact_email_address</field>
+                <field>contact_address</field>
+                <field>contact_call_to_action</field>
+                <field>contact_call_to_action_link_text</field>
+                <field>contact_call_to_action_url</field>
+            </fields>
+        </widget>
+        <widget name="rhea-schedule-tour-widget">
+            <fields>
+                <field>left_area_title</field>
+                <field>property_read_more_text</field>
+                <field>left_area_agent</field>
+                <field>view_agent_detail_text</field>
+                <field>nearby_places_repeat_list</field>
+                <field>left_area_gallery</field>
+                <field>right_area_calendar_title</field>
+                <field>rhea_sat_time_slots</field>
+                <field>right_area_form_title</field>
+                <field>right_area_next_button_text</field>
+                <field>right_area_in_person_title</field>
+                <field>right_area_video_call_title</field>
+                <field>form_name_placeholder</field>
+                <field>form_name_error_message</field>
+                <field>form_phone_placeholder</field>
+                <field>form_email_placeholder</field>
+                <field>form_email_error_message</field>
+                <field>form_message_placeholder</field>
+                <field>right_area_back_button_text</field>
+                <field>right_area_submit_button_text</field>
+            </fields>
+            <fields-in-item items_of="nearby_places_repeat_list">
+                <field>nearby_place_title</field>
+                <field>nearby_place_subtitle</field>
+                <field>nearby_place_image>url</field>
+                <field>nearby_place_image>id</field>
+                <field>nearby_place_image>size</field>
+                <field>nearby_place_image>alt</field>
+                <field>nearby_place_image>source</field>
+                <field>nearby_distance</field>
+            </fields-in-item>
+            <fields-in-item items_of="left_area_gallery">
+                <field>id</field>
+                <field>url</field>
+            </fields-in-item>
+        </widget>
+        <widget name="rhea-single-property-slider-widget">
+            <fields>
+                <field>slider_images</field>
+                <field>property_video_sub_heading</field>
+                <field>property_video_heading</field>
+                <field>property_video_url</field>
+                <field>property_title</field>
+                <field>property_description</field>
+                <field>property_price</field>
+                <field>property_address</field>
+                <field>cta_button_text</field>
+                <field>cta_url>url</field>
+                <field>bedrooms_label</field>
+                <field>bedrooms</field>
+                <field>bathrooms_label</field>
+                <field>bathrooms</field>
+                <field>area_label</field>
+                <field>area</field>
+                <field>area_unit</field>
+            </fields>
+            <fields-in-item items_of="slider_images">
+                <field>id</field>
+                <field>url</field>
+            </fields-in-item>
+        </widget>
+        <widget name="rhea-single-property-map-widget">
+            <fields>
+                <field>location_label</field>
+                <field>contact_number</field>
+                <field>email_address</field>
+                <field>address</field>
+                <field>background_image>url</field>
+                <field>background_image>id</field>
+                <field>background_image>size</field>
+                <field>background_image>alt</field>
+                <field>background_image>source</field>
+            </fields>
+        </widget>
+        <widget name="rhea-property-taxonomy-widget">
+            <fields>
+                <field>term_custom_name</field>
+                <field>image>url</field>
+                <field>image>id</field>
+                <field>image>size</field>
+                <field>image>alt</field>
+                <field>image>source</field>
+                <field>property_singular_label</field>
+                <field>property_plural_label</field>
+                <field>tax_view_all_label</field>
+                <field>description</field>
+            </fields>
+        </widget>
+        <widget name="rhea-property-floor-plans-widget">
+            <fields>
+                <field>floor_plans_list</field>
+                <field>fp_button_text</field>
+            </fields>
+            <fields-in-item items_of="floor_plans_list">
+                <field>fp_title</field>
+                <field>fp_price</field>
+                <field>fp_beds</field>
+                <field>fp_baths</field>
+                <field>fp_area</field>
+                <field>_id</field>
+                <field>fp_description</field>
+                <field>fp_image>url</field>
+                <field>fp_image>id</field>
+                <field>fp_image>size</field>
+                <field>fp_image>alt</field>
+                <field>fp_image>source</field>
+                <field>fp_lightbox_image>url</field>
+                <field>fp_lightbox_image>id</field>
+                <field>fp_lightbox_image>size</field>
+                <field>fp_lightbox_image>alt</field>
+                <field>fp_lightbox_image>source</field>
+            </fields-in-item>
+        </widget>
+        <widget name="rhea-properties-slider-widget">
+            <fields>
+                <field>button_text</field>
+                <field>property_statuses_icons</field>
+                <field>bedrooms_label</field>
+                <field>bathrooms_label</field>
+                <field>area_label</field>
+            </fields>
+            <fields-in-item items_of="property_statuses_icons">
+                <field>property_status</field>
+            </fields-in-item>
+        </widget>
+        <widget name="rhea-properties-slider-two-widget">
+            <fields>
+                <field>properties_list</field>
+                <field>rhea_add_meta_select</field>
+            </fields>
+            <fields-in-item items_of="properties_list">
+                <field>property_id</field>
+                <field>property_title</field>
+                <field>property_image>url</field>
+                <field>property_image>id</field>
+                <field>property_image>alt</field>
+                <field>property_image>source</field>
+                <field>property_image>size</field>
+            </fields-in-item>
+            <fields-in-item items_of="rhea_add_meta_select">
+                <field>rhea_meta_repeater_label</field>
+            </fields-in-item>
+        </widget>
+        <widget name="rhea-nav-menu">
+            <fields>
+                <field>menu-trigger-icon>value</field>
+                <field>menu-trigger-icon>library</field>
+            </fields>
+        </widget>
+        <widget name="rhea-site-logo">
+            <fields>
+                <field>site-image>url</field>
+                <field>site-image>id</field>
+                <field>site-image>size</field>
+                <field>site-image>alt</field>
+                <field>site-image>source</field>
+                <field>retina-site-image>url</field>
+                <field>retina-site-image>id</field>
+                <field>retina-site-image>size</field>
+                <field>retina-site-image>alt</field>
+                <field>retina-site-image>source</field>
+                <field>site_title</field>
+            </fields>
+        </widget>
+        <widget name="rhea-button-widget">
+            <fields>
+                <field>button_text</field>
+                <field>button_text_url>url</field>
+                <field>button_icon>value</field>
+                <field>button_icon>library</field>
+            </fields>
+        </widget>
+        <widget name="rhea-social-icons-list-widget">
+            <fields>
+                <field>social_icon_list</field>
+            </fields>
+            <fields-in-item items_of="social_icon_list">
+                <field>social_icon>value</field>
+                <field>social_icon>library</field>
+                <field>link>url</field>
+            </fields-in-item>
+        </widget>
+        <widget name="ere-page-title-widget">
+            <fields>
+                <field>top_title</field>
+                <field>main_title</field>
+                <field>description</field>
+            </fields>
+        </widget>
+        <!--Classic Elementor Widgets-->
+        <widget name="ere-classic-slogan-widget">
+            <fields>
+                <field>ere_main_title</field>
+                <field>ere_description</field>
+            </fields>
+        </widget>
+        <widget name="rhea-classic-properties-widget">
+            <fields>
+                <field>property-feature</field>
+                <field>property-type</field>
+                <field>property-city</field>
+                <field>property-status</field>
+                <field>ere_property_more_detail_label</field>
+                <field>ere_property_bedrooms_label</field>
+                <field>ere_property_bathroom_label</field>
+                <field>ere_property_garage_label</field>
+            </fields>
+            <fields-in-item items_of="property-feature"/>
+            <fields-in-item items_of="property-type"/>
+            <fields-in-item items_of="property-city"/>
+            <fields-in-item items_of="property-status"/>
+        </widget>
+        <widget name="ere-classic-featured-properties-widget">
+            <fields>
+                <field>ere_featured_more_detail_label</field>
+                <field>ere_featured_photos_label</field>
+                <field>ere_featured_photo_singular_label</field>
+                <field>ere_featured_area_postfix_label</field>
+                <field>ere_featured_bedrooms_label</field>
+                <field>ere_featured_bedroom_singular_label</field>
+                <field>ere_featured_bathrooms_label</field>
+                <field>ere_featured_bathroom_singular_label</field>
+            </fields>
+        </widget>
+        <widget name="ere-classic-features-section-widget">
+            <fields>
+                <field>main_title</field>
+                <field>main_description</field>
+                <field>features_bg_image>url</field>
+                <field>features_bg_image>id</field>
+                <field>features_bg_image>size</field>
+                <field>features_bg_image>alt</field>
+                <field>features_bg_image>source</field>
+                <field>ere_section_feature</field>
+            </fields>
+            <fields-in-item items_of="ere_section_feature">
+                <field>section_title</field>
+                <field>section_image>url</field>
+                <field>section_image>id</field>
+                <field>section_image>size</field>
+                <field>section_image>alt</field>
+                <field>section_image>source</field>
+                <field>section_description</field>
+            </fields-in-item>
+        </widget>
+        <widget name="ere-classic-news-section-widget">
+            <fields>
+                <field>category</field>
+                <field>post_tag</field>
+                <field>post_format</field>
+                <field>translation_priority</field>
+                <field>ere_news_on</field>
+                <field>ere_news_by</field>
+                <field>ere_news_read_more</field>
+            </fields>
+            <fields-in-item items_of="category"/>
+            <fields-in-item items_of="post_tag"/>
+            <fields-in-item items_of="post_format"/>
+            <fields-in-item items_of="translation_priority"/>
+        </widget>
+    </elementor-widgets>
+</wpml-config>

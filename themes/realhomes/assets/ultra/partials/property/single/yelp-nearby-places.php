@@ -1,0 +1,18 @@
+<?php
+/**
+ * Property yelp nearby places section.
+ *
+ * @since      4.0.0
+ * @package    realhomes
+ * @subpackage ultra
+ */
+if ( 'true' === get_option( 'inspiry_display_yelp_nearby_places', 'false' ) ) : ?>
+    <div class="rh_property__yelp_wrap <?php realhomes_printable_section( 'yelp-nearby-places' ); ?>">
+		<?php
+		$yelp_nearby_title = get_option( 'inspiry_property_yelp_nearby_places_title', esc_html__( 'What\'s Nearby?', 'framework' ) );
+		if ( ! empty( $yelp_nearby_title ) ) : ?>
+            <h4 class="rh_property__heading"><?php echo esc_html( $yelp_nearby_title ); ?></h4>
+		<?php endif; ?>
+        <div class="rh_property__yelp"><?php inspiry_yelp_nearby_places(); ?></div>
+    </div>
+<?php endif; ?>
