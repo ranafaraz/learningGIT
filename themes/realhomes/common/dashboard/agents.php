@@ -47,7 +47,7 @@ if (isset($_GET['property_status_filter']) && in_array($_GET['property_status_fi
 
 $posts_per_page = realhomes_dashboard_posts_per_page();
 $current_user = wp_get_current_user();
-$agency_post_id = get_user_meta($current_user->ID, 'inspiry_user_agency', true);
+$agency_post_id = get_user_meta($current_user->ID, 'inspiry_role_post_id', true);
 
 $post_args = array(
 	'post_type' => 'agent',

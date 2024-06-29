@@ -113,7 +113,7 @@ if ($is_agent_post) {
             <div class="row">
                 <div class="col-md-12">
                     <p>
-                        <label for="post_title"><?php esc_html_e('Name', 'framework'); ?></label>
+                        <label for="post_title"><?php esc_html_e('Name', 'framework'); ?> *</label>
                         <input id="post_title" name="post_title" type="text" class="required" value="<?php
                         if ($is_post_editable) {
                             echo esc_attr($target_post->post_title);
@@ -161,9 +161,9 @@ if ($is_agent_post) {
                 </div>
                 <div class="col-lg-6 col-xl-4">
                     <p>
-                        <label for="mobile-number"><?php esc_html_e('Mobile Number', 'framework'); ?></label>
+                        <label for="mobile-number"><?php esc_html_e('Mobile Number', 'framework'); ?> *</label>
                         <input name="mobile-number" type="text" id="mobile-number"
-                            value="<?php echo esc_attr($post_data['mobile']); ?>" />
+                            value="<?php echo esc_attr($post_data['mobile']); ?>" required />
                     </p>
                 </div>
                 <div class="col-lg-6 col-xl-4">

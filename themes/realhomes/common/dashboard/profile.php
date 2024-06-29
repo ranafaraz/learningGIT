@@ -76,10 +76,10 @@ do_action( 'inspiry_before_edit_profile_page_render', get_the_ID() );
                     </div>
                     <div class="col-lg-6">
                         <p>
-                            <label for="mobile-number"><?php esc_html_e( 'Mobile Number', 'framework' ); ?></label>
+                            <label for="mobile-number"><?php esc_html_e( 'Mobile Number', 'framework' ); ?> *</label>
                             <input name="mobile-number" type="text" id="mobile-number" value="<?php if ( isset( $current_user_meta['mobile_number'] ) ) {
 								echo esc_attr( $current_user_meta['mobile_number'][0] );
-							} ?>" />
+							} ?>" required/>
                         </p>
                     </div>
                 </div>
