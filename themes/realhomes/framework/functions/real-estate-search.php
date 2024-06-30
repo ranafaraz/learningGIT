@@ -1633,9 +1633,9 @@ if (!function_exists('inspiry_beds_search')):
 		if ((!empty($_GET['bedrooms'])) && ($_GET['bedrooms'] != inspiry_any_value())) {
 			$meta_query[] = array(
 				'key' => 'REAL_HOMES_property_bedrooms',
-				'value' => $_GET['bedrooms'],
+				'value' => intval($_GET['bedrooms']),
 				'compare' => inspiry_get_beds_baths_compare_operator(),
-				'type' => 'DECIMAL',
+				'type' => 'DECIMAL'
 			);
 		}
 
@@ -1924,7 +1924,8 @@ if (!function_exists('inspiry_fix_featured_meta')):
 					'templates/properties-search-half-map.php',
 					'templates/properties-search-left-sidebar.php',
 					'templates/properties-search-right-sidebar.php',
-				))
+				)
+			)
 		) {
 
 			// Only if featured properties on top is enabled
@@ -1956,7 +1957,8 @@ if (!function_exists('inspiry_fix_featured_meta')):
 								),
 							),
 						),
-					));
+					)
+				);
 
 				if ($fixable_properties) {
 					foreach ($fixable_properties as $fixable_property) {
@@ -2046,14 +2048,16 @@ if (!function_exists('inspiry_searched_ajax_locations')) {
 				$searched_terms = get_term_by('slug', $location, 'property-city');
 				?>
 				<option value="<?php echo esc_attr($searched_terms->slug) ?>" selected="selected">
-					<?php echo esc_html($searched_terms->name) ?></option>
+					<?php echo esc_html($searched_terms->name) ?>
+				</option>
 				<?php
 			}
 		} elseif (!empty($searched_terms)) {
 			$searched_terms = get_term_by('slug', $searched_locations, 'property-city');
 			?>
 			<option value="<?php echo esc_attr($searched_terms->slug) ?>" selected="selected">
-				<?php echo esc_html($searched_terms->name) ?></option>
+				<?php echo esc_html($searched_terms->name) ?>
+			</option>
 			<?php
 		}
 

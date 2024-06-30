@@ -42,6 +42,10 @@ if ('1' !== get_post_meta(get_queried_object_id(), 'REAL_HOMES_hide_advance_sear
 			$mainPart = explode('/', $currentPath)[1];
 			$location = preg_replace('/דירות-בחריש-בשכונת-/', '', $mainPart);
 			$_GET['location'] = [$location];
+		} else if (str_ends_with($currentPath, '-חדרים-בחריש/') && count(explode('/', $currentPath)) >= 2) {
+			$mainPart = explode('/', $currentPath)[1];
+			$rooms = preg_replace('/-/', '.', preg_replace('/-חדרים-בחריש/', '', preg_replace('/דירות-/', '', $mainPart)));
+			$_GET['bedrooms'] = $rooms;
 		} else {
 			$parts = explode('/', $currentPath);
 			if (count($parts) >= 2) {
@@ -58,6 +62,7 @@ if ('1' !== get_post_meta(get_queried_object_id(), 'REAL_HOMES_hide_advance_sear
 		if (
 			(isset($_GET['status']) && !empty($_GET['status']) && is_array($_GET['status']) && count($_GET['status']) > 0) ||
 			(isset($_GET['location']) && !empty($_GET['location']) && is_array($_GET['location']) && count($_GET['location']) > 0) ||
+			(isset($_GET['bedrooms']) && !empty($_GET['bedrooms'])) ||
 			(isset($_GET['type']) && !empty($_GET['type']) && is_array($_GET['type']) && count($_GET['type']) > 0)
 		) {
 			// $title = get_the_title();
@@ -67,6 +72,8 @@ if ('1' !== get_post_meta(get_queried_object_id(), 'REAL_HOMES_hide_advance_sear
 				$title = urldecode($_GET['status'][0]) . ' דירות בחריש';
 			} else if (isset($_GET['location']) && !empty($_GET['location']) && is_array($_GET['location']) && count($_GET['location']) > 0) {
 				$title = 'דירות בחריש בשכונת ' . urldecode($_GET['location'][0]);
+			} else if (isset($_GET['bedrooms']) && !empty($_GET['bedrooms']) && $_GET['bedrooms']) {
+				$title = 'דירות ' . urldecode($_GET['bedrooms']) . ' חדרים בחריש';
 			} else if (isset($_GET['type']) && !empty($_GET['type']) && is_array($_GET['type']) && count($_GET['type']) > 0) {
 				$title = preg_replace('/-/', ' ', urldecode($_GET['type'][0])) . ' בחריש';
 			}
@@ -92,7 +99,6 @@ if ('1' !== get_post_meta(get_queried_object_id(), 'REAL_HOMES_hide_advance_sear
 			?>
 		</div>
 		<div class="rh-custom-search-form-gutter clearfix"></div>
-
 		<?php
 	}
 }
