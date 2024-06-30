@@ -17,11 +17,11 @@ if (0 < intval(get_option('realhomes_default_selected_agent'))) {
 } else if (inspiry_is_user_sync_enabled()) {
 	$user_id = get_current_user_id();
 	if ('agent' === get_user_meta($user_id, 'inspiry_user_role', true)) {
-		// $user_agent_post_id = get_user_meta($user_id, 'inspiry_role_post_id', true);
-		// if (!empty($user_agent_post_id)) {
-		// 	$default_selection = 'agent_info';
-		// 	$default_agent = $user_agent_post_id;
-		// }
+		$user_agent_post_id = get_user_meta($user_id, 'inspiry_role_post_id', true);
+		if (!empty($user_agent_post_id)) {
+			// 	$default_selection = 'agent_info';
+			$default_agent = $user_agent_post_id;
+		}
 		$default_selection = 'my_profile_info';
 	} else if ('agency' === get_user_meta($user_id, 'inspiry_user_role', true)) {
 		$default_selection = 'agent_info';
@@ -64,7 +64,7 @@ if (empty($property_agent_information_label)) {
 	$property_agent_information_label = esc_html__('Display agent(s) information.', 'framework');
 }
 
-$isAgency = get_user_meta($user_id, 'inspiry_user_role', true) === 'agency';
+$inspiry_user_role = get_user_meta($user_id, 'inspiry_user_role', true);
 
 ?>
 <div class="property-agent-information">
@@ -94,7 +94,7 @@ $isAgency = get_user_meta($user_id, 'inspiry_user_role', true) === 'agency';
 				</label>
 			</li>
 		<?php endif;
-		if ($isAgency) {
+		if ($inspiry_user_role == 'agency') {
 			?>
 			<li class="radio-field">
 				<input id="agent_option_agent" type="radio" name="agent_display_option" value="agent_info" <?php checked('agent_info', $default_selection); ?> />
@@ -141,6 +141,11 @@ $isAgency = get_user_meta($user_id, 'inspiry_user_role', true) === 'agency';
 				</div>
 			</li>
 			<?php
-		} ?>
+		} else if ($inspiry_user_role == 'agent') {
+			$user_id = get_current_user_id();
+			$user_agent_post_id = get_user_meta($user_id, 'inspiry_role_post_id', true);
+			echo '<input type="hidden" name="agent_id" value="' . $user_agent_post_id . '">';
+		}
+		?>
 	</ul>
 </div>
