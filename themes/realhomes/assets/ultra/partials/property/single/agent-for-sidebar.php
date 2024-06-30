@@ -70,7 +70,7 @@ function display_sidebar_agent_box($args)
 			}
 			if (isset($args['display_author']) && ($args['display_author'])) {
 				$agent_url = get_author_posts_url(get_the_author_meta('ID'));
-				$agent_url = preg_replace('/\/author\//', '/agent/', $agent_url);
+				$agent_url = preg_replace('/\/author\//', '/מתווך/', $agent_url);
 			} else {
 				$agent_url = get_permalink($args['agent_id']);
 			}
@@ -175,20 +175,20 @@ function display_sidebar_agent_box($args)
 					<?php
 				}
 				/*
-																																if (isset($args['agent_email']) && !empty($args['agent_email'])) {
-																																	?>
-																																	<p class="contact email">
-																																		<span><?php esc_html_e('Email', 'framework'); ?></span>
-																																		<a href="mailto:<?php echo esc_attr(antispambot($args['agent_email'])); ?>">
-																																			<?php
-																																			inspiry_safe_include_svg('/ultra/icons/email.svg', '/assets/');
-																																			echo esc_html(antispambot($args['agent_email']));
-																																			?>
-																																		</a>
-																																	</p>
-																																	<?php
-																																}
-																																*/
+																																				if (isset($args['agent_email']) && !empty($args['agent_email'])) {
+																																					?>
+																																					<p class="contact email">
+																																						<span><?php esc_html_e('Email', 'framework'); ?></span>
+																																						<a href="mailto:<?php echo esc_attr(antispambot($args['agent_email'])); ?>">
+																																							<?php
+																																							inspiry_safe_include_svg('/ultra/icons/email.svg', '/assets/');
+																																							echo esc_html(antispambot($args['agent_email']));
+																																							?>
+																																						</a>
+																																					</p>
+																																					<?php
+																																				}
+																																				*/
 				?>
 			</div>
 		<?php endif;
