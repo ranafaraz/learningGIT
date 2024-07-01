@@ -76,8 +76,8 @@ $properties_args = array(
 $user_role = get_user_meta($current_user->ID, 'inspiry_user_role', true);
 $agency_id = get_user_meta($current_user->ID, 'inspiry_role_post_id', true);
 
-if (isset($_GET['test']) && $user_role === 'agency' && $agency_id) {
-	// get all users when inspiry_user_role is agent, and inspiry_user_agency === agency_id
+if ($user_role === 'agency' && $agency_id) {
+	// Get all users when inspiry_user_role is agent, and inspiry_user_agency === agency_id
 	$agent_user_ids = get_users(
 		array(
 			'meta_key' => 'inspiry_user_agency',
