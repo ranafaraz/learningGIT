@@ -15,3 +15,6 @@
 	Tags: custom-background, light, one-column, two-columns, three-columns, four-columns, right-sidebar, flexible-header, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
 
 	----------------------------------------------------------------------------------------------------------------*/
+.advance-search-form{
+    display: none;
+}

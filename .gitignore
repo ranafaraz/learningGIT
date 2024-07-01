@@ -1,0 +1,13 @@
+ai1wm-backups
+cache
+languages
+logs
+mu-plugins
+mc_data
+wflogs
+uploads
+wp-rocket-config
+advanced-cache.php
+plugins
+!plugins/realhomes-elementor-addon
+!plugins/easy-real-estate
