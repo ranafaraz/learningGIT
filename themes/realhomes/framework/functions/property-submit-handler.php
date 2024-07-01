@@ -103,9 +103,6 @@ if (!function_exists('inspiry_image_upload')) {
 				$attach_data = wp_generate_attachment_metadata($attach_id, $uploaded_image['file']); // This function generates metadata for an image attachment. It also creates a thumbnail and other intermediate sizes of the image attachment based on the sizes defined
 
 				if (!empty($attach_data)) {
-					// $altText = 'testing 123' . $attach_id;
-					// update_post_meta($attach_id, '_wp_attachment_image_alt', sanitize_text_field($altText));
-
 					wp_update_attachment_metadata($attach_id, $attach_data); // Update metadata for an attachment.
 
 					if (isset($_REQUEST['size'])) {
