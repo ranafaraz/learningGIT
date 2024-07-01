@@ -111,7 +111,7 @@ $inspiry_user_role = get_user_meta($user_id, 'inspiry_user_role', true);
 					?> data-size="5"
 						data-actions-box="true" title="<?php esc_attr_e('No Agent Selected', 'framework') ?>">
 						<?php
-						$agencyId = get_user_meta($user_id, 'inspiry_user_agency', true);
+						$agencyId = get_user_meta($user_id, 'inspiry_role_post_id', true);
 						$postArgs = [
 							'post_type' => 'agent'
 						];
@@ -124,17 +124,17 @@ $inspiry_user_role = get_user_meta($user_id, 'inspiry_user_role', true);
 									'compare' => '=',
 								],
 							];
-						}
 
-						if (realhomes_dashboard_edit_property()) {
-							global $post_meta_data;
-							if (isset($post_meta_data['REAL_HOMES_agents'])) {
-								generate_posts_list($postArgs, $post_meta_data['REAL_HOMES_agents']);
+							if (realhomes_dashboard_edit_property()) {
+								global $post_meta_data;
+								if (isset($post_meta_data['REAL_HOMES_agents'])) {
+									generate_posts_list($postArgs, $post_meta_data['REAL_HOMES_agents']);
+								} else {
+									generate_posts_list($postArgs, $default_agent);
+								}
 							} else {
 								generate_posts_list($postArgs, $default_agent);
 							}
-						} else {
-							generate_posts_list($postArgs, $default_agent);
 						}
 						?>
 					</select>
