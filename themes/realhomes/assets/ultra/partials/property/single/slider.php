@@ -31,7 +31,9 @@ if ( ! empty( $properties_images ) && 1 < count( $properties_images ) && ( 'yes'
 					?>
                     <div>
                         <div class="rh-ultra-property-thumb-wrapper">
-                            <a class="rh-ultra-property-thumb" href="<?php echo esc_url( $prop_image_meta['full_url'] ) ?>" style='background-image: url("<?php echo esc_url( $prop_image_meta['full_url'] ) ?>")' data-fancybox="gallery" <?php echo esc_attr( $lightbox_caption ) ?>></a>
+                            <a class="rh-ultra-property-thumb" href="<?php echo esc_url( $prop_image_meta['full_url'] ) ?>" data-fancybox="gallery" <?php echo esc_attr( $lightbox_caption ) ?>>
+                                <img class="gallery-img" src="<?php echo esc_url( $prop_image_meta['full_url'] ) ?>" alt="<?php echo esc_attr( $prop_image_meta['alt'] ) ?>">
+                            </a>
                         </div>
                     </div>
 					<?php
@@ -55,13 +57,14 @@ if ( ! empty( $properties_images ) && 1 < count( $properties_images ) && ( 'yes'
 					$lightbox_caption  = '';
 					foreach ( $properties_images as $prop_image_id => $prop_image_meta ) {
 						$lightbox_title = $prop_image_meta['title'];
+						$alt = $prop_image_meta['alt'];
 						if ( 'true' == $title_in_lightbox ) {
 							$lightbox_caption = 'data-caption="' . $prop_image_meta['title'] . '"';
 						}
 						?>
                         <div>
                             <div class="rh-ultra-property-carousel-thumb-box">
-                                <span class="rh-ultra-property-carousel-thumb" style='background-image: url("<?php echo esc_url( $prop_image_meta['full_url'] ) ?>")'></span>
+                                <img class="rh-ultra-property-carousel-thumb" src="<?php echo esc_url( $prop_image_meta['full_url'] ) ?>" alt="<?php echo $alt; ?>">
                             </div>
                         </div>
 						<?php
