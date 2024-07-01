@@ -39,15 +39,15 @@ if (realhomes_dashboard_edit_property()) {
 			<input type="text" class="required map-address" name="address" value="<?php echo esc_attr($property_address); ?>"
 				title="<?php esc_attr_e('* Please provide a property address!', 'framework'); ?>" required />
 			<?php /*
-	<button class="btn btn-primary goto-address-button" type="button"
-		value="address"><?php echo esc_html($find_address_btn_label); ?></button> */ ?>
+ <button class="btn btn-primary goto-address-button" type="button"
+	 value="address"><?php echo esc_html($find_address_btn_label); ?></button> */ ?>
 		</div>
 		<?php /*
-	<div class="map-wrapper">
-		<div class="map-canvas"></div>
-		<input type="hidden" name="coordinates" class="map-coordinate"
-			value="<?php echo esc_attr($property_location); ?>" />
-	</div> */ ?>
+<div class="map-wrapper">
+	<div class="map-canvas"></div>
+	<input type="hidden" name="coordinates" class="map-coordinate"
+		value="<?php echo esc_attr($property_location); ?>" />
+</div> */ ?>
 	</div>
 	<?php
 } else {
@@ -60,13 +60,13 @@ if (realhomes_dashboard_edit_property()) {
 				value="<?php echo esc_attr(get_option('theme_submit_default_address')); ?>"
 				title="<?php esc_attr_e('* Please provide a property address!', 'framework'); ?>" required />
 			<?php /* <button class="btn btn-primary goto-address-button"
-		 type="button"><?php echo esc_html($find_address_btn_label); ?></button> */ ?>
+		type="button"><?php echo esc_html($find_address_btn_label); ?></button> */ ?>
 		</div>
 		<?php /*
 <div class="map-wrapper">
-	<div class="map-canvas"></div>
-	<input type="hidden" name="coordinates" class="map-coordinate"
-		value="<?php echo esc_attr(get_option('theme_submit_default_location')); ?>" />
+<div class="map-canvas"></div>
+<input type="hidden" name="coordinates" class="map-coordinate"
+	value="<?php echo esc_attr(get_option('theme_submit_default_location')); ?>" />
 </div> */ ?>
 	</div>
 	<?php

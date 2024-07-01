@@ -11,7 +11,7 @@ if (empty($property_price_label)) {
 }
 ?>
 <p>
-	<label for="price"><?php echo esc_html($property_price_label); ?></label>
+	<label for="price"><?php echo esc_html($property_price_label); ?> *</label>
 	<input id="price" name="price" type="text" value="<?php
 	if (realhomes_dashboard_edit_property()) {
 		global $post_meta_data;
