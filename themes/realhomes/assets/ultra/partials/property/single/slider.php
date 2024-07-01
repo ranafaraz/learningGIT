@@ -94,8 +94,8 @@ if ( ! empty( $properties_images ) && 1 < count( $properties_images ) && ( 'yes'
 	?>
     <div class="rh-ultra-property-slider-wrapper">
         <div class="rh-ultra-property-slider-container">
-            <div class="rh-property-featured-image" style="background-image: url('<?php echo esc_url( $image_url ); ?>')">
-                <div id="property-featured-image" class="clearfix only-for-print">
+            <div class="rh-property-featured-image">
+                <div id="property-featured-image">
 					<?php echo '<img src="' . esc_url( $image_url ) . '" alt="' . the_title_attribute( 'echo=0' ) . '" />'; ?>
                 </div>
             </div>
