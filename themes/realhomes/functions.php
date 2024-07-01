@@ -175,32 +175,35 @@ if (!function_exists('inspiry_theme_setup')) {
 		}
 
 		// Add custom editor font sizes.
-		add_theme_support('editor-font-sizes', array(
+		add_theme_support(
+			'editor-font-sizes',
 			array(
-				'name' => esc_html__('Small', 'framework'),
-				'shortName' => esc_html__('S', 'framework'),
-				'size' => 14,
-				'slug' => 'small',
-			),
-			array(
-				'name' => esc_html__('Normal', 'framework'),
-				'shortName' => esc_html__('M', 'framework'),
-				'size' => 16,
-				'slug' => 'normal',
-			),
-			array(
-				'name' => esc_html__('Large', 'framework'),
-				'shortName' => esc_html__('L', 'framework'),
-				'size' => 28,
-				'slug' => 'large',
-			),
-			array(
-				'name' => esc_html__('Huge', 'framework'),
-				'shortName' => esc_html__('XL', 'framework'),
-				'size' => 36,
-				'slug' => 'huge',
-			),
-		));
+				array(
+					'name' => esc_html__('Small', 'framework'),
+					'shortName' => esc_html__('S', 'framework'),
+					'size' => 14,
+					'slug' => 'small',
+				),
+				array(
+					'name' => esc_html__('Normal', 'framework'),
+					'shortName' => esc_html__('M', 'framework'),
+					'size' => 16,
+					'slug' => 'normal',
+				),
+				array(
+					'name' => esc_html__('Large', 'framework'),
+					'shortName' => esc_html__('L', 'framework'),
+					'size' => 28,
+					'slug' => 'large',
+				),
+				array(
+					'name' => esc_html__('Huge', 'framework'),
+					'shortName' => esc_html__('XL', 'framework'),
+					'size' => 36,
+					'slug' => 'huge',
+				),
+			)
+		);
 
 		$editor_color_palette = array(
 			array(
@@ -448,7 +451,8 @@ if (!function_exists('inspiry_theme_sidebars')) {
 				'after_widget' => '</section>',
 				'before_title' => '<h3 class="title">',
 				'after_title' => '</h3>',
-			));
+			)
+		);
 
 		// Location: Sidebar Pages.
 		register_sidebar(
@@ -460,7 +464,8 @@ if (!function_exists('inspiry_theme_sidebars')) {
 				'after_widget' => '</section>',
 				'before_title' => '<h3 class="title">',
 				'after_title' => '</h3>',
-			));
+			)
+		);
 
 		// Location: Sidebar for contact page.
 		if ('classic' === INSPIRY_DESIGN_VARIATION) {
@@ -473,7 +478,8 @@ if (!function_exists('inspiry_theme_sidebars')) {
 					'after_widget' => '</section>',
 					'before_title' => '<h3 class="title">',
 					'after_title' => '</h3>',
-				));
+				)
+			);
 		}
 
 		// Location: Sidebar Property.
@@ -486,7 +492,8 @@ if (!function_exists('inspiry_theme_sidebars')) {
 				'after_widget' => '</section>',
 				'before_title' => '<h3 class="title">',
 				'after_title' => '</h3>',
-			));
+			)
+		);
 
 		// Location: Sidebar Properties List.
 		register_sidebar(
@@ -498,7 +505,8 @@ if (!function_exists('inspiry_theme_sidebars')) {
 				'after_widget' => '</section>',
 				'before_title' => '<h3 class="title">',
 				'after_title' => '</h3>',
-			));
+			)
+		);
 
 		// Location: Footer First Column.
 		register_sidebar(
@@ -510,7 +518,8 @@ if (!function_exists('inspiry_theme_sidebars')) {
 				'after_widget' => '</section>',
 				'before_title' => '<h3 class="title">',
 				'after_title' => '</h3>',
-			));
+			)
+		);
 
 		// Location: Footer Second Column.
 		register_sidebar(
@@ -522,7 +531,8 @@ if (!function_exists('inspiry_theme_sidebars')) {
 				'after_widget' => '</section>',
 				'before_title' => '<h3 class="title">',
 				'after_title' => '</h3>',
-			));
+			)
+		);
 
 		// Location: Footer Third Column.
 		register_sidebar(
@@ -534,7 +544,8 @@ if (!function_exists('inspiry_theme_sidebars')) {
 				'after_widget' => '</section>',
 				'before_title' => '<h3 class="title">',
 				'after_title' => '</h3>',
-			));
+			)
+		);
 
 		// Location: Footer Fourth Column.
 		register_sidebar(
@@ -546,7 +557,8 @@ if (!function_exists('inspiry_theme_sidebars')) {
 				'after_widget' => '</section>',
 				'before_title' => '<h3 class="title">',
 				'after_title' => '</h3>',
-			));
+			)
+		);
 
 		// Location: Sidebar Agent.
 		register_sidebar(
@@ -558,7 +570,8 @@ if (!function_exists('inspiry_theme_sidebars')) {
 				'after_widget' => '</section>',
 				'before_title' => '<h3 class="title">',
 				'after_title' => '</h3>',
-			));
+			)
+		);
 
 		// Location: Sidebar Agency.
 		register_sidebar(
@@ -570,7 +583,8 @@ if (!function_exists('inspiry_theme_sidebars')) {
 				'after_widget' => '</section>',
 				'before_title' => '<h3 class="title">',
 				'after_title' => '</h3>',
-			));
+			)
+		);
 
 		// Location: Property Search Template.
 		register_sidebar(
@@ -582,7 +596,8 @@ if (!function_exists('inspiry_theme_sidebars')) {
 				'after_widget' => '</section>',
 				'before_title' => '<h3 class="title">',
 				'after_title' => '</h3>',
-			));
+			)
+		);
 
 		if ('classic' !== INSPIRY_DESIGN_VARIATION) {
 			// Location: Property Search Template.
@@ -595,21 +610,25 @@ if (!function_exists('inspiry_theme_sidebars')) {
 					'after_widget' => '</section>',
 					'before_title' => '<h3 class="title">',
 					'after_title' => '</h3>',
-				));
+				)
+			);
 		}
 
 		// Create additional sidebar to use with visual composer if needed.
 		if (class_exists('Vc_Manager')) {
 
 			// Additional Sidebars.
-			register_sidebars(4, array(
-				'name' => esc_html__('Additional Sidebar %d', 'framework'),
-				'description' => esc_html__('An extra sidebar to use with Visual Composer if needed.', 'framework'),
-				'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
-				'after_widget' => '</section>',
-				'before_title' => '<h3 class="title">',
-				'after_title' => '</h3>',
-			));
+			register_sidebars(
+				4,
+				array(
+					'name' => esc_html__('Additional Sidebar %d', 'framework'),
+					'description' => esc_html__('An extra sidebar to use with Visual Composer if needed.', 'framework'),
+					'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
+					'after_widget' => '</section>',
+					'before_title' => '<h3 class="title">',
+					'after_title' => '</h3>',
+				)
+			);
 
 		}
 
@@ -626,7 +645,8 @@ if (!function_exists('inspiry_theme_sidebars')) {
 					'after_widget' => '</section>',
 					'before_title' => '<h3 class="home-widget-label">',
 					'after_title' => '</h3>',
-				));
+				)
+			);
 
 			// Additional Sidebars.
 			register_sidebar(
@@ -638,7 +658,8 @@ if (!function_exists('inspiry_theme_sidebars')) {
 					'after_widget' => '</section>',
 					'before_title' => '<h3 class="title">',
 					'after_title' => '</h3>',
-				));
+				)
+			);
 		}
 
 		// Creates additional sidebar to use with WooCommerce page if needed.
@@ -654,7 +675,8 @@ if (!function_exists('inspiry_theme_sidebars')) {
 					'after_widget' => '</section>',
 					'before_title' => '<h3 class="title">',
 					'after_title' => '</h3>',
-				));
+				)
+			);
 		}
 
 	}
@@ -1224,7 +1246,8 @@ if (!function_exists('realhomes_content_width')) {
 					array(
 						'templates/agents-list.php',
 						'templates/agencies-list.php'
-					))
+					)
+				)
 			) {
 				$classes[] = 'realhomes-content-fullwidth default-page-sidebar-inactive';
 			}
@@ -1236,7 +1259,8 @@ if (!function_exists('realhomes_content_width')) {
 					array(
 						'templates/agents-list.php',
 						'templates/agencies-list.php',
-					))
+					)
+				)
 			) {
 				$classes[] = 'realhomes-content-fullwidth property-listing-sidebar-inactive';
 			}
@@ -1248,7 +1272,9 @@ if (!function_exists('realhomes_content_width')) {
 					'templates/grid-layout.php',
 					'templates/list-layout.php',
 					'templates/users-lists.php',
-				)))
+				)
+			)
+			)
 		) {
 			$classes[] = 'realhomes-content-fullwidth property-listing-sidebar-inactive';
 
@@ -1257,7 +1283,8 @@ if (!function_exists('realhomes_content_width')) {
 				array(
 					'templates/properties-search-right-sidebar.php',
 					'templates/properties-search-left-sidebar.php',
-				))
+				)
+			)
 		) {
 			$classes[] = 'realhomes-content-fullwidth property-search-sidebar-inactive';
 
@@ -1343,7 +1370,8 @@ if (!function_exists('rh_sfoi_data_fetch')) {
 				'posts_per_page' => 50,
 				's' => esc_attr($_POST['keyword']),
 				'post_type' => 'property',
-			));
+			)
+		);
 		if ($the_query->have_posts()) {
 			while ($the_query->have_posts()) {
 				$the_query->the_post(); ?>
@@ -1523,3 +1551,62 @@ if ($request_uri === parse_url($old_url, PHP_URL_PATH)) {
 	exit;
 }
 
+// Temp code to update alt text for property images
+// if (isset($_GET['test'])) {
+// 	function custom_process_property_data()
+// 	{
+// 		// Get all posts with the post type "property"
+// 		$properties = get_posts(
+// 			array(
+// 				'post_type' => 'property',
+// 				'numberposts' => -1,
+// 			)
+// 		);
+
+// 		// Loop through each property and get images from post meta 'REAL_HOMES_property_images'
+// 		foreach ($properties as $property) {
+// 			$alt_text_info = [];
+// 			$alt_text_info['city'] = esc_html__('חריש', 'framework');
+// 			$alt_text_info['apartment_desc'] = esc_html__('דירת', 'framework');
+// 			$alt_text_info['bedrooms'] = !empty(trim(get_post_meta($property->ID, 'REAL_HOMES_property_bedrooms', true))) && intval(trim(get_post_meta($property->ID, 'REAL_HOMES_property_bedrooms', true))) > 0 ? intval(trim(get_post_meta($property->ID, 'REAL_HOMES_property_bedrooms', true))) : 0;
+// 			$alt_text_info['bedrooms_desc'] = esc_html__('חדרים', 'framework');
+// 			$alt_text_info['street_desc'] = esc_html__('שכונת', 'framework');
+// 			$alt_text_info['contractor'] = !empty(trim(get_post_meta($property->ID, 'inspiry_קבלן', true))) ? trim(get_post_meta($property->ID, 'inspiry_קבלן', true)) : '';
+// 			$alt_text_info['contractor_desc'] = esc_html__('קבלן', 'framework');
+
+// 			$status_terms = wp_get_object_terms($property->ID, 'property-status');
+// 			$alt_text_info['status'] = '';
+// 			if (!is_wp_error($status_terms) && !empty($status_terms)) {
+// 				$alt_text_info['status'] = $status_terms[0]->name; // Assuming there's only one status term
+// 			}
+// 			$alt_text_info['street'] = '';
+// 			$location_terms = wp_get_object_terms($property->ID, 'property-city');
+// 			if (!is_wp_error($location_terms) && !empty($location_terms)) {
+// 				$alt_text_info['street'] = $location_terms[0]->name; // Assuming there's only one location term
+// 			}
+
+// 			$alt_text = '';
+// 			if (!empty($alt_text_info['status'])) {
+// 				$alt_text .= $alt_text_info['status'] . ' ';
+// 			}
+// 			$alt_text .= 'ב' . $alt_text_info['city'] . ' ';
+
+// 			if ($alt_text_info['bedrooms'] > 0) {
+// 				$alt_text .= $alt_text_info['apartment_desc'] . ' ' . $alt_text_info['bedrooms'] . ' ' . $alt_text_info['bedrooms_desc'] . ' ';
+// 			}
+// 			if (!empty($alt_text_info['street'])) {
+// 				$alt_text .= 'ב' . $alt_text_info['street_desc'] . ' ' . $alt_text_info['street'] . ' ';
+// 			}
+// 			if (!empty($alt_text_info['contractor'])) {
+// 				$alt_text .= $alt_text_info['contractor_desc'] . ' ' . $alt_text_info['contractor'];
+// 			}
+
+// 			$images = get_post_meta($property->ID, 'REAL_HOMES_property_images');
+// 			foreach ($images as $image_id) {
+// 				update_post_meta($image_id, '_wp_attachment_image_alt', sanitize_text_field(trim($alt_text)));
+// 			}
+// 		}
+// 	}
+
+// 	add_action('wp_loaded', 'custom_process_property_data');
+// }
