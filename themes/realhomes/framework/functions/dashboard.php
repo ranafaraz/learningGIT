@@ -1659,7 +1659,7 @@ if (!function_exists('realhomes_dashboard_submit_property')) {
 
 						// Add an alternative text to the image
 						$alt_text_info = [];
-						$alt_text_info['status'] = isset($_POST['status']) ? (intval($_POST['status']) === 67 ? 'למכירה' : intval($_POST['status']) === 68 ? 'להשכרה' : '') : '';
+						$alt_text_info['status'] = isset($_POST['status']) ? (intval($_POST['status']) === 67 ? 'למכירה' : (intval($_POST['status']) === 68 ? 'להשכרה' : '')) : '';
 						$alt_text_info['city'] = esc_html__('חריש', 'framework');
 						$alt_text_info['apartment_desc'] = esc_html__('דירת', 'framework');
 						$alt_text_info['bedrooms'] = isset($_POST['bedrooms']) && !empty(trim($_POST['bedrooms'])) && intval(trim($_POST['bedrooms'])) > 0 ? intval(trim($_POST['bedrooms'])) : 0;
