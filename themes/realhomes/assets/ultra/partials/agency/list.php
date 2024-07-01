@@ -35,6 +35,10 @@
 				// Filter out agents based on their post title (if any starts with 'agency_' then exclude it)
 				$agencies_args['s'] = '-agency_';
 
+				// Exclude also specific agents
+				$exclude_agencies = [6213];
+				$agencies_args['post__not_in'] = $exclude_agencies;
+
 				$agencies_args = inspiry_agencies_sort_args($agencies_args);
 				$agencies_query = new WP_Query(apply_filters('realhomes_agencies_list', $agencies_args));
 
