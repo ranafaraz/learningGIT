@@ -1026,6 +1026,7 @@
          * @param selectedLocationFromPageTitle
          */
         function selectParamOption(currentSelect, selectedLocationFromPageTitle = '') {
+            console.log(selectedLocationFromPageTitle)
             if (selectedLocationFromPageTitle !== '') {
                 console.log(selectedLocationFromPageTitle)
                 let tempValue = [selectedLocationFromPageTitle];
