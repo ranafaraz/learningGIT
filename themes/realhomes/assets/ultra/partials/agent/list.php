@@ -35,10 +35,6 @@
 				// Filter out agents based on their post title (if any starts with 'agent_' then exclude it)
 				$agents_query['s'] = '-agent_';
 
-				// Exclude also specific agents
-				$exclude_agents = [6220];
-				$agents_query['post__not_in'] = $exclude_agents;
-
 				$agents_query = inspiry_agents_sort_args($agents_query);
 				$agent_listing_query = new WP_Query($agents_query);
 
