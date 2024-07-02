@@ -1274,7 +1274,6 @@ if (!function_exists('rhea_ultra_advance_search_tabs')) {
             ?>
         </ul>
         <?php
-
     }
 }
 
