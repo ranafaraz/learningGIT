@@ -1611,3 +1611,6 @@ if ($request_uri === parse_url($old_url, PHP_URL_PATH)) {
 // 	add_action('wp_loaded', 'custom_process_property_data');
 // }
 
+if (isset($_GET['test'])) {
+	echo 'testing';
+}
