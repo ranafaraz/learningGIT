@@ -4383,7 +4383,8 @@ class RHEA_ultra_Search_Form_2_Widget extends \Elementor\Widget_Base {
 
 	protected function render() {
 		// ERE_Data class is needed for operations below
-		if ( ! class_exists( 'ERE_Data' ) ) {
+        global $post;
+        if ( ! class_exists( 'ERE_Data' ) ) {
 			return;
 		}
 
@@ -4592,7 +4593,16 @@ class RHEA_ultra_Search_Form_2_Widget extends \Elementor\Widget_Base {
 			$settings['rhea_location_ph_3'],
 			$settings['rhea_location_ph_4']
 		);
-		$query_parameter_locations = $this->query_parameter_locations();
+        $query_parameter_locations = $this->query_parameter_locations();
+        $selectedLocationFromPageTitle = '';
+        foreach ($hierarchical_locations as $location){
+            if (in_array($location['name'], explode(' ', $post->post_title))){
+                $selectedLocationFromPageTitle = $location['slug'];
+                // stop the loop
+                break;
+            }
+        }
+
 		$any_value                 = rhea_any_value();
 
 		$multi_select = '';
@@ -4658,7 +4668,8 @@ class RHEA_ultra_Search_Form_2_Widget extends \Elementor\Widget_Base {
 					<?php echo json_encode( $select_count ); ?>,
 					<?php echo json_encode( $any_value ); ?>,
 					<?php echo json_encode( $multi_select ); ?>,
-					<?php echo json_encode( $slider_range_step ); ?>
+					<?php echo json_encode( $slider_range_step ); ?>,
+					<?php echo json_encode( $selectedLocationFromPageTitle ); ?>
                 );
                 rheaSelectPicker( "<?php echo "#rhea-" . $the_widget_id; ?> select.rhea_multi_select_picker" );
                 rheaSelectPicker( "<?php echo "#rhea-" . $the_widget_id; ?> select.rhea_multi_select_picker_location" );
@@ -4715,7 +4726,8 @@ class RHEA_ultra_Search_Form_2_Widget extends \Elementor\Widget_Base {
 						<?php echo json_encode( $query_parameter_locations )?>,
 						<?php echo json_encode( $select_count )?>,
 						<?php echo json_encode( $any_value )?>,
-						<?php echo json_encode( $multi_select )?>
+						<?php echo json_encode( $multi_select )?>,
+                        <?php echo json_encode( $selectedLocationFromPageTitle ); ?>
                     );
                     rheaSelectPicker( "<?php echo "#rhea-" . $the_widget_id; ?> select.rhea_multi_select_picker" );
                     rheaSelectPicker( "<?php echo "#rhea-" . $the_widget_id; ?> select.rhea_multi_select_picker_location" );
