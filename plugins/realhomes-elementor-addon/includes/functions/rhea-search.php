@@ -1262,7 +1262,7 @@ if (!function_exists('rhea_ultra_advance_search_tabs')) {
 				foreach ($taxonomy_terms as $term) {
 
 					$checked = '';
-					if ($searched_term === $term->slug) {
+					if ($searched_term[0] === $term->slug) {
 						$checked = ' checked ';
 					} else if ($default === $term->slug) {
 						$checked = ' checked ';

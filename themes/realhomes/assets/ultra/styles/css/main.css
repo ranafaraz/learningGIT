@@ -819,8 +819,7 @@ body .fancybox-button {
   padding-right: 0;
 }
 .bootstrap-select.rh-ultra-select-dropdown > .dropdown-menu {
-  width: -moz-max-content;
-  width: max-content;
+  width: 210px;
   border-radius: 10px;
   list-style: none;
   padding-top: 10px;
