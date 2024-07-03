@@ -1551,6 +1551,25 @@ if ($request_uri === parse_url($old_url, PHP_URL_PATH)) {
 	exit;
 }
 
+function dirabe_get_hebrew_month($month)
+{
+	$hebrew_months = array(
+		'January' => 'ינואר',
+		'February' => 'פברואר',
+		'March' => 'מרץ',
+		'April' => 'אפריל',
+		'May' => 'מאי',
+		'June' => 'יוני',
+		'July' => 'יולי',
+		'August' => 'אוגוסט',
+		'September' => 'ספטמבר',
+		'October' => 'אוקטובר',
+		'November' => 'נובמבר',
+		'December' => 'דצמבר'
+	);
+	return $hebrew_months[$month] ?? $month;
+}
+
 // Temp code to update alt text for property images
 // if (isset($_GET['test'])) {
 // 	function custom_process_property_data()

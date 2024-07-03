@@ -85,7 +85,18 @@ $label_text = get_post_meta(get_the_ID(), 'inspiry_property_label', true);
 				?>
 			</div>
 			<p class="added-date">
-				<?php echo get_the_date(); ?>
+				<?php
+
+				// Get the date components
+				$day = get_the_date('j');  // Day without leading zeros
+				$month = get_the_date('F');  // Full month name
+				$year = get_the_date('Y');  // Full year
+				
+				// Format the date
+				$formatted_date = $day . ' ב' . dirabe_get_hebrew_month($month) . ' ' . $year;
+				echo $formatted_date;
+
+				?>
 			</p>
 		</div>
 	</div>
