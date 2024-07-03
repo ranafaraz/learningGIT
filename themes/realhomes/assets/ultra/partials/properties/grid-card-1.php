@@ -84,10 +84,9 @@ $label_text = get_post_meta(get_the_ID(), 'inspiry_property_label', true);
 				}
 				?>
 			</div>
-			<p class="added-date"><span class="added-title"><?php esc_html_e('Added:', 'framework'); ?></span>
-				<?php echo get_the_date(); ?></p>
+			<p class="added-date">
+				<?php echo get_the_date(); ?>
+			</p>
 		</div>
-		<?php
-		?>
 	</div>
 </div>
