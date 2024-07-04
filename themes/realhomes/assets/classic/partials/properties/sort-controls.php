@@ -20,6 +20,5 @@
         <option value="date-desc" <?php echo ( 'date-desc' == $sort_by ) ? 'selected' : ''; ?>><?php esc_html_e( 'Date New to Old', 'framework' ); ?></option>
         <option value="title-asc" <?php echo ( 'title-asc' == $sort_by ) ? 'selected' : ''; ?>><?php esc_html_e( 'Property Title A to Z', 'framework' ); ?></option>
         <option value="title-desc" <?php echo ( 'title-desc' == $sort_by ) ? 'selected' : ''; ?>><?php esc_html_e( 'Property Title Z to A', 'framework' ); ?></option>
-
 	</select>
 </div>
