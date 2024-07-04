@@ -71,7 +71,7 @@ if ('1' !== get_post_meta(get_queried_object_id(), 'REAL_HOMES_hide_advance_sear
 			if (isset($_GET['status']) && !empty($_GET['status']) && is_array($_GET['status']) && count($_GET['status']) > 0) {
 				$title = urldecode($_GET['status'][0]) . ' דירות בחריש';
 			} else if (isset($_GET['location']) && !empty($_GET['location']) && is_array($_GET['location']) && count($_GET['location']) > 0) {
-				$title = 'דירות בחריש בשכונת ' . urldecode($_GET['location'][0]);
+				$title = 'דירות בחריש בשכונת ' . preg_replace('/-/', ' ', urldecode($_GET['location'][0]));
 			} else if (isset($_GET['bedrooms']) && !empty($_GET['bedrooms']) && $_GET['bedrooms']) {
 				$title = 'דירות ' . urldecode($_GET['bedrooms']) . ' חדרים בחריש';
 			} else if (isset($_GET['type']) && !empty($_GET['type']) && is_array($_GET['type']) && count($_GET['type']) > 0) {
