@@ -1845,14 +1845,14 @@ if (!function_exists('inspiry_property_features_search')):
 			if (is_array($required_features_slugs)) {
 				$slugs_count = count($required_features_slugs);
 				if ($slugs_count > 0) {
-
 					/* build an array of existing features slugs to validate required feature slugs */
 					$existing_features_slugs = ERE_Data::get_features_slug_name();
 
 					foreach ($required_features_slugs as $feature_slug) {
+						$raw_feature_slug = $feature_slug;
 						$feature_slug = rawurldecode($feature_slug);
 						/* validate feature slug */
-						if (isset($existing_features_slugs[$feature_slug])) {
+						if (isset($existing_features_slugs[$raw_feature_slug])) {
 							$tax_query[] = array(
 								'taxonomy' => 'property-feature',
 								'field' => 'slug',

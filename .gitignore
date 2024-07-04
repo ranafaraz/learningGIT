@@ -11,3 +11,7 @@ advanced-cache.php
 plugins
 !plugins/realhomes-elementor-addon
 !plugins/easy-real-estate
+themes
+!themes/realhomes
+index.php
+
