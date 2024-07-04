@@ -278,7 +278,7 @@
         });
 
         // Show login modal by default on the user's pages
-        if (document.location.pathname.startsWith('/dashboard/') && $('.rh_login_modal_wrapper').length) {
+        if (document.location.pathname.startsWith('/dashboard') && $('.rh_login_modal_wrapper').length) {
             $('.rh-ultra-menu-user-profile, .rh_menu__user_profile, .rhea_menu__user_profile svg, .rhea_menu__user_profile > span, .rh-user-account-profile-image .user-icon').click();
         }
 
