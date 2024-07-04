@@ -1689,6 +1689,7 @@ if (!function_exists('rhea_search_form_fields')) {
 			'min-max-lot-size' => esc_html__('Min and Max Lot Size', 'realhomes-elementor-addon'),
 			'keyword-search' => esc_html__('Keyword Search', 'realhomes-elementor-addon'),
 			'property-id' => esc_html__('Property ID', 'realhomes-elementor-addon'),
+			'min-max-floor' => esc_html__('Min and Max Floor', 'realhomes-elementor-addon'),
 		);
 
 		if ($modern_variation) {
