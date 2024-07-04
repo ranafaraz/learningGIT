@@ -401,9 +401,6 @@ if (!function_exists('realhomes_hierarchical_options')) {
 		$get_select_placeholder = null;
 		$skip_any_option_generation = false;
 
-		$currentPath = $_SERVER['REQUEST_URI'];
-		$currentPath = urldecode($currentPath);
-		$currentPathParts = explode('/', $currentPath);
 
 		if ($taxonomy_name == 'property-city') {
 			$hierarchical_terms_array = ERE_Data::get_hierarchical_locations();
@@ -421,8 +418,6 @@ if (!function_exists('realhomes_hierarchical_options')) {
 			}
 			if (!empty($_GET['type'])) {
 				$searched_terms = $_GET['type'];
-			} else if (count($currentPathParts) >= 2 && str_ends_with($currentPathParts[1], '-בחריש')) {
-				$searched_terms = preg_replace('/-בחריש/', '', $currentPathParts[1]);
 			}
 		}
 
@@ -458,16 +453,15 @@ if (!function_exists('realhomes_generate_options')) {
 		global $post;
 		if (!empty($hierarchical_terms_array)) {
 			foreach ($hierarchical_terms_array as $term) {
-
 				if (!empty($excluded_terms) && in_array($term['term_id'], $excluded_terms)) {
 					continue; //skip if matched with excluded
 				}
 
 				if (
-					!empty($searched_terms)
-					&& ((is_string($searched_terms) && $searched_terms == $term['slug'])
-						|| (is_array($searched_terms) && in_array($term['slug'], $searched_terms)))
-					|| preg_match("/" . preg_quote($term['name'], '/') . "/", $post->post_title)
+					!empty($searched_terms) && (
+						(is_string($searched_terms) && $searched_terms == $term['slug']) ||
+						(is_array($searched_terms) && (in_array(urldecode($term['slug']), $searched_terms) || in_array($term['slug'], $searched_terms)))
+					)
 				) {
 					echo '<option value="' . esc_attr($term['slug']) . '" selected="selected">' . esc_html($prefix . $term['name']) . '</option>';
 				} else {
