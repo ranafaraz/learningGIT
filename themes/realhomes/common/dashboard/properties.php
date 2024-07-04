@@ -89,13 +89,9 @@ if ($user_role === 'agency' && $agency_id) {
 	// Remove duplicates
 	$agent_user_ids = array_unique($agent_user_ids);
 
-	$properties_args = array(
-		'post_type' => 'property',
-		'posts_per_page' => $posts_per_page,
-		'paged' => $paged,
-		'post_status' => $property_statuses,
-		'author__in' => $agent_user_ids,
-	);
+	if (!empty($agent_user_ids)) {
+		$properties_args['author__in'] = $agent_user_ids;
+	}
 }
 
 $property_status_filter = realhomes_dashboard_properties_status_filter();
