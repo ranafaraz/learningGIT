@@ -13,4 +13,5 @@ plugins
 !plugins/easy-real-estate
 themes
 !themes/realhomes
-*
+index.php
+

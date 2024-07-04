@@ -1,0 +1,22 @@
+{
+  "overrides": [
+    {
+      "files": "*.min.css",
+      "options": {
+        "parser": "css",
+        "disableLanguages": [
+          "css"
+        ]
+      }
+    },
+    {
+      "files": "*.min.js",
+      "options": {
+        "parser": "babel",
+        "disableLanguages": [
+          "javascript"
+        ]
+      }
+    }
+  ]
+}

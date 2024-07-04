@@ -1830,46 +1830,46 @@ endif;
 
 
 if (!function_exists('inspiry_property_features_search')):
-    /**
-     * Add features related search arguments to taxonomy query
-     *
-     * @param $tax_query
-     *
-     * @return array
-     */
-    function inspiry_property_features_search($tax_query)
-    {
-        if (!class_exists('ERE_Data')) {
-            return $tax_query;
-        }
-        if (isset($_GET['features'])) {
-            $required_features_slugs = $_GET['features'];
-            if (is_array($required_features_slugs)) {
-                $slugs_count = count($required_features_slugs);
-                if ($slugs_count > 0) {
+	/**
+	 * Add features related search arguments to taxonomy query
+	 *
+	 * @param $tax_query
+	 *
+	 * @return array
+	 */
+	function inspiry_property_features_search($tax_query)
+	{
+		if (!class_exists('ERE_Data')) {
+			return $tax_query;
+		}
+		if (isset($_GET['features'])) {
+			$required_features_slugs = $_GET['features'];
+			if (is_array($required_features_slugs)) {
+				$slugs_count = count($required_features_slugs);
+				if ($slugs_count > 0) {
+					/* build an array of existing features slugs to validate required feature slugs */
+					$existing_features_slugs = ERE_Data::get_features_slug_name();
 
-                    /* build an array of existing features slugs to validate required feature slugs */
-                    $existing_features_slugs = ERE_Data::get_features_slug_name();
+					foreach ($required_features_slugs as $feature_slug) {
+						$raw_feature_slug = $feature_slug;
+						$feature_slug = rawurldecode($feature_slug);
+						/* validate feature slug */
+						if (isset($existing_features_slugs[$raw_feature_slug])) {
+							$tax_query[] = array(
+								'taxonomy' => 'property-feature',
+								'field' => 'slug',
+								'terms' => $feature_slug,
+							);
+						}
+					}
+				}
+			}
+		}
 
-                    foreach ($required_features_slugs as $feature_slug) {
-                        $feature_slug = rawurldecode($feature_slug);
-                        /* validate feature slug */
-                        if (isset($existing_features_slugs[$feature_slug])) {
-                            $tax_query[] = array(
-                                'taxonomy' => 'property-feature',
-                                'field' => 'slug',
-                                'terms' => $feature_slug,
-                            );
-                        }
-                    }
-                }
-            }
-        }
+		return $tax_query;
+	}
 
-        return $tax_query;
-    }
-
-    add_filter('inspiry_real_estate_taxonomy_search', 'inspiry_property_features_search');
+	add_filter('inspiry_real_estate_taxonomy_search', 'inspiry_property_features_search');
 endif;
 
 
