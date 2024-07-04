@@ -1,23 +1,23 @@
-( function( $ ) {
+(function ($) {
 
-	"use strict";
+    "use strict";
 
-	$( document ).ready( function() {
+    $(document).ready(function () {
 
-		var progress_bar = false;
+        var progress_bar = false;
 
-		var rhLoginMessageBox = $('.rh_login_modal_messages');
-		var rhLoginMessagesCommon = $('.rh_login_modal_messages .rh_modal__msg');
+        var rhLoginMessageBox = $('.rh_login_modal_messages');
+        var rhLoginMessagesCommon = $('.rh_login_modal_messages .rh_modal__msg');
 
-		var rhLoginModalLoader = $('.rh_modal_login_loader');
+        var rhLoginModalLoader = $('.rh_modal_login_loader');
 
-		if ( $('#rh_progress').length ) {
-			progress_bar = new ProgressBar.Line('#rh_progress', {
-				easing: 'easeInOut',
-				color: '#1ea69a',
-				strokeWidth: 0.3,
-			});
-		}
+        if ($('#rh_progress').length) {
+            progress_bar = new ProgressBar.Line('#rh_progress', {
+                easing: 'easeInOut',
+                color: '#1ea69a',
+                strokeWidth: 0.3,
+            });
+        }
 
 
         // var modal_switch = $( 'div.switch' );
@@ -56,47 +56,47 @@
         //     }
         // } );
 
-        if ( jQuery().validate && jQuery().ajaxSubmit ) {
+        if (jQuery().validate && jQuery().ajaxSubmit) {
 
             /**
              * AJAX Login Form
              */
             var loginButton = $('#login-button'),
                 // loginAjaxLoader = $('#login-loader'),
-                loginError = $("#login-error" ),
+                loginError = $("#login-error"),
                 loginMessage = $('#login-message');
 
             var loginOptions = {
                 beforeSubmit: function () {
-                	if ( progress_bar ) {
-		                progress_bar.set(0);
-		                progress_bar.animate(1);
-	                }
+                    if (progress_bar) {
+                        progress_bar.set(0);
+                        progress_bar.animate(1);
+                    }
                     loginButton.attr('disabled', 'disabled');
                     rhLoginModalLoader.removeClass('rh_modal_login_loader_hide');
                     // loginAjaxLoader.fadeIn( 200 );
                 },
                 success: function (ajax_response, statusText, xhr, $form) {
-                    var response = $.parseJSON( ajax_response );
+                    var response = $.parseJSON(ajax_response);
                     // loginAjaxLoader.fadeOut( 100 );
                     loginButton.removeAttr('disabled');
                     rhLoginModalLoader.addClass('rh_modal_login_loader_hide');
-                    rhLoginMessagesCommon.fadeOut( 50,'swing',function () {
+                    rhLoginMessagesCommon.fadeOut(50, 'swing', function () {
                         rhLoginMessageBox.slideDown('fast');
-                    } );
+                    });
 
-                    if ( response.success ) {
-                        loginMessage.html( response.message ).fadeIn( 200 );
-                        if ( window.location.href == response.redirect ) {
-                            window.location.reload( true );
+                    if (response.success) {
+                        loginMessage.html(response.message).fadeIn(200);
+                        if (window.location.href == response.redirect) {
+                            window.location.reload(true);
                         } else {
-                            window.location.replace( response.redirect );
+                            window.location.replace(response.redirect);
                         }
                     } else {
-                        loginError.html( response.message ).fadeIn( 200 );
+                        loginError.html(response.message).fadeIn(200);
 
                         // call reset function if it exists
-                        if ( typeof inspiryResetReCAPTCHA == 'function' ) {
+                        if (typeof inspiryResetReCAPTCHA == 'function') {
                             inspiryResetReCAPTCHA();
                         }
                     }
@@ -115,36 +115,36 @@
              * AJAX Register Form
              */
             var registerButton = $('#register-button'),
-                registerError = $("#register-error" ),
+                registerError = $("#register-error"),
                 registerMessage = $('#register-message');
 
 
             var registerOptions = {
                 beforeSubmit: function () {
-	                if ( progress_bar ) {
-		                progress_bar.set(0);
-		                progress_bar.animate(1);
-	                }
+                    if (progress_bar) {
+                        progress_bar.set(0);
+                        progress_bar.animate(1);
+                    }
                     registerButton.attr('disabled', 'disabled');
                     rhLoginModalLoader.removeClass('rh_modal_login_loader_hide');
                 },
                 success: function (ajax_response, statusText, xhr, $form) {
-                    var response = $.parseJSON( ajax_response );
+                    var response = $.parseJSON(ajax_response);
                     // registerAjaxLoader.fadeOut('fast');
                     registerButton.removeAttr('disabled');
-                    rhLoginMessagesCommon.fadeOut( 50,'swing',function () {
+                    rhLoginMessagesCommon.fadeOut(50, 'swing', function () {
                         rhLoginMessageBox.slideDown('fast');
-                    } );
+                    });
                     rhLoginModalLoader.addClass('rh_modal_login_loader_hide');
-                    if ( response.success ) {
-                        registerMessage.html( response.message ).fadeIn('fast');
+                    if (response.success) {
+                        registerMessage.html(response.message).fadeIn('fast');
                         $form.resetForm();
 
                     } else {
-                        registerError.html( response.message ).fadeIn('fast');
+                        registerError.html(response.message).fadeIn('fast');
 
                         // call reset function if it exists
-                        if ( typeof inspiryResetReCAPTCHA == 'function' ) {
+                        if (typeof inspiryResetReCAPTCHA == 'function') {
                             inspiryResetReCAPTCHA();
                         }
                     }
@@ -172,15 +172,15 @@
              */
             var forgotButton = $('#forgot-button'),
                 // forgotAjaxLoader = $('#forgot-loader'),
-                forgotError = $("#forgot-error" ),
+                forgotError = $("#forgot-error"),
                 forgotMessage = $('#forgot-message');
 
             var forgotOptions = {
                 beforeSubmit: function () {
-	                if ( progress_bar ) {
-		                progress_bar.set(0);
-		                progress_bar.animate(1);
-	                }
+                    if (progress_bar) {
+                        progress_bar.set(0);
+                        progress_bar.animate(1);
+                    }
                     forgotButton.attr('disabled', 'disabled');
                     // forgotAjaxLoader.fadeIn('fast');
                     // forgotMessage.fadeOut('fast');
@@ -188,21 +188,21 @@
                     rhLoginModalLoader.removeClass('rh_modal_login_loader_hide');
                 },
                 success: function (ajax_response, statusText, xhr, $form) {
-                    var response = $.parseJSON( ajax_response );
+                    var response = $.parseJSON(ajax_response);
                     // forgotAjaxLoader.fadeOut('fast');
                     forgotButton.removeAttr('disabled');
-                    rhLoginMessagesCommon.fadeOut( 50,'swing',function () {
+                    rhLoginMessagesCommon.fadeOut(50, 'swing', function () {
                         rhLoginMessageBox.slideDown('fast');
-                    } );
+                    });
                     rhLoginModalLoader.addClass('rh_modal_login_loader_hide');
-                    if ( response.success ) {
-                        forgotMessage.html( response.message ).fadeIn('fast');
+                    if (response.success) {
+                        forgotMessage.html(response.message).fadeIn('fast');
                         $form.resetForm();
                     } else {
-                        forgotError.html( response.message ).fadeIn('fast');
+                        forgotError.html(response.message).fadeIn('fast');
 
                         // call reset function if it exists
-                        if ( typeof inspiryResetReCAPTCHA == 'function' ) {
+                        if (typeof inspiryResetReCAPTCHA == 'function') {
                             inspiryResetReCAPTCHA();
                         }
                     }
@@ -220,7 +220,7 @@
          * Forgot Form
          */
         $('.rh_form #rh_modal__forgot_form').slideUp('fast');
-        $('.rh_form .toggle-forgot-form').on('click', function(event){
+        $('.rh_form .toggle-forgot-form').on('click', function (event) {
             event.preventDefault();
             $('.rh_form #rh_modal__forgot_form').slideToggle('fast');
         });
@@ -229,24 +229,23 @@
         /*-----------------------------------------------------------------------------------*/
         /* Login Modal
         /*-----------------------------------------------------------------------------------*/
-        function rhSetLoginFormHeight(){
-            var heights = $("div.rh_form_modal").map(function ()
-            {
+        function rhSetLoginFormHeight() {
+            var heights = $("div.rh_form_modal").map(function () {
                 return $(this).outerHeight();
             }).get();
 
             var maxHeight = Math.max.apply(null, heights);
 
 
-            $('.rh_wrapper_login_forms').css('height',maxHeight);
+            $('.rh_wrapper_login_forms').css('height', maxHeight);
 
         }
 
         $(window).resize(rhSetLoginFormHeight);
 
 
-        $('.rh_login_target').on('click',function () {
-            if(!$(this).hasClass('rh_active')){
+        $('.rh_login_target').on('click', function () {
+            if (!$(this).hasClass('rh_active')) {
                 $('.rh_login_tab').removeClass('rh_active');
                 $(this).addClass('rh_active');
                 $('.rh_form_modal').slideUp(500);
@@ -254,8 +253,8 @@
             }
         });
 
-        $('.rh_register_target').on('click',function () {
-            if(!$(this).hasClass('rh_active')){
+        $('.rh_register_target').on('click', function () {
+            if (!$(this).hasClass('rh_active')) {
                 $('.rh_login_tab').removeClass('rh_active');
                 $(this).addClass('rh_active');
                 $('.rh_form_modal').slideUp(500);
@@ -263,14 +262,14 @@
             }
         });
 
-        $('.rh_forget_password_trigger').on('click',function () {
+        $('.rh_forget_password_trigger').on('click', function () {
             $('.rh_login_tab').removeClass('rh_active');
             $('.rh_form_modal').slideUp(500);
             $('.rh_password_reset_form').slideDown(500);
         });
 
         var rhLoginViz = false;
-        $('.rh-ultra-menu-user-profile, .rh_menu__user_profile, .rhea_menu__user_profile svg, .rhea_menu__user_profile > span, .rh-user-account-profile-image .user-icon').on('click',function (e) {
+        $('.rh-ultra-menu-user-profile, .rh_menu__user_profile, .rhea_menu__user_profile svg, .rhea_menu__user_profile > span, .rh-user-account-profile-image .user-icon').on('click', function (e) {
             // e.preventDefault();
             $('.rh_login_modal_wrapper').css("display", "flex").hide().fadeIn(500);
             rhSetLoginFormHeight();
@@ -278,41 +277,46 @@
             rhLoginViz = true;
         });
 
+        // Show login modal by default on the user's pages
+        if (document.location.pathname.startsWith('/dashboard') && $('.rh_login_modal_wrapper').length) {
+            $('.rh-ultra-menu-user-profile, .rh_menu__user_profile, .rhea_menu__user_profile svg, .rhea_menu__user_profile > span, .rh-user-account-profile-image .user-icon').click();
+        }
+
         // A common class to ask for login where needed in the theme.
-        $('.ask-for-login').on('click',function (event) {
+        $('.ask-for-login').on('click', function (event) {
             event.preventDefault();
             $('.rh_login_modal_wrapper').css("display", "flex").hide().fadeIn(500);
             rhSetLoginFormHeight();
             rhLoginViz = true;
         });
 
-        $('.rh_login_close').on('click',function () {
+        $('.rh_login_close').on('click', function () {
             $('.rh_login_modal_wrapper').fadeOut(500);
             rhLoginViz = false;
             $('.rh_modal_field').val('');
         });
 
 
-        $('body').on('click','.rh_login_modal_wrapper',function(e) {
+        $('body').on('click', '.rh_login_modal_wrapper', function (e) {
 
-            if (e.target === this){
+            if (e.target === this) {
                 $(this).fadeOut(500);
                 rhLoginMessageBox.slideUp('fast');
             }
         });
 
-        $('body').on('click','.rh_login_modal_box',function(e) {
-            if (e.target !== rhLoginMessageBox){
+        $('body').on('click', '.rh_login_modal_box', function (e) {
+            if (e.target !== rhLoginMessageBox) {
                 rhLoginMessageBox.slideUp('fast');
                 // rhLoginMessageBox.find('p').fadeOut('fast');
             }
         });
 
 
-        $('.rh_login_close_message').on('click',function () {
+        $('.rh_login_close_message').on('click', function () {
             rhLoginMessageBox.slideUp('fast');
         });
 
-	} );
+    });
 
-} )( jQuery );
+})(jQuery);

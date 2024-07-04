@@ -3,7 +3,8 @@
  * A helper class to centralize data to gain better performance on server side.
  */
 
-class ERE_Data {
+class ERE_Data
+{
 
 	/**
 	 * Locations (property cities) Variables
@@ -91,9 +92,10 @@ class ERE_Data {
 	 *
 	 * @return array
 	 */
-	public static function get_locations_slug_name( bool $hide_empty = false ): array {
-		if ( empty( self::$locations_slug_name ) ) {
-			self::assemble_slug_name_array( self::get_hierarchical_locations(),  self::$locations_slug_name, $hide_empty );
+	public static function get_locations_slug_name(bool $hide_empty = false): array
+	{
+		if (empty(self::$locations_slug_name)) {
+			self::assemble_slug_name_array(self::get_hierarchical_locations(), self::$locations_slug_name, $hide_empty);
 		}
 		return self::$locations_slug_name;
 	}
@@ -105,9 +107,10 @@ class ERE_Data {
 	 *
 	 * @return array
 	 */
-	public static function get_locations_id_name( bool $hide_empty = false ): array {
-		if ( empty( self::$locations_id_name ) ) {
-			self::assemble_id_name_array( self::get_hierarchical_locations(), self::$locations_id_name, $hide_empty );
+	public static function get_locations_id_name(bool $hide_empty = false): array
+	{
+		if (empty(self::$locations_id_name)) {
+			self::assemble_id_name_array(self::get_hierarchical_locations(), self::$locations_id_name, $hide_empty);
 		}
 		return self::$locations_id_name;
 	}
@@ -119,14 +122,15 @@ class ERE_Data {
 	 *
 	 * @return array
 	 */
-	public static function get_hierarchical_locations( bool $hide_empty = false ): array {
-		if ( empty( self::$hierarchical_locations ) && ! $hide_empty ) {
-			self::$hierarchical_locations = self::get_hierarchical_terms( 'property-city' );
-		} else if ( empty( self::$hierarchical_none_empty_locations ) && $hide_empty ) {
-			self::$hierarchical_none_empty_locations = self::get_hierarchical_terms( 'property-city', true );
+	public static function get_hierarchical_locations(bool $hide_empty = false): array
+	{
+		if (empty(self::$hierarchical_locations) && !$hide_empty) {
+			self::$hierarchical_locations = self::get_hierarchical_terms('property-city');
+		} else if (empty(self::$hierarchical_none_empty_locations) && $hide_empty) {
+			self::$hierarchical_none_empty_locations = self::get_hierarchical_terms('property-city', true);
 		}
 
-		if ( $hide_empty ) {
+		if ($hide_empty) {
 			return self::$hierarchical_none_empty_locations;
 		} else {
 			return self::$hierarchical_locations;
@@ -143,14 +147,15 @@ class ERE_Data {
 	 * @return array
 	 *
 	 */
-	public static function get_agency_hierarchical_locations( bool $hide_empty = false ): array {
-		if ( empty( self::$hierarchical_agency_locations ) && ! $hide_empty ) {
-			self::$hierarchical_agency_locations = self::get_hierarchical_terms( 'agency-location' );
-		} else if ( empty( self::$hierarchical_agency_none_empty_locations ) && $hide_empty ) {
-			self::$hierarchical_agency_none_empty_locations = self::get_hierarchical_terms( 'agency-location', true );
+	public static function get_agency_hierarchical_locations(bool $hide_empty = false): array
+	{
+		if (empty(self::$hierarchical_agency_locations) && !$hide_empty) {
+			self::$hierarchical_agency_locations = self::get_hierarchical_terms('agency-location');
+		} else if (empty(self::$hierarchical_agency_none_empty_locations) && $hide_empty) {
+			self::$hierarchical_agency_none_empty_locations = self::get_hierarchical_terms('agency-location', true);
 		}
 
-		if ( $hide_empty ) {
+		if ($hide_empty) {
 			return self::$hierarchical_agency_none_empty_locations;
 		} else {
 			return self::$hierarchical_agency_locations;
@@ -167,14 +172,15 @@ class ERE_Data {
 	 * @return array
 	 *
 	 */
-	public static function get_agent_hierarchical_locations( bool $hide_empty = false ): array {
-		if ( empty( self::$hierarchical_agent_locations ) && ! $hide_empty ) {
-			self::$hierarchical_agent_locations = self::get_hierarchical_terms( 'agent-location' );
-		} else if ( empty( self::$hierarchical_agent_none_empty_locations ) && $hide_empty ) {
-			self::$hierarchical_agent_none_empty_locations = self::get_hierarchical_terms( 'agent-location', true );
+	public static function get_agent_hierarchical_locations(bool $hide_empty = false): array
+	{
+		if (empty(self::$hierarchical_agent_locations) && !$hide_empty) {
+			self::$hierarchical_agent_locations = self::get_hierarchical_terms('agent-location');
+		} else if (empty(self::$hierarchical_agent_none_empty_locations) && $hide_empty) {
+			self::$hierarchical_agent_none_empty_locations = self::get_hierarchical_terms('agent-location', true);
 		}
 
-		if ( $hide_empty ) {
+		if ($hide_empty) {
 			return self::$hierarchical_agent_none_empty_locations;
 		} else {
 			return self::$hierarchical_agent_locations;
@@ -189,9 +195,10 @@ class ERE_Data {
 	 *
 	 * @return array
 	 */
-	public static function get_statuses_slug_name( bool $hide_empty = false ): array {
-		if ( empty( self::$statuses_slug_name ) ) {
-			self::assemble_slug_name_array( self::get_hierarchical_property_statuses(), self::$statuses_slug_name, $hide_empty );
+	public static function get_statuses_slug_name(bool $hide_empty = false): array
+	{
+		if (empty(self::$statuses_slug_name)) {
+			self::assemble_slug_name_array(self::get_hierarchical_property_statuses(), self::$statuses_slug_name, $hide_empty);
 		}
 		return self::$statuses_slug_name;
 	}
@@ -203,9 +210,10 @@ class ERE_Data {
 	 *
 	 * @return array
 	 */
-	public static function get_statuses_id_name( bool $hide_empty = false ): array {
-		if ( empty( self::$statuses_id_name ) ) {
-			self::assemble_id_name_array( self::get_hierarchical_property_statuses(), self::$statuses_id_name, $hide_empty );
+	public static function get_statuses_id_name(bool $hide_empty = false): array
+	{
+		if (empty(self::$statuses_id_name)) {
+			self::assemble_id_name_array(self::get_hierarchical_property_statuses(), self::$statuses_id_name, $hide_empty);
 		}
 		return self::$statuses_id_name;
 	}
@@ -215,9 +223,10 @@ class ERE_Data {
 	 *
 	 * @return array
 	 */
-	public static function get_hierarchical_property_statuses(): array {
-		if ( empty( self::$hierarchical_property_statuses ) ) {
-			self::$hierarchical_property_statuses = self::get_hierarchical_terms( 'property-status' );
+	public static function get_hierarchical_property_statuses(): array
+	{
+		if (empty(self::$hierarchical_property_statuses)) {
+			self::$hierarchical_property_statuses = self::get_hierarchical_terms('property-status');
 		}
 
 		return self::$hierarchical_property_statuses;
@@ -231,9 +240,10 @@ class ERE_Data {
 	 *
 	 * @return array
 	 */
-	public static function get_types_slug_name( bool $hide_empty = false ): array {
-		if ( empty( self::$types_slug_name ) ) {
-			self::assemble_slug_name_array( self::get_hierarchical_property_types(), self::$types_slug_name, $hide_empty );
+	public static function get_types_slug_name(bool $hide_empty = false): array
+	{
+		if (empty(self::$types_slug_name)) {
+			self::assemble_slug_name_array(self::get_hierarchical_property_types(), self::$types_slug_name, $hide_empty);
 		}
 		return self::$types_slug_name;
 	}
@@ -245,9 +255,10 @@ class ERE_Data {
 	 *
 	 * @return array
 	 */
-	public static function get_types_id_name( bool $hide_empty = false ): array {
-		if ( empty( self::$types_id_name ) ) {
-			self::assemble_id_name_array( self::get_hierarchical_property_types(), self::$types_id_name, $hide_empty );
+	public static function get_types_id_name(bool $hide_empty = false): array
+	{
+		if (empty(self::$types_id_name)) {
+			self::assemble_id_name_array(self::get_hierarchical_property_types(), self::$types_id_name, $hide_empty);
 		}
 		return self::$types_id_name;
 	}
@@ -259,19 +270,49 @@ class ERE_Data {
 	 *
 	 * @return array
 	 */
-	public static function get_hierarchical_property_types( bool $hide_empty = false ): array {
-		if ( empty( self::$hierarchical_property_types ) && ! $hide_empty ) {
-			self::$hierarchical_property_types = self::get_hierarchical_terms( 'property-type' );
-		} else if ( empty( self::$hierarchical_none_empty_property_types ) && $hide_empty ) {
-			self::$hierarchical_none_empty_property_types = self::get_hierarchical_terms( 'property-type', true );
+	public static function get_hierarchical_property_types(bool $hide_empty = false): array
+	{
+		if (empty(self::$hierarchical_property_types) && !$hide_empty) {
+			self::$hierarchical_property_types = self::get_hierarchical_terms('property-type');
+		} else if (empty(self::$hierarchical_none_empty_property_types) && $hide_empty) {
+			self::$hierarchical_none_empty_property_types = self::get_hierarchical_terms('property-type', true);
 		}
 
-		if ( $hide_empty ) {
-			return self::$hierarchical_none_empty_property_types;
-		} else {
-			return self::$hierarchical_property_types;
+		// Order property types
+		$property_type_order = [
+			"דירה",
+			"דירת גג",
+			"דירת גן",
+			"מיני פנטהאוז",
+			"פנטהאוז",
+			"בית פרטי / קוטג'",
+			"דופלקס",
+			"חנות",
+			"יחידת דיור",
+			"מחסן",
+			"משרד"
+		];
+
+		$ordered_property_types = [];
+		foreach ($property_type_order as $type) {
+			if ($hide_empty) {
+				foreach (self::$hierarchical_none_empty_property_types as $property_type) {
+					if ($property_type['name'] === $type) {
+						$ordered_property_types[] = $property_type;
+						continue;
+					}
+				}
+			} else {
+				foreach (self::$hierarchical_property_types as $property_type) {
+					if ($property_type['name'] === $type) {
+						$ordered_property_types[] = $property_type;
+						continue;
+					}
+				}
+			}
 		}
 
+		return $ordered_property_types;
 	}
 
 	/**
@@ -285,9 +326,10 @@ class ERE_Data {
 	 *
 	 * @return array
 	 */
-	public static function get_hierarchical_property_terms( $taxonomy, $hide_empty = false, $orderby = 'name', $order = 'ASC' ) {
+	public static function get_hierarchical_property_terms($taxonomy, $hide_empty = false, $orderby = 'name', $order = 'ASC')
+	{
 
-		return self::get_hierarchical_terms( $taxonomy, $hide_empty, $orderby, $order );
+		return self::get_hierarchical_terms($taxonomy, $hide_empty, $orderby, $order);
 
 	}
 
@@ -299,9 +341,10 @@ class ERE_Data {
 	 *
 	 * @return array
 	 */
-	public static function get_features_slug_name( bool $hide_empty = false ): array {
-		if ( empty( self::$features_slug_name ) ) {
-			self::assemble_slug_name_array( self::get_hierarchical_property_features(), self::$features_slug_name, $hide_empty );
+	public static function get_features_slug_name(bool $hide_empty = false): array
+	{
+		if (empty(self::$features_slug_name)) {
+			self::assemble_slug_name_array(self::get_hierarchical_property_features(), self::$features_slug_name, $hide_empty);
 		}
 		return self::$features_slug_name;
 	}
@@ -313,9 +356,10 @@ class ERE_Data {
 	 *
 	 * @return array
 	 */
-	public static function get_features_id_name( bool $hide_empty = false ): array {
-		if ( empty( self::$features_id_name ) ) {
-			self::assemble_id_name_array( self::get_hierarchical_property_features(), self::$features_id_name, $hide_empty );
+	public static function get_features_id_name(bool $hide_empty = false): array
+	{
+		if (empty(self::$features_id_name)) {
+			self::assemble_id_name_array(self::get_hierarchical_property_features(), self::$features_id_name, $hide_empty);
 		}
 		return self::$features_id_name;
 	}
@@ -325,9 +369,10 @@ class ERE_Data {
 	 *
 	 * @return array
 	 */
-	public static function get_hierarchical_property_features(): array {
-		if ( empty( self::$hierarchical_property_features ) ) {
-			self::$hierarchical_property_features = self::get_hierarchical_terms( 'property-feature' );
+	public static function get_hierarchical_property_features(): array
+	{
+		if (empty(self::$hierarchical_property_features)) {
+			self::$hierarchical_property_features = self::get_hierarchical_terms('property-feature');
 		}
 
 		return self::$hierarchical_property_features;
@@ -341,19 +386,22 @@ class ERE_Data {
 	 * @return array|null
 	 *
 	 */
-	public static function get_agencies_id_name(): array {
-		if ( empty( self::$agencies_id_name ) ) {
+	public static function get_agencies_id_name(): array
+	{
+		if (empty(self::$agencies_id_name)) {
 
-			$agencies_query = new WP_Query( array(
-				'post_type'        => 'agency',
-				'posts_per_page'   => - 1,
-				'suppress_filters' => false, //So WPML can filter the posts according to current language
-			) );
+			$agencies_query = new WP_Query(
+				array(
+					'post_type' => 'agency',
+					'posts_per_page' => -1,
+					'suppress_filters' => false, //So WPML can filter the posts according to current language
+				)
+			);
 
 			$agencies_array = array();
-			if ( ! empty( $agencies_query->posts ) ) {
-				foreach ( $agencies_query->posts as $single_agency ) {
-					$agencies_array[ $single_agency->ID ] = $single_agency->post_title;
+			if (!empty($agencies_query->posts)) {
+				foreach ($agencies_query->posts as $single_agency) {
+					$agencies_array[$single_agency->ID] = $single_agency->post_title;
 				}
 				self::$agencies_id_name = $agencies_array;
 			} else {
@@ -369,19 +417,22 @@ class ERE_Data {
 	 *
 	 * @return array|null
 	 */
-	public static function get_agents_id_name(): array {
-		if ( empty( self::$agents_id_name ) ) {
+	public static function get_agents_id_name(): array
+	{
+		if (empty(self::$agents_id_name)) {
 
-			$agents_query = new WP_Query( array(
-				'post_type'        => 'agent',
-				'posts_per_page'   => - 1,
-				'suppress_filters' => false, //So WPML can filter the posts according to current language
-			) );
+			$agents_query = new WP_Query(
+				array(
+					'post_type' => 'agent',
+					'posts_per_page' => -1,
+					'suppress_filters' => false, //So WPML can filter the posts according to current language
+				)
+			);
 
 			$agents_array = array();
-			if ( ! empty( $agents_query->posts ) ) {
-				foreach ( $agents_query->posts as $single_agent ) {
-					$agents_array[ $single_agent->ID ] = $single_agent->post_title;
+			if (!empty($agents_query->posts)) {
+				foreach ($agents_query->posts as $single_agent) {
+					$agents_array[$single_agent->ID] = $single_agent->post_title;
 				}
 				self::$agents_id_name = $agents_array;
 			} else {
@@ -404,27 +455,30 @@ class ERE_Data {
 	 *
 	 * @return array
 	 */
-	private static function get_hierarchical_terms( $taxonomy_name, $hide_empty = false, $orderby = 'name', $order = 'ASC' ) {
+	private static function get_hierarchical_terms($taxonomy_name, $hide_empty = false, $orderby = 'name', $order = 'ASC')
+	{
 		$hierarchical_terms_array = array();
 
-		$taxonomy_terms = get_terms( array(
-			'taxonomy'         => $taxonomy_name,
-			'hide_empty'       => $hide_empty,
-			'suppress_filters' => false,
-			'orderby'          => $orderby,
-			'order'            => $order
-		) );
+		$taxonomy_terms = get_terms(
+			array(
+				'taxonomy' => $taxonomy_name,
+				'hide_empty' => $hide_empty,
+				'suppress_filters' => false,
+				'orderby' => $orderby,
+				'order' => $order
+			)
+		);
 
-		if ( ! empty( $taxonomy_terms ) && ! is_wp_error( $taxonomy_terms ) ) {
+		if (!empty($taxonomy_terms) && !is_wp_error($taxonomy_terms)) {
 			$parents_index = 0;   // we have to use array index as we will be converting this array to JavaScript array for search form
-			foreach ( $taxonomy_terms as $index => $term ) {
-				if ( $term->parent == 0 ) {
-					$hierarchical_terms_array[ $parents_index ] = self::get_term_data( $term );
-					unset( $taxonomy_terms[ $index ] );    // to optimise performance
+			foreach ($taxonomy_terms as $index => $term) {
+				if ($term->parent == 0) {
+					$hierarchical_terms_array[$parents_index] = self::get_term_data($term);
+					unset($taxonomy_terms[$index]);    // to optimise performance
 					self::add_term_children(
-						$hierarchical_terms_array[ $parents_index ], // parent term
+						$hierarchical_terms_array[$parents_index], // parent term
 						$taxonomy_terms, // all terms from database
-						$hierarchical_terms_array[ $parents_index ]['children'] // children array
+						$hierarchical_terms_array[$parents_index]['children'] // children array
 					);
 					$parents_index++;
 				}
@@ -441,17 +495,18 @@ class ERE_Data {
 	 * @param array $taxonomy_terms
 	 * @param array $children
 	 */
-	private static function add_term_children( array $parent_term_data, array &$taxonomy_terms, array &$children ) {
-		if ( ! empty( $taxonomy_terms ) ) {
+	private static function add_term_children(array $parent_term_data, array &$taxonomy_terms, array &$children)
+	{
+		if (!empty($taxonomy_terms)) {
 			$children_index = 0;
-			foreach ( $taxonomy_terms as $index => $term ) {
-				if ( $term->parent == $parent_term_data['term_id'] ) {
-					$children[ $children_index ] = self::get_term_data( $term );
-					unset( $taxonomy_terms[ $index ] );   // to optimise performance
+			foreach ($taxonomy_terms as $index => $term) {
+				if ($term->parent == $parent_term_data['term_id']) {
+					$children[$children_index] = self::get_term_data($term);
+					unset($taxonomy_terms[$index]);   // to optimise performance
 					self::add_term_children(
-						$children[ $children_index ],
+						$children[$children_index],
 						$taxonomy_terms,
-						$children[ $children_index ]['children']    //children array
+						$children[$children_index]['children']    //children array
 					);
 					$children_index++;
 				}
@@ -466,13 +521,14 @@ class ERE_Data {
 	 *
 	 * @return array
 	 */
-	private static function get_term_data( WP_Term $term ): array {
-		$term_data             = array();
-		$term_data['term_id']  = $term->term_id;
-		$term_data['name']     = $term->name;
-		$term_data['slug']     = $term->slug;
-		$term_data['parent']   = $term->parent;
-		$term_data['count']    = $term->count;
+	private static function get_term_data(WP_Term $term): array
+	{
+		$term_data = array();
+		$term_data['term_id'] = $term->term_id;
+		$term_data['name'] = $term->name;
+		$term_data['slug'] = $term->slug;
+		$term_data['parent'] = $term->parent;
+		$term_data['count'] = $term->count;
 		$term_data['children'] = array();
 
 		return $term_data;
@@ -486,15 +542,16 @@ class ERE_Data {
 	 * @param bool $hide_empty
 	 * @param string $prefix
 	 */
-	private static function assemble_slug_name_array( Array $hierarchical_terms_array, array &$terms_array, bool $hide_empty = false, string $prefix = '' ) {
-		if ( ! empty( $hierarchical_terms_array ) ) {
-			foreach ( $hierarchical_terms_array as $term ) {
-				if ( $hide_empty && empty( $term['count'] ) ) {
+	private static function assemble_slug_name_array(array $hierarchical_terms_array, array &$terms_array, bool $hide_empty = false, string $prefix = '')
+	{
+		if (!empty($hierarchical_terms_array)) {
+			foreach ($hierarchical_terms_array as $term) {
+				if ($hide_empty && empty($term['count'])) {
 					continue;   // skip the iteration if hide empty is true and current term's count is 0
 				}
-				$terms_array[ $term['slug'] ] = $prefix . $term['name'];
-				If ( ! empty( $term['children'] ) ){
-					self::assemble_slug_name_array( $term['children'], $terms_array, $hide_empty, '- ' . $prefix );
+				$terms_array[$term['slug']] = $prefix . $term['name'];
+				if (!empty($term['children'])) {
+					self::assemble_slug_name_array($term['children'], $terms_array, $hide_empty, '- ' . $prefix);
 				}
 			}
 		}
@@ -508,15 +565,16 @@ class ERE_Data {
 	 * @param bool $hide_empty
 	 * @param string $prefix
 	 */
-	private static function assemble_id_name_array( Array $hierarchical_terms_array, array &$terms_array, bool $hide_empty = false, string $prefix = '' ) {
-		if ( ! empty( $hierarchical_terms_array ) ) {
-			foreach ( $hierarchical_terms_array as $term ) {
-				if ( $hide_empty && empty( $term['count'] ) ) {
+	private static function assemble_id_name_array(array $hierarchical_terms_array, array &$terms_array, bool $hide_empty = false, string $prefix = '')
+	{
+		if (!empty($hierarchical_terms_array)) {
+			foreach ($hierarchical_terms_array as $term) {
+				if ($hide_empty && empty($term['count'])) {
 					continue;   // skip the iteration if hide empty is true and current term's count is 0
 				}
-				$terms_array[ $term['term_id'] ] = $prefix . $term['name'];
-				If ( ! empty( $term['children'] ) ){
-					self::assemble_id_name_array( $term['children'], $terms_array, $hide_empty, '- ' . $prefix );
+				$terms_array[$term['term_id']] = $prefix . $term['name'];
+				if (!empty($term['children'])) {
+					self::assemble_id_name_array($term['children'], $terms_array, $hide_empty, '- ' . $prefix);
 				}
 			}
 		}
