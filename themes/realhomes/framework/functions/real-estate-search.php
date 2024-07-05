@@ -1632,7 +1632,7 @@ if (!function_exists('inspiry_beds_search')):
 	 */
 	function inspiry_beds_search($meta_query)
 	{
-		if ((!empty(trim($_GET['bedrooms']))) && (trim($_GET['bedrooms']) != inspiry_any_value())) {
+		if (isset($_GET['bedrooms']) && (!empty(trim($_GET['bedrooms']))) && (trim($_GET['bedrooms']) != inspiry_any_value())) {
 			$meta_query[] = array(
 				'key' => 'REAL_HOMES_property_bedrooms',
 				'value' => sanitize_text_field(trim($_GET['bedrooms'])),
