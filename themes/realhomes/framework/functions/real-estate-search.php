@@ -1559,7 +1559,7 @@ if (!function_exists('inspiry_get_beds_baths_compare_operator')):
 				$inspiry_compare_operator = '=';
 				break;
 			default:
-				$inspiry_compare_operator = '>=';
+				$inspiry_compare_operator = '=';
 		}
 
 		return $inspiry_compare_operator;
@@ -1632,13 +1632,23 @@ if (!function_exists('inspiry_beds_search')):
 	 */
 	function inspiry_beds_search($meta_query)
 	{
-		if ((!empty($_GET['bedrooms'])) && ($_GET['bedrooms'] != inspiry_any_value())) {
+		if ((!empty(trim($_GET['bedrooms']))) && (trim($_GET['bedrooms']) != inspiry_any_value())) {
 			$meta_query[] = array(
 				'key' => 'REAL_HOMES_property_bedrooms',
-				'value' => intval($_GET['bedrooms']),
-				'compare' => inspiry_get_beds_baths_compare_operator(),
-				'type' => 'DECIMAL'
+				'value' => sanitize_text_field(trim($_GET['bedrooms'])),
+				'compare' => '=',
+				'type' => 'CHAR'
 			);
+
+			$max_bedrooms = 6;
+			if (sanitize_text_field(trim($_GET['bedrooms'])) == $max_bedrooms) {
+				$meta_query[count($meta_query) - 1] = array(
+					'key' => 'REAL_HOMES_property_bedrooms',
+					'value' => sanitize_text_field(trim($_GET['bedrooms'])),
+					'compare' => '>=',
+					'type' => 'NUMERIC'
+				);
+			}
 		}
 
 		return $meta_query;
