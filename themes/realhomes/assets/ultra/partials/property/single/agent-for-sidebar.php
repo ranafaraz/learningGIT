@@ -175,20 +175,20 @@ function display_sidebar_agent_box($args)
 					<?php
 				}
 				/*
-																																				if (isset($args['agent_email']) && !empty($args['agent_email'])) {
-																																					?>
-																																					<p class="contact email">
-																																						<span><?php esc_html_e('Email', 'framework'); ?></span>
-																																						<a href="mailto:<?php echo esc_attr(antispambot($args['agent_email'])); ?>">
-																																							<?php
-																																							inspiry_safe_include_svg('/ultra/icons/email.svg', '/assets/');
-																																							echo esc_html(antispambot($args['agent_email']));
-																																							?>
-																																						</a>
-																																					</p>
-																																					<?php
-																																				}
-																																				*/
+																																																				if (isset($args['agent_email']) && !empty($args['agent_email'])) {
+																																																					?>
+																																																					<p class="contact email">
+																																																						<span><?php esc_html_e('Email', 'framework'); ?></span>
+																																																						<a href="mailto:<?php echo esc_attr(antispambot($args['agent_email'])); ?>">
+																																																							<?php
+																																																							inspiry_safe_include_svg('/ultra/icons/email.svg', '/assets/');
+																																																							echo esc_html(antispambot($args['agent_email']));
+																																																							?>
+																																																						</a>
+																																																					</p>
+																																																					<?php
+																																																				}
+																																																				*/
 				?>
 			</div>
 		<?php endif;
@@ -313,6 +313,14 @@ $display_agent_info = get_option('theme_display_agent_info', 'true');
 $agent_display_option = get_post_meta(get_the_ID(), 'REAL_HOMES_agent_display_option', true);
 
 if (('true' === $display_agent_info) && ('none' !== $agent_display_option)) {
+	// Check if agent display option is set to agent info and property has no agent assigned.
+	if ($agent_display_option === 'agent_info') {
+		$property_agents = get_post_meta(get_the_ID(), 'REAL_HOMES_agents');
+		if (empty($property_agents)) {
+			$agent_display_option = 'my_profile_info';
+		}
+	}
+
 	if ('my_profile_info' === $agent_display_option) {
 		$profile_args = array();
 		$profile_args['display_author'] = true;
