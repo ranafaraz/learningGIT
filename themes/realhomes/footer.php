@@ -12,7 +12,7 @@ if (!is_page_template('templates/dashboard.php')) {
     if ($sticky_footer) {
         ?>
         <div class="<?php echo esc_attr('rh_sticky_wrapper_footer rh_apply_sticky_wrapper_footer rhea-hide-before-load'); ?>">
-        <?php
+            <?php
     }
 
     if (!function_exists('elementor_theme_do_location') || !elementor_theme_do_location('footer')) {
@@ -21,8 +21,10 @@ if (!is_page_template('templates/dashboard.php')) {
 
         if (function_exists('hfe_footer_enabled') && true == hfe_footer_enabled()) {
             hfe_render_footer();
-        } else if (class_exists('RHEA_Elementor_Header_Footer') &&
-            ('default' !== $realhomes_custom_footer_is_selected || (!empty($realhomes_post_custom_footer) && 'default' !== $realhomes_post_custom_footer))) {
+        } else if (
+            class_exists('RHEA_Elementor_Header_Footer') &&
+            ('default' !== $realhomes_custom_footer_is_selected || (!empty($realhomes_post_custom_footer) && 'default' !== $realhomes_post_custom_footer))
+        ) {
             do_action('realhomes_elementor_footer_content');
         } else {
             get_template_part('assets/' . INSPIRY_DESIGN_VARIATION . '/partials/footer');
@@ -35,7 +37,7 @@ if (!is_page_template('templates/dashboard.php')) {
         <?php
     }
 
-    inspiry_post_nav();
+    // inspiry_post_nav();
 
     if ('classic' !== INSPIRY_DESIGN_VARIATION) {
         echo '</div>';
@@ -45,8 +47,8 @@ if (!is_page_template('templates/dashboard.php')) {
     if ('true' === get_option('inspiry_scroll_to_top', 'true')) {
         ?>
         <a href="#top" id="scroll-top"
-           class="<?php echo esc_html(get_option('inspiry_scroll_to_top_position', 'stp_right')); ?>"><i
-                    class="fas fa-chevron-up"></i></a>
+            class="<?php echo esc_html(get_option('inspiry_scroll_to_top_position', 'stp_right')); ?>"><i
+                class="fas fa-chevron-up"></i></a>
         <?php
     }
 
@@ -60,7 +62,8 @@ if (!is_user_logged_in()) {
     $prop_detail_login = inspiry_prop_detail_login();
     $skip_prop_single = ('yes' == $prop_detail_login && !is_user_logged_in() && is_singular('property'));
 
-    if (empty($theme_login_url) && (!is_page_template('templates/login-register.php')) &&
+    if (
+        empty($theme_login_url) && (!is_page_template('templates/login-register.php')) &&
         !$skip_prop_single
     ) {
         get_template_part('common/partials/login-modal');
@@ -85,4 +88,5 @@ wp_footer();
     });
 </script>
 </body>
+
 </html>
