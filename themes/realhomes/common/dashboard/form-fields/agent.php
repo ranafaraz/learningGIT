@@ -30,12 +30,14 @@ if (0 < intval(get_option('realhomes_default_selected_agent'))) {
 
 if (realhomes_dashboard_edit_property()) {
 	global $post_meta_data;
-	if (isset($post_meta_data['REAL_HOMES_agent_display_option']) && ('none' == $post_meta_data['REAL_HOMES_agent_display_option'][0])) {
-		$default_selection = 'none';
-	}
-
-	if (isset($post_meta_data['REAL_HOMES_agent_display_option']) && ('agent_info' == $post_meta_data['REAL_HOMES_agent_display_option'][0])) {
-		$default_selection = 'agent_info';
+	if (isset($post_meta_data['REAL_HOMES_agent_display_option'])) {
+		if ($post_meta_data['REAL_HOMES_agent_display_option'][0] == 'none') {
+			$default_selection = 'none';
+		} else if ($post_meta_data['REAL_HOMES_agent_display_option'][0] == 'my_profile_info') {
+			$default_selection = 'my_profile_info';
+		} else if ($post_meta_data['REAL_HOMES_agent_display_option'][0] == 'agent_info') {
+			$default_selection = 'agent_info';
+		}
 	}
 }
 
