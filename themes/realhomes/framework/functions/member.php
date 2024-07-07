@@ -60,18 +60,12 @@ if (!function_exists('inspiry_ajax_login')):
 	 */
 	function inspiry_ajax_login()
 	{
-		try {
-			// First check the nonce, if it fails the function will break.
-			check_ajax_referer('inspiry-ajax-login-nonce', 'inspiry-secure-login');
-		} catch (Exception $e) {
-			echo json_encode(
-				array(
-					'success' => false,
-					'message' => esc_html__('Security check failed!', 'framework'),
-				)
-			);
-			die();
-		}
+		echo 'before';
+
+		// First check the nonce, if it fails the function will break.
+		check_ajax_referer('inspiry-ajax-login-nonce', 'inspiry-secure-login');
+
+		echo 'after';
 
 		if (class_exists('Easy_Real_Estate')) {
 			/* Verify Google reCAPTCHA */
