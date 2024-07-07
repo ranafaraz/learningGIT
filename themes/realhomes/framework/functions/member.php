@@ -60,12 +60,9 @@ if (!function_exists('inspiry_ajax_login')):
 	 */
 	function inspiry_ajax_login()
 	{
-		echo 'before';
 
 		// First check the nonce, if it fails the function will break.
 		check_ajax_referer('inspiry-ajax-login-nonce', 'inspiry-secure-login');
-
-		echo 'after';
 
 		if (class_exists('Easy_Real_Estate')) {
 			/* Verify Google reCAPTCHA */
