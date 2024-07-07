@@ -1,1 +1,11 @@
 /* Custom CSS File for Buyers to Modify */
+#rh_modal__login_form .rh_wrapper_password_field {
+  position: relative;
+}
+#rh_modal__login_form .rh_wrapper_password_field .rh_password_reveal_trigger {
+  position: absolute;
+  transform: translate(50%, -50%);
+  top: 50%;
+  left: 1rem;
+  cursor: pointer;
+}
