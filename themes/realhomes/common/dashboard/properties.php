@@ -74,14 +74,14 @@ $properties_args = array(
 );
 
 $user_role = get_user_meta($current_user->ID, 'inspiry_user_role', true);
-$agency_id = get_user_meta($current_user->ID, 'inspiry_role_post_id', true);
+$user_post_id = get_user_meta($current_user->ID, 'inspiry_role_post_id', true);
 
-if ($user_role === 'agency' && $agency_id) {
-	// Get all users when inspiry_user_role is agent, and inspiry_user_agency === agency_id
+if ($user_role === 'agency' && $user_post_id) {
+	// Get all users when inspiry_user_role is agent, and inspiry_user_agency === user_post_id
 	$agent_user_ids = get_users(
 		array(
 			'meta_key' => 'inspiry_user_agency',
-			'meta_value' => $agency_id,
+			'meta_value' => $user_post_id,
 			'fields' => 'ID'
 		)
 	);
@@ -92,6 +92,18 @@ if ($user_role === 'agency' && $agency_id) {
 	if (!empty($agent_user_ids)) {
 		$properties_args['author__in'] = $agent_user_ids;
 	}
+} else if ($user_role === 'agent' && $user_post_id) {
+	// Support properties that are assigned to multiple agents (including the current agent)
+	unset($properties_args['author']); // Remove author parameter
+
+	// Properties assigned to the current agent have 'REAL_HOMES_agents' meta key
+	$properties_args['meta_query'] = array(
+		array(
+			'key' => 'REAL_HOMES_agents',
+			'value' => $user_post_id,
+			'compare' => '='
+		)
+	);
 }
 
 $property_status_filter = realhomes_dashboard_properties_status_filter();
