@@ -37,7 +37,7 @@ if (realhomes_dashboard_edit_property()) {
 		} else if ($post_meta_data['REAL_HOMES_agent_display_option'][0] == 'my_profile_info') {
 			$default_selection = 'my_profile_info';
 
-			if ($post_meta_data['REAL_HOMES_agents'] && $user_role === 'agency') {
+			if (isset($post_meta_data['REAL_HOMES_agents']) && $user_role === 'agency') {
 				$default_selection = 'agent_info';
 			}
 		} else if ($post_meta_data['REAL_HOMES_agent_display_option'][0] == 'agent_info') {
