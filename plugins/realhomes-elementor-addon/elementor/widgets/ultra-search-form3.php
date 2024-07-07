@@ -4626,13 +4626,15 @@ class RHEA_ultra_Search_Form_2_Widget extends \Elementor\Widget_Base
         $pattern = '/[^\p{Hebrew}a-zA-Z0-9\s]/u';
         $query_parameter_locations = $this->query_parameter_locations();
         $selectedLocationFromPageTitle = '';
-        foreach ($hierarchical_locations as $location) {
-            $postName = $post->post_title;
-            $locationName = $location['name'];
-            if (preg_match("/" . preg_quote($locationName, '/') . "/", $postName)) {
-                $selectedLocationFromPageTitle = $location['slug'];
-                // stop the loop
-                break;
+        if ($post) {
+            foreach ($hierarchical_locations as $location) {
+                $postName = $post->post_title;
+                $locationName = $location['name'];
+                if (preg_match("/" . preg_quote($locationName, '/') . "/", $postName)) {
+                    $selectedLocationFromPageTitle = $location['slug'];
+                    // stop the loop
+                    break;
+                }
             }
         }
 

@@ -1115,9 +1115,9 @@ if (!function_exists('rhea_advance_search_tabs')) {
                 <li class="rhea-mod-tab">
                     <label class="rh-mod-search-field-label">
                         <input checked type="radio" name="<?php echo esc_attr($field_name); ?>"
-                               value="<?php echo esc_attr(rhea_any_value()); ?>">
+                            value="<?php echo esc_attr(rhea_any_value()); ?>">
                         <span
-                                class="rhea-mod-tab-name"><?php echo $placeholder ? esc_html($placeholder) : esc_html__('All', 'realhomes-elementor-addon'); ?></span>
+                            class="rhea-mod-tab-name"><?php echo $placeholder ? esc_html($placeholder) : esc_html__('All', 'realhomes-elementor-addon'); ?></span>
                     </label>
                 </li>
                 <?php
@@ -1173,7 +1173,7 @@ if (!function_exists('rhea_generate_tabs')) {
         <li class="rhea-mod-tab">
             <label class="rh-mod-search-field-label">
                 <input <?php echo esc_attr($checked) ?> type="radio" name="<?php echo esc_attr($field_name); ?>"
-                                                        value="<?php echo esc_attr($slug); ?>">
+                    value="<?php echo esc_attr($slug); ?>">
                 <span class="rhea-mod-tab-name"><?php echo esc_html($name) ?></span>
             </label>
         </li>
@@ -1238,9 +1238,9 @@ if (!function_exists('rhea_ultra_advance_search_tabs')) {
                 <li class="rhea-ultra-tab">
                     <label class="rh-ultra-search-field-label">
                         <input checked type="radio" name="<?php echo esc_attr($field_name); ?>"
-                               value="<?php echo esc_attr(rhea_any_value()); ?>">
+                            value="<?php echo esc_attr(rhea_any_value()); ?>">
                         <span
-                                class="rhea-ultra-tab-name"><?php echo $placeholder ? esc_html($placeholder) : esc_html__('All', 'realhomes-elementor-addon'); ?></span>
+                            class="rhea-ultra-tab-name"><?php echo $placeholder ? esc_html($placeholder) : esc_html__('All', 'realhomes-elementor-addon'); ?></span>
                     </label>
                 </li>
                 <?php
@@ -1259,11 +1259,13 @@ if (!function_exists('rhea_ultra_advance_search_tabs')) {
                     rhea_ultra_generate_tabs($checked, $field_name, $tab, $tab_name);
 
                 }
-            } else if (!empty($taxonomy_terms)) {
+            } else if (!empty($taxonomy_terms) && $post) {
                 foreach ($taxonomy_terms as $term) {
                     $checked = '';
-                    if (isset($searched_term[0]) && $searched_term[0] === $term->slug ||
-                        in_array($term->slug, explode('-', $post->post_name))) {
+                    if (
+                        isset($searched_term[0]) && $searched_term[0] === $term->slug ||
+                        in_array($term->slug, explode('-', $post->post_name))
+                    ) {
                         $checked = ' checked ';
                     } else if ($default === $term->slug) {
                         $checked = ' checked ';
@@ -1294,7 +1296,7 @@ if (!function_exists('rhea_ultra_generate_tabs')) {
         <li class="rhea-ultra-tab">
             <label class="rh-ultra-search-field-label tab-<?php echo esc_attr($slug); ?>">
                 <input <?php echo esc_attr($checked) ?> type="radio" name="<?php echo esc_attr($field_name); ?>"
-                                                        value="<?php echo esc_attr($slug); ?>">
+                    value="<?php echo esc_attr($slug); ?>">
                 <span class="rhea-ultra-tab-name"><?php echo esc_html($name) ?></span>
             </label>
         </li>
@@ -1319,14 +1321,14 @@ if (!function_exists('rhea_generate_fields_icons')) {
             $button_icon = $settings[$icon_key];
             if (is_array($button_icon['value']) && !empty($button_icon['value']['url'])) {
                 ?><span class="field-icon field-svg-icon">
-                <?php
-                \Elementor\Icons_Manager::render_icon($button_icon, ['aria-hidden' => 'true']);
+                    <?php
+                    \Elementor\Icons_Manager::render_icon($button_icon, ['aria-hidden' => 'true']);
 
-                ?>
+                    ?>
                 </span><?php
             } else if (!empty($button_icon['library'] && !empty($button_icon['value']))) {
                 ?>
-                <i class="field-icon field-svg-icon <?php echo esc_attr($button_icon['library'] . ' ' . $button_icon['value']) ?>"></i>
+                    <i class="field-icon field-svg-icon <?php echo esc_attr($button_icon['library'] . ' ' . $button_icon['value']) ?>"></i>
                 <?php
             }
         }
