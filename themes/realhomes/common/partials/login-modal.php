@@ -13,9 +13,10 @@ $users_can_register = get_option('users_can_register');
 
 ?>
 <div class="rh_login_modal_wrapper <?php echo esc_attr($form_design); ?>">
-	<div class="rh_login_modal_box <?php if (!('true' == $inspiry_login_quote_side_display)) {
-		echo esc_attr('rh_login_no_quote');
-	} ?>">
+	<div
+		class="rh_login_modal_box <?php if (!('true' == $inspiry_login_quote_side_display)) {
+			echo esc_attr('rh_login_no_quote');
+		} ?>">
 		<span class="rh_login_close"><i class="fas fa-times"></i></span>
 		<?php
 
@@ -204,7 +205,8 @@ $users_can_register = get_option('users_can_register');
 								) {
 									?>
 									<div class="rh_modal__recaptcha">
-										<div class="inspiry-recaptcha-wrapper clearfix g-recaptcha-type-<?php echo esc_attr($recaptcha_type); ?>">
+										<div
+											class="inspiry-recaptcha-wrapper clearfix g-recaptcha-type-<?php echo esc_attr($recaptcha_type); ?>">
 											<div class="inspiry-google-recaptcha"></div>
 										</div>
 									</div>
@@ -215,10 +217,10 @@ $users_can_register = get_option('users_can_register');
 						?>
 						<input type="hidden" name="action" value="inspiry_ajax_login" />
 						<?php
-						wp_create_nonce('inspiry-ajax-login-nonce');
 						wp_nonce_field('inspiry-ajax-login-nonce', 'inspiry-secure-login');
 						?>
-						<input type="hidden" name="redirect_to" value="<?php echo esc_url(inspiry_get_login_redirect_Url()); ?>" />
+						<input type="hidden" name="redirect_to"
+							value="<?php echo esc_url(inspiry_get_login_redirect_Url()); ?>" />
 						<?php
 						$inspiry_login_button_text = get_option('inspiry_login_button_text');
 						if (!empty($inspiry_login_button_text)) {
@@ -240,8 +242,8 @@ $users_can_register = get_option('users_can_register');
 				if ($users_can_register) {
 					?>
 					<div class="rh_form_modal rh_register_form">
-						<form action="<?php echo esc_url(admin_url('admin-ajax.php')); ?>" id="rh_modal__register_form" method="post"
-							enctype="multipart/form-data">
+						<form action="<?php echo esc_url(admin_url('admin-ajax.php')); ?>" id="rh_modal__register_form"
+							method="post" enctype="multipart/form-data">
 							<label class="rh_modal_labels" for="register_username"><?php echo esc_html($label_user_name); ?></label>
 							<input class="rh_modal_field" id="register_username" name="register_username" type="text"
 								placeholder="<?php echo esc_attr($inspiry_login_user_name_placeholder); ?>"
@@ -281,9 +283,9 @@ $users_can_register = get_option('users_can_register');
 												<select name="<?php echo esc_attr($field['id']); ?>"
 													class="rh_custom_login_modal_select inspiry_select_picker_trigger inspiry_bs_default_mod  inspiry_bs_green show-tick dropup"
 													id="<?php echo esc_attr($field['id']); ?>" data-dropup-auto="false" <?php
-														 echo (!empty($field['title'])) ? 'title="' . esc_attr($field['title']) . '"' : '';
-														 echo (true === $required) ? 'class="required" required' : '';
-														 ?>>
+															 echo (!empty($field['title'])) ? 'title="' . esc_attr($field['title']) . '"' : '';
+															 echo (true === $required) ? 'class="required" required' : '';
+															 ?>>
 													<?php
 													foreach ($field['options'] as $key => $value) {
 														echo '<option value="' . esc_attr($key) . '">' . esc_html($value) . '</option>';
@@ -305,10 +307,10 @@ $users_can_register = get_option('users_can_register');
 													for="<?php echo esc_attr($field['id']); ?>"><?php echo esc_html($field['name']) ?></label>
 												<input class="rh_modal_field" type="text" id="<?php echo esc_attr($field['id']); ?>"
 													name="<?php echo esc_attr($field['id']); ?>" <?php
-														 echo (!empty($field['title'])) ? 'title="' . esc_attr($field['title']) . '"' : '';
-														 echo (!empty($field['name'])) ? 'placeholder="' . esc_attr($field['name']) . '"' : '';
-														 echo (true === $required) ? 'class="required" required' : '';
-														 ?> />
+															 echo (!empty($field['title'])) ? 'title="' . esc_attr($field['title']) . '"' : '';
+															 echo (!empty($field['name'])) ? 'placeholder="' . esc_attr($field['name']) . '"' : '';
+															 echo (true === $required) ? 'class="required" required' : '';
+															 ?> />
 											<?php
 										}
 									}
@@ -368,7 +370,8 @@ $users_can_register = get_option('users_can_register');
 								} elseif (ere_is_reCAPTCHA_configured() && empty(get_option('inspiry_contact_form_shortcode'))) {
 									?>
 									<div class="rh_modal__recaptcha">
-										<div class="inspiry-recaptcha-wrapper clearfix g-recaptcha-type-<?php echo esc_attr($recaptcha_type); ?>">
+										<div
+											class="inspiry-recaptcha-wrapper clearfix g-recaptcha-type-<?php echo esc_attr($recaptcha_type); ?>">
 											<div class="inspiry-google-recaptcha" style=""></div>
 										</div>
 									</div>
@@ -417,8 +420,8 @@ $users_can_register = get_option('users_can_register');
 					</div>
 				<?php } ?>
 				<div class="rh_form_modal rh_password_reset_form">
-					<form action="<?php echo esc_url(admin_url('admin-ajax.php')); ?>" id="rh_modal__forgot_form" method="post"
-						enctype="multipart/form-data">
+					<form action="<?php echo esc_url(admin_url('admin-ajax.php')); ?>" id="rh_modal__forgot_form"
+						method="post" enctype="multipart/form-data">
 						<input id="reset_username_or_email" name="reset_username_or_email" type="text"
 							placeholder="<?php echo esc_attr($placeholder_restore); ?>" class="rh_modal_field required"
 							title="<?php echo esc_attr($placeholder_restore); ?>" required />
@@ -427,7 +430,8 @@ $users_can_register = get_option('users_can_register');
 							if (ere_is_reCAPTCHA_configured() && !is_page_template('templates/contact.php')) {
 								?>
 								<div class="rh_modal__recaptcha">
-									<div class="inspiry-recaptcha-wrapper clearfix g-recaptcha-type-<?php echo esc_attr($recaptcha_type); ?>">
+									<div
+										class="inspiry-recaptcha-wrapper clearfix g-recaptcha-type-<?php echo esc_attr($recaptcha_type); ?>">
 										<div class="inspiry-google-recaptcha"></div>
 									</div>
 								</div>
@@ -435,7 +439,8 @@ $users_can_register = get_option('users_can_register');
 							} elseif (ere_is_reCAPTCHA_configured() && empty(get_option('inspiry_contact_form_shortcode'))) {
 								?>
 								<div class="rh_modal__recaptcha">
-									<div class="inspiry-recaptcha-wrapper clearfix g-recaptcha-type-<?php echo esc_attr($recaptcha_type); ?>">
+									<div
+										class="inspiry-recaptcha-wrapper clearfix g-recaptcha-type-<?php echo esc_attr($recaptcha_type); ?>">
 										<div class="inspiry-google-recaptcha"></div>
 									</div>
 								</div>
@@ -451,7 +456,8 @@ $users_can_register = get_option('users_can_register');
 						$inspiry_restore_button_text = get_option('inspiry_restore_button_text');
 						if (!empty($inspiry_restore_button_text)) {
 							?>
-							<button id="forgot-button" name="user-submit"><?php echo esc_html($inspiry_restore_button_text); ?></button>
+							<button id="forgot-button"
+								name="user-submit"><?php echo esc_html($inspiry_restore_button_text); ?></button>
 							<?php
 						} else {
 							?>
