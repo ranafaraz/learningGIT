@@ -208,19 +208,19 @@ $agent_id = get_the_ID();
 					<?php
 				}
 				/*
-						if (!empty($agent_email)) {
-							?>
-							<div class="agent-contact-item">
-								<?php inspiry_safe_include_svg('/icons/email.svg'); ?>
-								<div class="agent-contact-item-inner">
-									<h4 class="agent-contact-item-label"><?php esc_html_e('Email', 'framework'); ?></h4>
-									<a
-										href="mailto:<?php echo esc_attr(antispambot($agent_email)); ?>"><?php echo esc_html(antispambot($agent_email)); ?></a>
-								</div>
-							</div>
-							<?php
-						}
-						*/
+												if (!empty($agent_email)) {
+													?>
+													<div class="agent-contact-item">
+														<?php inspiry_safe_include_svg('/icons/email.svg'); ?>
+														<div class="agent-contact-item-inner">
+															<h4 class="agent-contact-item-label"><?php esc_html_e('Email', 'framework'); ?></h4>
+															<a
+																href="mailto:<?php echo esc_attr(antispambot($agent_email)); ?>"><?php echo esc_html(antispambot($agent_email)); ?></a>
+														</div>
+													</div>
+													<?php
+												}
+												*/
 				if (!empty($agent_address)) {
 					?>
 					<div class="agent-contact-item agent-contact-item-address">
@@ -255,18 +255,18 @@ $agent_id = get_the_ID();
 			<div class="stats-wrapper">
 				<div class="tax-stats property-city">
 					<h3>
-						<?php echo preg_replace('/^(\w+)/isux', '<span>$1</span>', esc_html__('Property Location', 'framework')); ?>
+						<?php echo preg_replace('/^(\w+)/isux', '<span>$1</span>', esc_html__('Property Locations', 'framework')); ?>
 					</h3>
 					<?php realhomes_generate_properties_stats_chart($agent_id); ?>
 				</div>
 				<div class="tax-stats property-type">
-					<h3><?php echo preg_replace('/^(\w+)/isux', '<span>$1</span>', esc_html__('Property Type', 'framework')); ?>
+					<h3><?php echo preg_replace('/^(\w+)/isux', '<span>$1</span>', esc_html__('Property Types', 'framework')); ?>
 					</h3>
 					<?php realhomes_generate_properties_stats_chart($agent_id, 'property-type'); ?>
 				</div>
 				<div class="tax-stats property-status">
 					<h3>
-						<?php echo preg_replace('/^(\w+)/isux', '<span>$1</span>', esc_html__('Property Status', 'framework')); ?>
+						<?php echo preg_replace('/^(\w+)/isux', '<span>$1</span>', esc_html__('Property Statuses', 'framework')); ?>
 					</h3>
 					<?php realhomes_generate_properties_stats_chart($agent_id, 'property-status'); ?>
 				</div>
