@@ -9049,9 +9049,13 @@ p.rh-sat-select-field .bootstrap-select.dropup span.caret {
   position: relative;
 }
 
+.rh-ultra-property-card-thumb {
+  min-width:300px
+}
+
 .rh-ultra-property-card-thumb img {
   max-width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 10px;
 }
 .rh-ultra-property-card-thumb a {
