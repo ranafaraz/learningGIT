@@ -1661,12 +1661,12 @@ div.wpforms-container .wpforms-form .wpforms-page-button:hover {
 .pagination .rh_pagination__prev:before,
 .rh_pagination .rh_pagination__prev:before,
 .rh_filter_pagination .rh_pagination__prev:before {
-  content: "\f0d9";
+  content: "\f0da";
 }
 .pagination .rh_pagination__next:before,
 .rh_pagination .rh_pagination__next:before,
 .rh_filter_pagination .rh_pagination__next:before {
-  content: "\f0da";
+  content: "\f0d9";
 }
 .pagination .rh-pagination-first-item,
 .pagination .rh-pagination-last-item,
@@ -9041,6 +9041,7 @@ p.rh-sat-select-field .bootstrap-select.dropup span.caret {
   padding-right: 15px;
   margin-bottom: 30px;
   box-sizing: border-box;
+  flex: 1;
 }
 
 .rh-ultra-card-thumb-wrapper {
@@ -9048,9 +9049,13 @@ p.rh-sat-select-field .bootstrap-select.dropup span.caret {
   position: relative;
 }
 
+.rh-ultra-property-card-thumb {
+  min-width:300px
+}
+
 .rh-ultra-property-card-thumb img {
   max-width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 10px;
 }
 .rh-ultra-property-card-thumb a {
