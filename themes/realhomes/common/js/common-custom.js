@@ -148,11 +148,11 @@
             } else {
                 let nonce = $form.find('.rh_save_search_nonce').val();
                 $.post(ajaxurl, {
-                        nonce: nonce,
-                        action: 'inspiry_save_search',
-                        search_args: searchArguments,
-                        search_url: searchURL,
-                    },
+                    nonce: nonce,
+                    action: 'inspiry_save_search',
+                    search_args: searchArguments,
+                    search_url: searchURL,
+                },
                     function (response) {
                         response = JSON.parse(response);
                         if (response.success) {
@@ -419,7 +419,7 @@
                         circle_pct = 100;
                     }
                     var pct = ((100 - circle_pct) / 100) * c;
-                    $circle.css({strokeDashoffset: pct});
+                    $circle.css({ strokeDashoffset: pct });
 
                     var $circle = mcState.fields.graph_tax;
                     var circle_pct = mcState.percentage.tax + mcState.percentage.p_i;
@@ -432,7 +432,7 @@
                         circle_pct = 100;
                     }
                     var pct = ((100 - circle_pct) / 100) * c;
-                    $circle.css({strokeDashoffset: pct});
+                    $circle.css({ strokeDashoffset: pct });
 
                     var $circle = mcState.fields.graph_hoa;
                     var circle_pct = mcState.percentage.hoa + mcState.percentage.tax + mcState.percentage.p_i;
@@ -445,7 +445,7 @@
                         circle_pct = 100;
                     }
                     var pct = ((100 - circle_pct) / 100) * c;
-                    $circle.css({strokeDashoffset: pct});
+                    $circle.css({ strokeDashoffset: pct });
 
                 } else {
                     // Update bar graph and total cost.
@@ -508,25 +508,25 @@
         /*-----------------------------------------------------------------------------------*/
         /* Language Switcher
         /*-----------------------------------------------------------------------------------*/
-        $body.on( 'click', '.inspiry-language', function ( e ) {
-            if ( $( '.inspiry-language-switcher' )
-                 .find( '.rh_languages_available' )
-                 .children( '.inspiry-language' ).length > 0 ) {
-                const wrapper_language_switcher = $( '.rh_wrapper_language_switcher' );
-                wrapper_language_switcher.toggleClass( 'parent_open' );
+        $body.on('click', '.inspiry-language', function (e) {
+            if ($('.inspiry-language-switcher')
+                .find('.rh_languages_available')
+                .children('.inspiry-language').length > 0) {
+                const wrapper_language_switcher = $('.rh_wrapper_language_switcher');
+                wrapper_language_switcher.toggleClass('parent_open');
 
-                if ( wrapper_language_switcher.hasClass( 'parent_open' ) ) {
-                    $( this ).addClass( 'open' );
-                    $( '.rh_languages_available' ).fadeIn( 200 );
+                if (wrapper_language_switcher.hasClass('parent_open')) {
+                    $(this).addClass('open');
+                    $('.rh_languages_available').fadeIn(200);
 
                 } else {
-                    $( this ).removeClass( 'open' );
-                    $( '.rh_languages_available' ).fadeOut( 200 );
+                    $(this).removeClass('open');
+                    $('.rh_languages_available').fadeOut(200);
 
                 }
             }
             e.stopPropagation();
-        } );
+        });
 
         $('html').on('click', function () {
             $('.rh_wrapper_language_switcher').removeClass('parent_open');
@@ -645,28 +645,28 @@
         /* Report property modal script.
         /*-----------------------------------------------------------------------------------*/
         if ($body.hasClass('single-property')) {
-            const reportThisProperty = $( '.report-this-property' );
-            if ( reportThisProperty.length ) {
-                reportThisProperty.on('click', null,function (event) {
+            const reportThisProperty = $('.report-this-property');
+            if (reportThisProperty.length) {
+                reportThisProperty.on('click', null, function (event) {
                     // Target model id
                     let targetModelID = $(this).attr('href');
                     let reportPropertyModal = $(targetModelID);
 
                     if (reportPropertyModal.length) {
                         const reportPropertyForm = $("#report-property-form"),
-                              ajaxLoader = reportPropertyForm.find(".ajax-loader"),
-                              submitButton = reportPropertyForm.find("#btn-submit"),
-                              responseContainer = reportPropertyForm.find('#response-container'),
-                              errorContainer = reportPropertyForm.find('#error-container'),
-                              mainOptionsContainer = reportPropertyForm.find("#report-property-form-main-options"),
-                              childOptionsContainer = reportPropertyForm.find("#report-property-form-child-options"),
-                              customMessage = reportPropertyForm.find("#feedback-custom-message"),
-                              backButton = reportPropertyForm.find("#btn-back");
+                            ajaxLoader = reportPropertyForm.find(".ajax-loader"),
+                            submitButton = reportPropertyForm.find("#btn-submit"),
+                            responseContainer = reportPropertyForm.find('#response-container'),
+                            errorContainer = reportPropertyForm.find('#error-container'),
+                            mainOptionsContainer = reportPropertyForm.find("#report-property-form-main-options"),
+                            childOptionsContainer = reportPropertyForm.find("#report-property-form-child-options"),
+                            customMessage = reportPropertyForm.find("#feedback-custom-message"),
+                            backButton = reportPropertyForm.find("#btn-back");
 
                         reportPropertyModal.css("display", "flex").hide().fadeIn(250).addClass("show");
 
                         reportPropertyModal.find(".btn-close").on('click', function (event) {
-                            reportPropertyModal.removeClass("show").fadeOut(250, function() {
+                            reportPropertyModal.removeClass("show").fadeOut(250, function () {
                                 reportPropertyModal.removeClass("has-response");
                                 responseContainer.addClass("hide");
                                 responseContainer.find(".response-title").html('');
@@ -979,11 +979,11 @@
     });
 
     //Remove class that hide elements before load to avoid glitching screen
-    $(window).on('load',function () {
+    $(window).on('load', function () {
         $('div').removeClass('rh-hide-before-load');
     });
 
-    window.rhUltraTooltip = function(selector) {
+    window.rhUltraTooltip = function (selector) {
 
         $(selector).tooltip({
             classes: {
@@ -992,13 +992,13 @@
             position: {
                 my: "center bottom-10",
                 at: "center top",
-                using: function( position, feedback ) {
-                    $( this ).css( position );
-                    $( "<div>" )
-                    .addClass( "arrow" )
-                    .addClass( feedback.vertical )
-                    .addClass( feedback.horizontal )
-                    .appendTo( this );
+                using: function (position, feedback) {
+                    $(this).css(position);
+                    $("<div>")
+                        .addClass("arrow")
+                        .addClass(feedback.vertical)
+                        .addClass(feedback.horizontal)
+                        .appendTo(this);
                 }
             }
         });
@@ -1018,30 +1018,30 @@
      * @since 4.1.1
      */
     function comparePropertyStickyHead() {
-        const compareHead = $( '.sticky-compare-head, .sticky-head-smart' );
-        if ( ! compareHead.length ) {
+        const compareHead = $('.sticky-compare-head, .sticky-head-smart');
+        if (!compareHead.length) {
             return false;
         }
 
-        let screenWidth = $( window ).width();
-        if ( 1024 <= screenWidth ) {
-            const $body   = $( 'body' );
+        let screenWidth = $(window).width();
+        if (1024 <= screenWidth) {
+            const $body = $('body');
             let offsetTop = 0;
 
-            if ( $body.hasClass( 'admin-bar' ) ) {
+            if ($body.hasClass('admin-bar')) {
                 offsetTop += 32;
             }
 
-            compareHead.stick_in_parent( { offset_top : offsetTop } )
+            compareHead.stick_in_parent({ offset_top: offsetTop })
         } else {
-            compareHead.trigger( "sticky_kit:detach" );
+            compareHead.trigger("sticky_kit:detach");
         }
     }
 
     // Scripts to run on window load and resize events.
-    $(window).on( 'load resize', function () {
+    $(window).on('load resize', function () {
         comparePropertyStickyHead();
-    } );
+    });
 
     /*-----------------------------------------------------------------------------------*/
     /* Favorite Properties
@@ -1239,43 +1239,47 @@
 
     // Ajax Pagination Fix
     window.realhomes_update_favorites = function () {
-        remove_from_favorite( $( 'a.remove-from-favorite' ) );
-        remove_from_favorite( $( '.favorite-placeholder.highlight__red' ) );
+        remove_from_favorite($('a.remove-from-favorite'));
+        remove_from_favorite($('.favorite-placeholder.highlight__red'));
     }
 
 
     // Generating agent/agency stats doughnut charts
-    $( '.stats-wrap .tax-stats-chart' ).each( function ( index, element, b ) {
-        let thisObj = JSON.parse( element.dataset.chartStats ),
-            thisID  = element.id,
-            labels  = thisObj.labels,
-            values  = thisObj.values,
-            colors  = thisObj.colors;
+    $('.stats-wrap .tax-stats-chart').each(function (index, element, b) {
+        try {
+            let thisObj = JSON.parse(element.dataset.chartStats),
+                thisID = element.id,
+                labels = thisObj.labels,
+                values = thisObj.values,
+                colors = thisObj.colors;
 
-        const data = {
-            labels   : labels,
-            datasets : [{
-                data            : values,
-                backgroundColor : colors,
-                hoverOffset     : 1
-            }]
-        };
+            const data = {
+                labels: labels,
+                datasets: [{
+                    data: values,
+                    backgroundColor: colors,
+                    hoverOffset: 1
+                }]
+            };
 
-        const config = {
-            type       : 'doughnut',
-            responsive : true,
-            data       : data,
-            options    : {
-                legend : {
-                    display : false
-                },
-                // Arguments to disable tooltips on hover
-                tooltips : { enabled : false },
-                hover    : { mode : null }
-            }
-        };
+            const config = {
+                type: 'doughnut',
+                responsive: true,
+                data: data,
+                options: {
+                    legend: {
+                        display: false
+                    },
+                    // Arguments to disable tooltips on hover
+                    tooltips: { enabled: false },
+                    hover: { mode: null }
+                }
+            };
 
-        new Chart( thisID, config );
-    } );
+            new Chart(thisID, config);
+        } catch (error) {
+            console.log(error);
+        }
+    });
 
 })(jQuery);
