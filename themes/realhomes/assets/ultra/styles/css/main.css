@@ -11494,8 +11494,10 @@ div.leaflet-container a.leaflet-popup-close-button {
 }
 .stats-charts-wrap .stats-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
   padding: 25px 0 0;
   border-top: 1px solid #eaeaea;
 }
