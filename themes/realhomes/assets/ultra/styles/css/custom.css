@@ -9,3 +9,17 @@
   left: 1rem;
   cursor: pointer;
 }
+.agent-properties {
+  flex-wrap: nowrap !important;
+}
+@media screen and (max-width: 767px) {
+  .agent-properties {
+    flex-wrap: wrap !important;
+  }
+}
+/* 
+@media screen and (max-width: 767px) {
+  .agent-properties .rh_agent_card {
+    width: 100%;
+  }
+} */
