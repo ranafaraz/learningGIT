@@ -229,6 +229,10 @@ msgstr ""
 msgid "Property Type"
 msgstr ""
 
+#: framework/functions/basic.php:2218
+msgid "Similar"
+msgstr ""
+
 #: assets/classic/partials/agency/single/agency.php:151
 #: assets/classic/partials/agent/single/agent.php:161
 #: assets/classic/partials/properties/search/fields/status.php:10

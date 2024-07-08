@@ -66,15 +66,18 @@ if (!function_exists('elementor_theme_do_location') || !elementor_theme_do_locat
 
 								$agent_properties_listing_query = new WP_Query(apply_filters('inspiry_agent_single_properties', $agent_properties_args));
 
+								$listings_max_num_pages = null;
+
 								if ($agent_properties_listing_query->have_posts()) {
 									while ($agent_properties_listing_query->have_posts()) {
 										$agent_properties_listing_query->the_post();
 
 										// Display Property for Listing
-										get_template_part('assets/ultra/partials/properties/list-card-1');
+										// get_template_part('assets/ultra/partials/properties/list-card-1');
+										get_template_part('assets/ultra/partials/properties/grid-card-1');
 									}
 
-									inspiry_theme_pagination($agent_properties_listing_query->max_num_pages);
+									$listings_max_num_pages = $agent_properties_listing_query->max_num_pages;
 
 									wp_reset_postdata();
 								} else {
@@ -87,6 +90,9 @@ if (!function_exists('elementor_theme_do_location') || !elementor_theme_do_locat
 								?>
 							</div>
 							<?php
+							if (isset($listings_max_num_pages) && $listings_max_num_pages) {
+								inspiry_theme_pagination($agent_properties_listing_query->max_num_pages);
+							}
 						}
 
 						// If comments are open, or we have at least one comment, load up the comment template.

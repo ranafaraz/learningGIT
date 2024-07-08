@@ -1570,6 +1570,52 @@ function dirabe_get_hebrew_month($month)
 	return $hebrew_months[$month] ?? $month;
 }
 
+function dirabe_show_agencys_and_agents_posts_preview($posts)
+{
+	global $wp_query, $wpdb;
+	// Check if the requested URL is a single post page preview
+	$user_id = get_current_user_id();
+	if (!is_preview() || !is_single() || $wp_query->post_count > 0 || $user_id == 0) {
+		return $posts;
+	}
+
+	$user_role = get_user_meta($user_id, 'inspiry_user_role', true);
+	$user_post_id = get_user_meta($user_id, 'inspiry_role_post_id', true);
+	$fetched_posts = $wpdb->get_results($wp_query->request);
+
+	if (empty($fetched_posts) || empty($fetched_posts[0])) {
+		return $posts;
+	}
+
+	$fetched_post = $fetched_posts[0];
+
+	// Check permissions
+	if ($user_role == 'agency' && $user_post_id) {
+		// Check if agency is the post author, or one of the users agency is the post author
+		// Get all users when inspiry_user_role is agent, and inspiry_user_agency === user_post_id
+		$agent_user_ids = get_users(
+			array(
+				'meta_key' => 'inspiry_user_agency',
+				'meta_value' => $user_post_id,
+				'fields' => 'ID'
+			)
+		);
+		$agent_user_ids[] = $user_id;
+		$agent_user_ids = array_unique($agent_user_ids);
+		if (in_array($fetched_post->post_author, $agent_user_ids)) {
+			return $fetched_posts;
+		}
+	} else if ($user_role == 'agent' && $user_post_id) {
+		$is_post_agent = get_post_meta($fetched_post->ID, 'REAL_HOMES_agents', true);
+		if ($is_post_agent === $user_post_id) {
+			return $fetched_posts;
+		}
+	}
+
+	return $posts;
+}
+add_filter('the_posts', 'dirabe_show_agencys_and_agents_posts_preview');
+
 // Temp code to update alt text for property images
 // if (isset($_GET['test'])) {
 // 	function custom_process_property_data()

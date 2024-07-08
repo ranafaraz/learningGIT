@@ -2,3 +2,29 @@
 .rhea_ultra_search_form_wrapper .rhea_keyword_field {
     width: 100% !important;
 }
+
+#rh_modal__login_form .rh_wrapper_password_field {
+  position: relative;
+}
+#rh_modal__login_form .rh_wrapper_password_field .rh_password_reveal_trigger {
+  position: absolute;
+  transform: translate(50%, -50%);
+  top: 50%;
+  left: 1rem;
+  cursor: pointer;
+}
+.agent-properties {
+  flex-wrap: nowrap !important;
+}
+@media screen and (max-width: 767px) {
+  .agent-properties {
+    flex-wrap: wrap !important;
+  }
+}
+/* 
+@media screen and (max-width: 767px) {
+  .agent-properties .rh_agent_card {
+    width: 100%;
+  }
+} */
+

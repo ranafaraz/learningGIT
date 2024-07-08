@@ -14,22 +14,29 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 		// Check if current logged in user is the author of property
 		// Or user is agency and property is assigned to that agency
 		$user_role = get_user_meta($current_user->ID, 'inspiry_user_role', true);
-		$agency_id = get_user_meta($current_user->ID, 'inspiry_role_post_id', true);
+		$user_post_id = get_user_meta($current_user->ID, 'inspiry_role_post_id', true);
 
 		if ($target_property->post_author == $current_user->ID) {
 			global $post_meta_data;
 			$post_meta_data = get_post_custom($target_property->ID);
-		} else if ($user_role === 'agency' && $agency_id) {
-			// Get all users when inspiry_user_role is agent, and inspiry_user_agency === agency_id
+		} else if ($user_role === 'agency' && $user_post_id) {
+			// Get all users when inspiry_user_role is agent, and inspiry_user_agency === user_post_id
 			$agent_user_ids = get_users(
 				array(
 					'meta_key' => 'inspiry_user_agency',
-					'meta_value' => $agency_id,
+					'meta_value' => $user_post_id,
 					'fields' => 'ID'
 				)
 			);
 
 			if (in_array($target_property->post_author, $agent_user_ids)) {
+				global $post_meta_data;
+				$post_meta_data = get_post_custom($target_property->ID);
+			}
+		} else if ($user_role === 'agent' && $user_post_id) {
+			// Support properties that are assigned to multiple agents (including the current agent)
+			$agents = get_post_meta($target_property->ID, 'REAL_HOMES_agents', false);
+			if (in_array($user_post_id, $agents)) {
 				global $post_meta_data;
 				$post_meta_data = get_post_custom($target_property->ID);
 			}

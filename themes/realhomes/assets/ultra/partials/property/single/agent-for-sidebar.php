@@ -42,22 +42,34 @@ function display_sidebar_agent_box($args)
 			<!--            <div class="rh-side-thumb-box">-->
 			<?php
 			if (isset($args['display_author']) && ($args['display_author'])) {
+				$user_post_url = get_author_posts_url(get_the_author_meta('ID'));
+				$user_role = get_the_author_meta('inspiry_user_role');
+				if ($user_role === 'agency') {
+					$user_post_url = preg_replace('/\/author\//', '/סוכנות%20תיווך/', $user_post_url);
+				} else if ($user_role === 'agent') {
+					$user_post_url = preg_replace('/\/author\//', '/מתווך/', $user_post_url);
+				}
+			} else {
+				$user_post_url = get_permalink($args['agent_id']);
+			}
+
+			if (isset($args['display_author']) && ($args['display_author'])) {
 				if (isset($args['profile_image_id']) && (0 < $args['profile_image_id'])):
 					?>
-					<a class="agent-image" href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>">
+					<a class="agent-image" href="<?php echo esc_url($user_post_url); ?>">
 						<?php echo wp_get_attachment_image($args['profile_image_id'], 'agent-image'); ?>
 					</a>
 					<?php
 				elseif (isset($args['agent_email'])):
 					?>
-					<a class="agent-image" href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>">
+					<a class="agent-image" href="<?php echo esc_url($user_post_url); ?>">
 						<?php echo get_avatar($args['agent_email'], '210'); ?>
 					</a>
 					<?php
 				endif;
 			} else if (isset($args['agent_id']) && (!empty(get_the_post_thumbnail($args['agent_id'])))) {
 				?>
-					<a class="agent-image" href="<?php echo esc_url(get_permalink($args['agent_id'])); ?>">
+					<a class="agent-image" href="<?php echo esc_url($user_post_url); ?>">
 					<?php echo get_the_post_thumbnail($args['agent_id'], 'agent-image'); ?>
 					</a>
 				<?php
@@ -67,12 +79,6 @@ function display_sidebar_agent_box($args)
 						<i class="fas fa-user-tie"></i>
 					</a>
 				<?php
-			}
-			if (isset($args['display_author']) && ($args['display_author'])) {
-				$agent_url = get_author_posts_url(get_the_author_meta('ID'));
-				$agent_url = preg_replace('/\/author\//', '/מתווך/', $agent_url);
-			} else {
-				$agent_url = get_permalink($args['agent_id']);
 			}
 			?>
 			<!--            </div>-->
@@ -91,7 +97,7 @@ function display_sidebar_agent_box($args)
 					if (isset($args['agent_title_text']) && !empty($args['agent_title_text'])) {
 						?>
 						<h3 class="rh_property_agent__title">
-							<a href="<?php echo esc_url($agent_url) ?>"><?php echo esc_html($args['agent_title_text']); ?></a>
+							<a href="<?php echo esc_url($user_post_url) ?>"><?php echo esc_html($args['agent_title_text']); ?></a>
 							<?php
 							if (0 < intval($args['agent_id'])) {
 								realhomes_verification_badge('agent', $args['agent_id']);
@@ -112,7 +118,7 @@ function display_sidebar_agent_box($args)
 					$theme_agent_detail_page_link_text = get_option('theme_agent_detail_page_link_text', esc_html__('View My Listings', 'framework'));
 					?>
 					<a class="rh-property-agent-link"
-						href="<?php echo esc_url($agent_url) ?>"><?php echo esc_html($theme_agent_detail_page_link_text); ?></a>
+						href="<?php echo esc_url($user_post_url) ?>"><?php echo esc_html($theme_agent_detail_page_link_text); ?></a>
 					<?php
 				}
 				?>
@@ -175,20 +181,20 @@ function display_sidebar_agent_box($args)
 					<?php
 				}
 				/*
-																																				if (isset($args['agent_email']) && !empty($args['agent_email'])) {
-																																					?>
-																																					<p class="contact email">
-																																						<span><?php esc_html_e('Email', 'framework'); ?></span>
-																																						<a href="mailto:<?php echo esc_attr(antispambot($args['agent_email'])); ?>">
-																																							<?php
-																																							inspiry_safe_include_svg('/ultra/icons/email.svg', '/assets/');
-																																							echo esc_html(antispambot($args['agent_email']));
-																																							?>
-																																						</a>
-																																					</p>
-																																					<?php
-																																				}
-																																				*/
+																																																																								if (isset($args['agent_email']) && !empty($args['agent_email'])) {
+																																																																									?>
+																																																																									<p class="contact email">
+																																																																										<span><?php esc_html_e('Email', 'framework'); ?></span>
+																																																																										<a href="mailto:<?php echo esc_attr(antispambot($args['agent_email'])); ?>">
+																																																																											<?php
+																																																																											inspiry_safe_include_svg('/ultra/icons/email.svg', '/assets/');
+																																																																											echo esc_html(antispambot($args['agent_email']));
+																																																																											?>
+																																																																										</a>
+																																																																									</p>
+																																																																									<?php
+																																																																								}
+																																																																								*/
 				?>
 			</div>
 		<?php endif;
@@ -313,6 +319,14 @@ $display_agent_info = get_option('theme_display_agent_info', 'true');
 $agent_display_option = get_post_meta(get_the_ID(), 'REAL_HOMES_agent_display_option', true);
 
 if (('true' === $display_agent_info) && ('none' !== $agent_display_option)) {
+	// Check if agent display option is set to agent info and property has no agent assigned.
+	if ($agent_display_option === 'agent_info') {
+		$property_agents = get_post_meta(get_the_ID(), 'REAL_HOMES_agents');
+		if (empty($property_agents)) {
+			$agent_display_option = 'my_profile_info';
+		}
+	}
+
 	if ('my_profile_info' === $agent_display_option) {
 		$profile_args = array();
 		$profile_args['display_author'] = true;
