@@ -1,4 +1,8 @@
 /* Custom CSS File for Buyers to Modify */
+.rhea_ultra_search_form_wrapper .rhea_keyword_field {
+    width: 100% !important;
+}
+
 #rh_modal__login_form .rh_wrapper_password_field {
   position: relative;
 }
@@ -23,3 +27,4 @@
     width: 100%;
   }
 } */
+
