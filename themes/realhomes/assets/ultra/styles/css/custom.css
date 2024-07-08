@@ -1,1 +1,4 @@
 /* Custom CSS File for Buyers to Modify */
+.rhea_ultra_search_form_wrapper .rhea_keyword_field {
+    width: 100% !important;
+}
