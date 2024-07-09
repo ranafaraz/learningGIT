@@ -39,79 +39,88 @@ function display_sidebar_agent_box($args)
 	<section
 		class="widget rh_property_agent<?php echo esc_attr($agent_section_classes); ?> <?php echo esc_attr((!empty($args['agent_class'])) ? $args['agent_class'] : ''); ?>">
 		<div class="rh-agent-thumb-title-wrapper">
-			<!--            <div class="rh-side-thumb-box">-->
-			<?php
-			if (isset($args['display_author']) && ($args['display_author'])) {
-				$user_post_url = get_author_posts_url(get_the_author_meta('ID'));
-				$user_role = get_the_author_meta('inspiry_user_role');
-				if ($user_role === 'agency') {
-					$user_post_url = preg_replace('/\/author\//', '/סוכנות%20תיווך/', $user_post_url);
-				} else if ($user_role === 'agent') {
-					$user_post_url = preg_replace('/\/author\//', '/מתווך/', $user_post_url);
-				}
-			} else {
-				$user_post_url = get_permalink($args['agent_id']);
-			}
-
-			if (isset($args['display_author']) && ($args['display_author'])) {
-				if (isset($args['profile_image_id']) && (0 < $args['profile_image_id'])):
-					?>
-					<a class="agent-image" href="<?php echo esc_url($user_post_url); ?>">
-						<?php echo wp_get_attachment_image($args['profile_image_id'], 'agent-image'); ?>
-					</a>
-					<?php
-				elseif (isset($args['agent_email'])):
-					?>
-					<a class="agent-image" href="<?php echo esc_url($user_post_url); ?>">
-						<?php echo get_avatar($args['agent_email'], '210'); ?>
-					</a>
-					<?php
-				endif;
-			} else if (isset($args['agent_id']) && (!empty(get_the_post_thumbnail($args['agent_id'])))) {
-				?>
-					<a class="agent-image" href="<?php echo esc_url($user_post_url); ?>">
-					<?php echo get_the_post_thumbnail($args['agent_id'], 'agent-image'); ?>
-					</a>
-				<?php
-			} else {
-				?>
-					<a class="agent-image agent-property-placeholder" href="<?php echo esc_url(get_permalink($args['agent_id'])); ?>">
-						<i class="fas fa-user-tie"></i>
-					</a>
-				<?php
-			}
-			?>
-			<!--            </div>-->
 			<div class="rh-agent-title-wrapper">
-				<div class="rh-side-title-box">
+				<div class="rh-agent-name-and-avatar-wrapper">
 					<?php
-					if (isset($args['agent_label']) && !empty($args['agent_label'])) {
-						?>
-						<span class="rh-agent-label">
-							<?php echo esc_html($args['agent_label']) ?>
-						</span>
-						<?php
-
+					if (isset($args['display_author']) && ($args['display_author'])) {
+						$user_post_url = get_author_posts_url(get_the_author_meta('ID'));
+						$user_role = get_the_author_meta('inspiry_user_role');
+						if ($user_role === 'agency') {
+							$user_post_url = preg_replace('/\/author\//', '/סוכנות%20תיווך/', $user_post_url);
+						} else if ($user_role === 'agent') {
+							$user_post_url = preg_replace('/\/author\//', '/מתווך/', $user_post_url);
+						}
+					} else {
+						$user_post_url = get_permalink($args['agent_id']);
 					}
 
-					if (isset($args['agent_title_text']) && !empty($args['agent_title_text'])) {
-						?>
-						<h3 class="rh_property_agent__title">
-							<a href="<?php echo esc_url($user_post_url) ?>"><?php echo esc_html($args['agent_title_text']); ?></a>
-							<?php
-							if (0 < intval($args['agent_id'])) {
-								realhomes_verification_badge('agent', $args['agent_id']);
-							}
+					if (isset($args['display_author']) && ($args['display_author'])) {
+						if (isset($args['profile_image_id']) && (0 < $args['profile_image_id'])):
 							?>
-						</h3>
+							<a class="agent-image" href="<?php echo esc_url($user_post_url); ?>">
+								<?php echo wp_get_attachment_image($args['profile_image_id'], 'agent-image'); ?>
+							</a>
+							<?php
+						elseif (isset($args['agent_email'])):
+							?>
+							<a class="agent-image" href="<?php echo esc_url($user_post_url); ?>">
+								<?php echo get_avatar($args['agent_email'], '210'); ?>
+							</a>
+							<?php
+						endif;
+					} else if (isset($args['agent_id']) && (!empty(get_the_post_thumbnail($args['agent_id'])))) {
+						?>
+							<a class="agent-image" href="<?php echo esc_url($user_post_url); ?>">
+							<?php echo get_the_post_thumbnail($args['agent_id'], 'agent-image'); ?>
+							</a>
+						<?php
+					} else {
+						?>
+							<a class="agent-image agent-property-placeholder"
+								href="<?php echo esc_url(get_permalink($args['agent_id'])); ?>">
+								<i class="fas fa-user-tie"></i>
+							</a>
 						<?php
 					}
 					?>
+					<div class="rh-side-title-box">
+						<?php
+						if (isset($args['agent_label']) && !empty($args['agent_label'])) {
+							?>
+							<span class="rh-agent-label">
+								<?php echo esc_html($args['agent_label']) ?>
+							</span>
+							<?php
+
+						}
+
+						if (isset($args['agent_title_text']) && !empty($args['agent_title_text'])) {
+							?>
+							<h3 class="rh_property_agent__title">
+								<a href="<?php echo esc_url($user_post_url) ?>"><?php echo esc_html($args['agent_title_text']); ?></a>
+								<?php
+								if (0 < intval($args['agent_id'])) {
+									realhomes_verification_badge('agent', $args['agent_id']);
+								}
+								?>
+							</h3>
+							<?php
+						}
+						?>
+					</div>
 				</div>
 				<?php
+				$agent_display_option = get_post_meta(get_the_ID(), 'REAL_HOMES_agent_display_option', true);
+
 				if (isset($args['agent_id']) && !empty($args['agent_id']) && !empty(get_the_content('', '', $args['agent_id']))) {
 					$agent_description = get_the_content('', '', $args['agent_id']);
 					echo '<p>' . wp_trim_words($agent_description, 15) . '</p>';
+				} else if ($agent_display_option === 'my_profile_info' && $args['author_id']) {
+					$user_post_id = get_user_meta($args['author_id'], 'inspiry_role_post_id', true);
+					if ($user_post_id) {
+						$agent_description = get_the_content('', '', $user_post_id);
+						echo '<p>' . wp_trim_words($agent_description, 15) . '</p>';
+					}
 				}
 
 				if ('true' === $theme_display_agent_detail_page_link) {
@@ -181,20 +190,20 @@ function display_sidebar_agent_box($args)
 					<?php
 				}
 				/*
-																																																																								if (isset($args['agent_email']) && !empty($args['agent_email'])) {
-																																																																									?>
-																																																																									<p class="contact email">
-																																																																										<span><?php esc_html_e('Email', 'framework'); ?></span>
-																																																																										<a href="mailto:<?php echo esc_attr(antispambot($args['agent_email'])); ?>">
-																																																																											<?php
-																																																																											inspiry_safe_include_svg('/ultra/icons/email.svg', '/assets/');
-																																																																											echo esc_html(antispambot($args['agent_email']));
-																																																																											?>
-																																																																										</a>
-																																																																									</p>
-																																																																									<?php
-																																																																								}
-																																																																								*/
+																																																																																				if (isset($args['agent_email']) && !empty($args['agent_email'])) {
+																																																																																					?>
+																																																																																					<p class="contact email">
+																																																																																						<span><?php esc_html_e('Email', 'framework'); ?></span>
+																																																																																						<a href="mailto:<?php echo esc_attr(antispambot($args['agent_email'])); ?>">
+																																																																																							<?php
+																																																																																							inspiry_safe_include_svg('/ultra/icons/email.svg', '/assets/');
+																																																																																							echo esc_html(antispambot($args['agent_email']));
+																																																																																							?>
+																																																																																						</a>
+																																																																																					</p>
+																																																																																					<?php
+																																																																																				}
+																																																																																				*/
 				?>
 			</div>
 		<?php endif;
@@ -328,6 +337,8 @@ if (('true' === $display_agent_info) && ('none' !== $agent_display_option)) {
 	}
 
 	if ('my_profile_info' === $agent_display_option) {
+		$user_role = get_user_meta(get_the_author_meta('ID'), 'inspiry_user_role', true);
+
 		$profile_args = array();
 		$profile_args['display_author'] = true;
 		$profile_args['agent_id'] = '';
@@ -339,6 +350,10 @@ if (('true' === $display_agent_info) && ('none' !== $agent_display_option)) {
 		$profile_args['agent_office_phone'] = get_the_author_meta('office_number');
 		$profile_args['agent_office_fax'] = get_the_author_meta('fax_number');
 		$profile_args['agent_email'] = get_the_author_meta('user_email');
+		if ($user_role === 'agent' || $user_role === 'agency') {
+			$profile_args['agent_label'] = $user_role === 'agent' ? esc_html__('Agent', 'framework') : esc_html__('Agency', 'framework');
+		}
+
 		display_sidebar_agent_box($profile_args);
 	} else {
 		$property_agents = get_post_meta(get_the_ID(), 'REAL_HOMES_agents');
