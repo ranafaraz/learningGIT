@@ -21,9 +21,7 @@
     flex-wrap: wrap !important;
   }
 }
-.logged-in-only {
-  display: none !important;
-}
+
 
 /* 
 @media screen and (max-width: 767px) {
