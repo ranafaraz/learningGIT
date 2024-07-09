@@ -23,3 +23,7 @@
     width: 100%;
   }
 } */
+.agency-properties {
+  display: flex;
+  flex-wrap: wrap;
+}

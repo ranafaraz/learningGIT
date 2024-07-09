@@ -11491,9 +11491,9 @@ div.leaflet-container a.leaflet-popup-close-button {
 /*
  * Stats Chart Styles
  */
-.stats-charts-wrap {
+/* .stats-charts-wrap {
   margin: 25px 0;
-}
+} */
 .stats-charts-wrap > h3 {
   margin-bottom: 15px;
 }
