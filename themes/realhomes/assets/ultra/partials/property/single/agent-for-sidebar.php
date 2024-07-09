@@ -192,20 +192,20 @@ function display_sidebar_agent_box($args)
 					<?php
 				}
 				/*
-																																																																																												if (isset($args['agent_email']) && !empty($args['agent_email'])) {
-																																																																																													?>
-																																																																																													<p class="contact email">
-																																																																																														<span><?php esc_html_e('Email', 'framework'); ?></span>
-																																																																																														<a href="mailto:<?php echo esc_attr(antispambot($args['agent_email'])); ?>">
-																																																																																															<?php
-																																																																																															inspiry_safe_include_svg('/ultra/icons/email.svg', '/assets/');
-																																																																																															echo esc_html(antispambot($args['agent_email']));
+																																																																																														if (isset($args['agent_email']) && !empty($args['agent_email'])) {
 																																																																																															?>
-																																																																																														</a>
-																																																																																													</p>
-																																																																																													<?php
-																																																																																												}
-																																																																																												*/
+																																																																																															<p class="contact email">
+																																																																																																<span><?php esc_html_e('Email', 'framework'); ?></span>
+																																																																																																<a href="mailto:<?php echo esc_attr(antispambot($args['agent_email'])); ?>">
+																																																																																																	<?php
+																																																																																																	inspiry_safe_include_svg('/ultra/icons/email.svg', '/assets/');
+																																																																																																	echo esc_html(antispambot($args['agent_email']));
+																																																																																																	?>
+																																																																																																</a>
+																																																																																															</p>
+																																																																																															<?php
+																																																																																														}
+																																																																																														*/
 				?>
 			</div>
 		<?php endif;
