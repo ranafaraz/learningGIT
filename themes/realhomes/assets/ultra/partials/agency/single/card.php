@@ -180,19 +180,19 @@ $agency_id = get_the_ID();
 					<?php
 				}
 				/*
-										if (!empty($agency_email)) {
-											?>
-											<div class="agency-contact-item">
-												<?php inspiry_safe_include_svg('/icons/email.svg'); ?>
-												<div class="agency-contact-item-inner">
-													<h4 class="agency-contact-item-label"><?php esc_html_e('Email', 'framework'); ?></h4>
-													<a
-														href="mailto:<?php echo esc_attr(antispambot($agency_email)); ?>"><?php echo esc_html(antispambot($agency_email)); ?></a>
-												</div>
-											</div>
-											<?php
-										}
-										*/
+																																																		if (!empty($agency_email)) {
+																																																			?>
+																																																			<div class="agency-contact-item">
+																																																				<?php inspiry_safe_include_svg('/icons/email.svg'); ?>
+																																																				<div class="agency-contact-item-inner">
+																																																					<h4 class="agency-contact-item-label"><?php esc_html_e('Email', 'framework'); ?></h4>
+																																																					<a
+																																																						href="mailto:<?php echo esc_attr(antispambot($agency_email)); ?>"><?php echo esc_html(antispambot($agency_email)); ?></a>
+																																																				</div>
+																																																			</div>
+																																																			<?php
+																																																		}
+																																																		*/
 				if (!empty($agency_address)) {
 					?>
 					<div class="agency-contact-item agency-contact-item-address">
@@ -217,7 +217,70 @@ $agency_id = get_the_ID();
 		</div>
 		<?php
 	}
+	?>
+</article>
+<h3 class="rh-page-heading"><?php esc_html_e('My Listings', 'framework'); ?></h3>
+<div class="agency-properties">
+	<?php
+	$number_of_properties = 4;
+	$post = get_post($agency_id);
+	$authors = [$post->post_author];
 
+	// Get all users when inspiry_user_role is agent, and inspiry_user_agency === agency_id
+	$agent_user_ids = get_users(
+		array(
+			'meta_key' => 'inspiry_user_agency',
+			'meta_value' => $agency_id,
+			'fields' => 'ID'
+		)
+	);
+
+	// Remove duplicates
+	$agent_user_ids = array_unique($agent_user_ids);
+
+	if (!empty($agent_user_ids)) {
+		$authors = array_merge($authors, $agent_user_ids);
+	}
+
+	$agency_properties_args = array(
+		'post_type' => 'property',
+		'posts_per_page' => intval($number_of_properties),
+		'author__in' => $authors,
+		'paged' => $paged,
+	);
+
+	$agency_properties_listing_query = new WP_Query(apply_filters('inspiry_agent_single_properties', $agency_properties_args));
+
+	$listings_max_num_pages = null;
+
+	if ($agency_properties_listing_query->have_posts()) {
+		while ($agency_properties_listing_query->have_posts()) {
+			$agency_properties_listing_query->the_post();
+
+			// Display Property for Listing
+			// get_template_part('assets/ultra/partials/properties/list-card-1');
+			get_template_part('assets/ultra/partials/properties/grid-card-1');
+		}
+
+		$listings_max_num_pages = $agency_properties_listing_query->max_num_pages;
+
+		wp_reset_postdata();
+	} else {
+		?>
+		<div class="rh-alert-wrapper">
+			<h4 class="no-results"><?php esc_html_e('No Property Found!', 'framework') ?></h4>
+		</div>
+		<?php
+	}
+	?>
+</div>
+<?php
+if (isset($listings_max_num_pages) && $listings_max_num_pages) {
+	inspiry_theme_pagination($agency_properties_listing_query->max_num_pages);
+}
+?>
+<article class="agency-card single-agency-card">
+	<?php
 	if (function_exists('realhomes_generate_properties_stats_chart') && 'show' === get_option('realhomes_agency_single_stats_charts', 'show')) {
 		?>
 		<div class="stats-charts-wrap agency">
