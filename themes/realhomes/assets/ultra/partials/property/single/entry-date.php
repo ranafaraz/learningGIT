@@ -10,7 +10,14 @@ if (isset($property_entry_date) && !empty($property_entry_date)) {
     </h4>
     <div class="rh_content margin-bottom-40px">
       <?php
-      echo $property_entry_date;
+      // Get the date components
+      $day = date('j', strtotime($property_entry_date));  // Day without leading zeros
+      $month = date('F', strtotime($property_entry_date));  // Full month name
+      $year = date('Y', strtotime($property_entry_date));  // Full year
+    
+      // Format the date
+      $formatted_date = $day . ' ב' . dirabe_get_hebrew_month($month) . ' ' . $year;
+      echo $formatted_date;
       ?>
     </div>
   </div>
