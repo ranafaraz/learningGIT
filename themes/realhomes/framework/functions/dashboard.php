@@ -2496,6 +2496,14 @@ if (!function_exists('realhomes_dashboard_assets')) {
 			'all'
 		);
 
+        wp_enqueue_style(
+            'dashboard-custom-styles',
+            get_theme_file_uri('assets/ultra/styles/css/custom.css'),
+            array(),
+            INSPIRY_THEME_VERSION,
+            'all'
+        );
+
 		// Adds inline dashboard styles
 		wp_add_inline_style('dashboard-styles', apply_filters('realhomes_dashboard_custom_css', ''));
 

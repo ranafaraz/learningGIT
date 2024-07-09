@@ -22,8 +22,8 @@
                         <span class="menu-item-name"><?php esc_html_e('התחבר והרשם', 'framework'); ?></span>
                     </a>
                 </li>
-                <li>
-                    <a href="/dashboard/?module=properties&submodule=submit-property">
+                <li class="ask-for-register">
+                    <a href="#">
                         <i class="fas fa-home"></i>
                         <span class="menu-item-name"><?php esc_html_e('פרסום דירה', 'framework'); ?></span>
                     </a>

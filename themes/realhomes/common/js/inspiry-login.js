@@ -227,6 +227,7 @@
 
 
         /*-----------------------------------------------------------------------------------*/
+
         /* Login Modal
         /*-----------------------------------------------------------------------------------*/
         function rhSetLoginFormHeight() {
@@ -283,11 +284,22 @@
         }
 
         // A common class to ask for login where needed in the theme.
-        $('.ask-for-login').on('click', function (event) {
+        $('.ask-for-login, .ask-for-login .nav-item-link').on('click', function (event) {
             event.preventDefault();
             $('.rh_login_modal_wrapper').css("display", "flex").hide().fadeIn(500);
             rhSetLoginFormHeight();
             rhLoginViz = true;
+        });
+
+        $('.ask-for-register, .ask-for-register .nav-item-link').on('click', function (event) {
+            event.preventDefault();
+            $('.rh_login_modal_wrapper').css("display", "flex").hide().fadeIn(500);
+            rhSetLoginFormHeight();
+            rhLoginViz = true;
+            $('.rh_login_tab').removeClass('rh_active');
+            $('.rh_register_target').addClass('rh_active');
+            $('.rh_form_modal').slideUp(500);
+            $('.rh_register_form').slideDown(500);
         });
 
         $('.rh_login_close').on('click', function () {
