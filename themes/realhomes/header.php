@@ -14,6 +14,20 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <meta name="format-detection" content="telephone=no">
 	<?php wp_head(); ?>
+    <?php if (is_user_logged_in()): ?>
+        <style>
+            .hide-for-logged-in-user {
+                display: none !important;
+            }
+        </style>
+    <?php endif; ?>
+    <?php if (!is_user_logged_in()): ?>
+        <style>
+            .show-for-logged-in-user {
+                display: none !important;
+            }
+        </style>
+    <?php endif; ?>
 </head>
 <body <?php body_class(); ?>>
 <?php
