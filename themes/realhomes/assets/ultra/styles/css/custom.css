@@ -4,32 +4,39 @@
 }
 
 #rh_modal__login_form .rh_wrapper_password_field {
-  position: relative;
+    position: relative;
 }
+
 #rh_modal__login_form .rh_wrapper_password_field .rh_password_reveal_trigger {
-  position: absolute;
-  transform: translate(50%, -50%);
-  top: 50%;
-  left: 1rem;
-  cursor: pointer;
+    position: absolute;
+    transform: translate(50%, -50%);
+    top: 50%;
+    left: 1rem;
+    cursor: pointer;
 }
+
 .agent-properties {
-  flex-wrap: nowrap !important;
-}
-@media screen and (max-width: 767px) {
-  .agent-properties {
-    flex-wrap: wrap !important;
-  }
+    flex-wrap: nowrap !important;
 }
 
 
-/* 
+/*
 @media screen and (max-width: 767px) {
   .agent-properties .rh_agent_card {
     width: 100%;
   }
 } */
 .agency-properties {
-  display: flex;
-  flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 767px) {
+    .agent-properties {
+        flex-wrap: wrap !important;
+    }
+
+    .agency-properties {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
