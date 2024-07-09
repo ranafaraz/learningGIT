@@ -2529,7 +2529,7 @@ if (!function_exists('realhomes_dashboard_assets')) {
 
         wp_enqueue_script(
             'dashboard-script',
-            get_theme_file_uri('assets\ultra\scripts\js\custom.js'),
+            get_theme_file_uri('assets/ultra/scripts/js/custom.js'),
             array('jquery'),
             INSPIRY_THEME_VERSION,
             true
