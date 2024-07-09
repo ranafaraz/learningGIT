@@ -15,29 +15,15 @@
   cursor: pointer;
 }
 
-.agent-properties {
-  flex-wrap: nowrap !important;
-}
-
-/*
-@media screen and (max-width: 767px) {
-  .agent-properties .rh_agent_card {
-    width: 100%;
-  }
-} */
-.agency-properties {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.agency-properties, .agent-properties {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 @media screen and (max-width: 767px) {
-  .agent-properties {
-    flex-wrap: wrap !important;
-  }
-
-  .agency-properties {
-    grid-template-columns: repeat(1, 1fr);
-  }
+    .agency-properties, .agent-properties {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .rh-agent-name-and-avatar-wrapper {
