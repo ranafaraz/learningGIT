@@ -15,6 +15,20 @@
 		$submenu = realhomes_dashboard_menus()['submenu'];
 		?>
 		<ul id="dashboard-menu" class="dashboard-menu">
+            <?php if (!is_user_logged_in()) : ?>
+                <li>
+                    <a href="#" class="ask-for-login">
+                        <i class="fas fa-user"></i>
+                        <span class="menu-item-name"><?php esc_html_e('התחבר והרשם', 'framework'); ?></span>
+                    </a>
+                </li>
+                <li class="ask-for-register">
+                    <a href="#">
+                        <i class="fas fa-home"></i>
+                        <span class="menu-item-name"><?php esc_html_e('פרסום דירה', 'framework'); ?></span>
+                    </a>
+                </li>
+            <?php endif; ?>
 			<?php
 			// 0 = menu_title, 1 = page_title, 2 = icon, 3 = show_in_menu
 			foreach ($menu as $key => $item) {

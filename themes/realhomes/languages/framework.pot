@@ -208,6 +208,21 @@ msgstr ""
 msgid "Property Location"
 msgstr ""
 
+#: assets/ultra/partials/agency/single/card.php
+#: assets/ultra/partials/agent/single/card.php
+msgid "Property Locations"
+msgstr ""
+
+#: assets/ultra/partials/agency/single/card.php
+#: assets/ultra/partials/agent/single/card.php
+msgid "Property Types"
+msgstr ""
+
+#: assets/ultra/partials/agency/single/card.php
+#: assets/ultra/partials/agent/single/card.php
+msgid "Property Statuses"
+msgstr ""
+
 #: assets/classic/partials/agency/single/agency.php:147
 #: assets/classic/partials/agent/single/agent.php:157
 #: assets/classic/partials/properties/search/fields/type.php:13

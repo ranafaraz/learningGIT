@@ -2496,6 +2496,14 @@ if (!function_exists('realhomes_dashboard_assets')) {
 			'all'
 		);
 
+        wp_enqueue_style(
+            'dashboard-custom-styles',
+            get_theme_file_uri('assets/ultra/styles/css/custom.css'),
+            array(),
+            INSPIRY_THEME_VERSION,
+            'all'
+        );
+
 		// Adds inline dashboard styles
 		wp_add_inline_style('dashboard-styles', apply_filters('realhomes_dashboard_custom_css', ''));
 
@@ -2518,6 +2526,14 @@ if (!function_exists('realhomes_dashboard_assets')) {
 			INSPIRY_THEME_VERSION,
 			true
 		);
+
+        wp_enqueue_script(
+            'dashboard-script',
+            get_theme_file_uri('assets\ultra\scripts\js\custom.js'),
+            array('jquery'),
+            INSPIRY_THEME_VERSION,
+            true
+        );
 
 		// Login Script
 		if (!is_user_logged_in()) {

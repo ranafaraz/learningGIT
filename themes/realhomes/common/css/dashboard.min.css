@@ -4838,7 +4838,8 @@ template {
   position: relative;
   width: 26px;
   height: 26px;
-  cursor: pointer
+  cursor: pointer;
+  margin-right: auto;
 }
 
 .rh-menu-toggle span {
