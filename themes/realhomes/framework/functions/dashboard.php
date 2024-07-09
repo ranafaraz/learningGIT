@@ -2527,6 +2527,14 @@ if (!function_exists('realhomes_dashboard_assets')) {
 			true
 		);
 
+        wp_enqueue_script(
+            'dashboard-script',
+            get_theme_file_uri('assets\ultra\scripts\js\custom.js'),
+            array('jquery'),
+            INSPIRY_THEME_VERSION,
+            true
+        );
+
 		// Login Script
 		if (!is_user_logged_in()) {
 			wp_enqueue_script(

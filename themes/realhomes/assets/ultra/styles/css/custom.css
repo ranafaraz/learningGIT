@@ -21,6 +21,10 @@
     flex-wrap: wrap !important;
   }
 }
+.logged-in-only {
+  display: none !important;
+}
+
 /* 
 @media screen and (max-width: 767px) {
   .agent-properties .rh_agent_card {
