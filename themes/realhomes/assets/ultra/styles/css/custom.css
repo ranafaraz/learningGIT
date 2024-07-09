@@ -1,24 +1,23 @@
 /* Custom CSS File for Buyers to Modify */
 .rhea_ultra_search_form_wrapper .rhea_keyword_field {
-    width: 100% !important;
+  width: 100% !important;
 }
 
 #rh_modal__login_form .rh_wrapper_password_field {
-    position: relative;
+  position: relative;
 }
 
 #rh_modal__login_form .rh_wrapper_password_field .rh_password_reveal_trigger {
-    position: absolute;
-    transform: translate(50%, -50%);
-    top: 50%;
-    left: 1rem;
-    cursor: pointer;
+  position: absolute;
+  transform: translate(50%, -50%);
+  top: 50%;
+  left: 1rem;
+  cursor: pointer;
 }
 
 .agent-properties {
-    flex-wrap: nowrap !important;
+  flex-wrap: nowrap !important;
 }
-
 
 /*
 @media screen and (max-width: 767px) {
@@ -27,16 +26,22 @@
   }
 } */
 .agency-properties {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 @media screen and (max-width: 767px) {
-    .agent-properties {
-        flex-wrap: wrap !important;
-    }
+  .agent-properties {
+    flex-wrap: wrap !important;
+  }
 
-    .agency-properties {
-        grid-template-columns: repeat(1, 1fr);
-    }
+  .agency-properties {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.rh-agent-name-and-avatar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
