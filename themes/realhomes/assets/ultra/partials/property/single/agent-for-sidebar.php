@@ -181,6 +181,7 @@ function display_sidebar_agent_box($args)
 					<?php
 				}
 				/*
+
 																																																																								if (isset($args['agent_email']) && !empty($args['agent_email'])) {
 																																																																									?>
 																																																																									<p class="contact email">
