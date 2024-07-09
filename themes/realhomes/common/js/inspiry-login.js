@@ -289,6 +289,10 @@
             $('.rh_login_modal_wrapper').css("display", "flex").hide().fadeIn(500);
             rhSetLoginFormHeight();
             rhLoginViz = true;
+            $('.rh_login_tab').addClass('rh_active');
+            $('.rh_register_target').removeClass('rh_active');
+            $('.rh_form_modal').slideUp(500);
+            $('.rh_login_form').slideDown(500);
         });
 
         $('.ask-for-register, .ask-for-register .nav-item-link').on('click', function (event) {
