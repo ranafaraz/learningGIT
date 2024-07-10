@@ -18,7 +18,7 @@ if ( isset( $dashboard_globals['submodule'] ) && ! empty( $dashboard_globals['su
 
 get_header();
 ?>
-    <div id="dashboard" class="dashboard <?php echo esc_attr( get_option( 'realhomes_dashboard_sidebar_display', 'show-sidebar' ) ); ?>">
+    <div id="dashboard" class="dashboard">
 		<?php
 		get_template_part( 'common/dashboard/sidebar' );
 		get_template_part( 'common/dashboard/content' );
