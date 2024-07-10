@@ -91,31 +91,15 @@ $label_text = get_post_meta($property_id, 'inspiry_property_label', true);
 			?>
 			<div
 				class="rhea-ultra-price-meta-box <?php echo 'yes' !== $settings['show_price_slash'] ? esc_attr('hide-ultra-price-postfix-separator') : ' '; ?>">
-                <div class="price-box">
+                <div>
                     <?php
                     rhea_get_template_part('assets/partials/ultra/price');
                     ?>
                 </div>
-                <div class="card-flex-box">
+                <div>
                     <?php
                     rhea_get_template_part('assets/partials/ultra/grid-card-meta');
                     ?>
-                    <div class="rh-ultra-prop-card-meta">
-                        <div class="rh-ultra-meta-icon-wrapper">
-                    <span class="rh-ultra-meta-icon">
-                        <?php inspiry_safe_include_svg('/ultra/icons/location.svg', '/assets/'); ?>
-                    </span>
-                            <span class="rh-ultra-meta-box">
-                        <span class="figure">
-                            <?php
-                            foreach ($propertyLocation as $location) {
-                                echo $location->name;
-                            }
-                            ?>
-                        </span>
-                    </span>
-                        </div>
-                    </div>
                 </div>
 			</div>
 			<div class="rvr_card_info_wrap">

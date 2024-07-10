@@ -55,7 +55,6 @@ $label_text = get_post_meta(get_the_ID(), 'inspiry_property_label', true);
     <div class="rh-ultra-card-detail-wrapper">
 
         <?php
-        $propertyLocation = get_the_terms(get_the_ID(), "property-city");
         get_template_part('assets/ultra/partials/properties/card-parts/heading');
         get_template_part('assets/ultra/partials/properties/card-parts/address');
         $type_terms = get_the_terms(get_the_ID(), "property-type");
@@ -72,33 +71,16 @@ $label_text = get_post_meta(get_the_ID(), 'inspiry_property_label', true);
         }
         ?>
         <div class="rh-ultra-price-meta-box hide-ultra-price-postfix-separator">
-            <div class="price-box">
+            <div>
                 <?php
                 get_template_part('assets/ultra/partials/properties/card-parts/price');
                 ?>
             </div>
-            <div class="card-flex-box">
+            <div>
                 <?php
                 get_template_part('assets/ultra/partials/properties/card-parts/grid-card-meta');
                 ?>
-                <div class="rh-ultra-prop-card-meta">
-                    <div class="rh-ultra-meta-icon-wrapper">
-                    <span class="rh-ultra-meta-icon">
-                        <?php inspiry_safe_include_svg('/ultra/icons/location.svg', '/assets/'); ?>
-                    </span>
-                        <span class="rh-ultra-meta-box">
-                        <span class="figure">
-                            <?php
-                            foreach ($propertyLocation as $location) {
-                                echo $location->name;
-                            }
-                            ?>
-                        </span>
-                    </span>
-                    </div>
-                </div>
             </div>
-
         </div>
         <div class="rvr_card_info_wrap">
             <div class="rh-ultra-rvr-rating">

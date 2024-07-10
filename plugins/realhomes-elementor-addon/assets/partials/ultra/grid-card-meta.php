@@ -41,31 +41,31 @@ $settings_to_keys = array(
 		'icon' => 'ultra-bedrooms',
 		'postfix' => ''
 	),
-	'bathrooms' => array(
-		'key' => 'REAL_HOMES_property_bathrooms',
-		'icon' => 'ultra-bathrooms',
-		'postfix' => ''
-	),
+//	'bathrooms' => array(
+//		'key' => 'REAL_HOMES_property_bathrooms',
+//		'icon' => 'ultra-bathrooms',
+//		'postfix' => ''
+//	),
 	'area' => array(
 		'key' => 'REAL_HOMES_property_size',
 		'icon' => 'ultra-area',
 		'postfix' => 'REAL_HOMES_property_size_postfix'
 	),
-	'garage' => array(
-		'key' => 'REAL_HOMES_property_garage',
-		'icon' => 'ultra-garagers',
-		'postfix' => ''
-	),
+//	'garage' => array(
+//		'key' => 'REAL_HOMES_property_garage',
+//		'icon' => 'ultra-garagers',
+//		'postfix' => ''
+//	),
 	'year-built' => array(
 		'key' => 'REAL_HOMES_property_year_built',
 		'icon' => 'ultra-calender',
 		'postfix' => ''
 	),
-	'lot-size' => array(
-		'key' => 'REAL_HOMES_property_lot_size',
-		'icon' => 'ultra-lot-size',
-		'postfix' => 'REAL_HOMES_property_lot_size_postfix'
-	),
+//	'lot-size' => array(
+//		'key' => 'REAL_HOMES_property_lot_size',
+//		'icon' => 'ultra-lot-size',
+//		'postfix' => 'REAL_HOMES_property_lot_size_postfix'
+//	),
 	'floor' => array(
 		'key' => 'REAL_HOMES_property_floor',
 		'icon' => 'ultra-floor',
@@ -113,6 +113,23 @@ if (isset($rhea_add_meta_select) && !empty($rhea_add_meta_select)) {
 		// display additional fields icons
 		do_action('rhea_property_listing_additional_fields_icons', $property_id);
 		?>
+        <div class="rh-ultra-prop-card-meta">
+            <div class="rh-ultra-meta-icon-wrapper">
+                    <span class="rh-ultra-meta-icon">
+                        <?php inspiry_safe_include_svg('/ultra/icons/location.svg', '/assets/'); ?>
+                    </span>
+                <span class="rh-ultra-meta-box">
+                        <span class="figure">
+                            <?php
+                            $propertyLocation = get_the_terms(get_the_ID(), "property-city");
+                            foreach ($propertyLocation as $location) {
+                                echo $location->name;
+                            }
+                            ?>
+                        </span>
+                    </span>
+            </div>
+        </div>
 	</div>
 	<?php
 }
