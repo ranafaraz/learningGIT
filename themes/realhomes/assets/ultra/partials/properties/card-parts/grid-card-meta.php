@@ -102,7 +102,7 @@ $rhea_add_meta_select = array();
             </div>
         </div>
         <?php
-        rh_ultra_meta('', 'REAL_HOMES_property_lot_size', 'ultra-area', '');
+        rh_ultra_meta('', 'REAL_HOMES_property_lot_size', 'ultra-lot-size', '');
         rh_ultra_meta('', 'REAL_HOMES_property_floor', 'ultra-floor', '');
         do_action('card_inspiry_additional_property_meta_fields', $post_id);
         ?>

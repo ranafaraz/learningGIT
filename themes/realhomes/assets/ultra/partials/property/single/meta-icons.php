@@ -54,7 +54,7 @@ $meta_to_display = array(
 		'id' => 'REAL_HOMES_property_lot_size',
 		'label' => 'inspiry_lot_size_field_label',
 		'default' => esc_html__('Lot Size', 'framework'),
-		'icon' => 'ultra-area.svg',
+		'icon' => 'ultra-lot-size.svg',
 		'post-fix' => 'REAL_HOMES_property_lot_size_postfix'
 	],
 	[
@@ -119,7 +119,30 @@ $meta_to_display = apply_filters('inspiry_property_detail_meta', $meta_to_displa
 			<?php
 		}
 	}
-
+?>
+    <div class="rh_ultra_prop_card__meta">
+        <div class="rh_ultra_meta_icon_wrapper">
+					<span class="rh-ultra-meta-label">
+                        שכונה
+                    </span>
+            <div class="rh-ultra-meta-icon-wrapper">
+						<span class="rh_ultra_meta_icon">
+                            <?php inspiry_safe_include_svg('/ultra/icons/location.svg', '/assets/'); ?>
+						</span>
+                <span class="rh_ultra_meta_box">
+							<span class="figure">
+                                <?php
+                                $propertyLocation = get_the_terms(get_the_ID(), "property-city");
+                                foreach ($propertyLocation as $location) {
+                                    echo $location->name;
+                                }
+                                ?>
+                            </span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <?php
 	/**
 	 * This hook can be used to display more property meta fields
 	 */
