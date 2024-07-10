@@ -115,6 +115,11 @@
 				echo '</li>';
 			}
 			?>
+            <li class="menu-item-logout">
+                <a href="<?php echo get_home_url()?>">
+                    <i class="fas fa-arrow-right"></i><span class="menu-item-name">חזרה לדף הבית</span>
+                </a>
+            </li>
 		</ul><!-- #dashboard-menu -->
 		<?php
 	endif;
