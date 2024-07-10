@@ -17,7 +17,6 @@
         </div><!-- .rh-sidebar-menu-toggle -->
     </div>
     <div class="rh-header-slim-right">
-        <?php get_template_part( 'assets/ultra/partials/header/site-logo' ); ?>
         <nav id="rh-main-menus" class="rh-main-menus">
             <div id="rh-responsive-menu-toggle" class="rh-responsive-menu-toggle rh-menu-toggle">
                 <div class="stacked-lines">
