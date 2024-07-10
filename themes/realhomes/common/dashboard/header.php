@@ -17,38 +17,40 @@
         </div><!-- .rh-sidebar-menu-toggle -->
     </div>
     <div class="rh-header-slim-right">
-        <nav id="rh-main-menus" class="rh-main-menus">
-            <div id="rh-responsive-menu-toggle" class="rh-responsive-menu-toggle rh-menu-toggle">
-                <div class="stacked-lines">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="cross">
-                    <span></span>
-                    <span></span>
-                </div>
-            </div><!-- .rh-responsive-menu-toggle -->
-			<?php
-			if ( has_nav_menu( 'responsive-menu' ) ) {
-				wp_nav_menu( array(
-					'theme_location' => 'responsive-menu',
-					'walker'         => new RH_Walker_Nav_Menu(),
-					'menu_class'     => 'rh-menu-responsive clearfix',
-					'fallback_cb'    => false // Do not fall back to wp_page_menu()
-				) );
-			}
-
-			if ( has_nav_menu( 'main-menu' ) ) {
-				wp_nav_menu( array(
-					'theme_location' => 'main-menu',
-					'walker'         => new RH_Walker_Nav_Menu(),
-					'menu_class'     => 'rh-menu-main clearfix',
-					'fallback_cb'    => false // Do not fall back to wp_page_menu()
-				) );
-			}
-			?>
-        </nav><!-- .rh-main-menus -->
+<!--        <nav id="rh-main-menus" class="rh-main-menus">-->
+<!--            <div id="rh-responsive-menu-toggle" class="rh-responsive-menu-toggle rh-menu-toggle">-->
+<!--                <div class="stacked-lines">-->
+<!--                    <span></span>-->
+<!--                    <span></span>-->
+<!--                    <span></span>-->
+<!--                </div>-->
+<!--                <div class="cross">-->
+<!--                    <span></span>-->
+<!--                    <span></span>-->
+<!--                </div>-->
+<!--            </div>-->
+            <!-- .rh-responsive-menu-toggle -->
+<!--			--><?php
+//			if ( has_nav_menu( 'responsive-menu' ) ) {
+//				wp_nav_menu( array(
+//					'theme_location' => 'responsive-menu',
+//					'walker'         => new RH_Walker_Nav_Menu(),
+//					'menu_class'     => 'rh-menu-responsive clearfix',
+//					'fallback_cb'    => false // Do not fall back to wp_page_menu()
+//				) );
+//			}
+//
+//			if ( has_nav_menu( 'main-menu' ) ) {
+//				wp_nav_menu( array(
+//					'theme_location' => 'main-menu',
+//					'walker'         => new RH_Walker_Nav_Menu(),
+//					'menu_class'     => 'rh-menu-main clearfix',
+//					'fallback_cb'    => false // Do not fall back to wp_page_menu()
+//				) );
+//			}
+//			?>
+<!--        </nav>-->
+        <!-- .rh-main-menus -->
 		<?php
 		$current_user      = wp_get_current_user();
 		$current_user_meta = get_user_meta( $current_user->ID );
