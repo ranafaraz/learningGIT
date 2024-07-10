@@ -54,3 +54,6 @@
 .rh_prop_card_meta_wrap_ultra, .rh-properties-card-meta-ultra {
     justify-content: flex-start !important;
 }
+.rh-ultra-price-meta-box {
+    column-gap: 20px !important;
+}
