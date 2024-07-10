@@ -1,18 +1,18 @@
 /* Custom CSS File for Buyers to Modify */
 .rhea_ultra_search_form_wrapper .rhea_keyword_field {
-  width: 100% !important;
+    width: 100% !important;
 }
 
 #rh_modal__login_form .rh_wrapper_password_field {
-  position: relative;
+    position: relative;
 }
 
 #rh_modal__login_form .rh_wrapper_password_field .rh_password_reveal_trigger {
-  position: absolute;
-  transform: translate(50%, -50%);
-  top: 50%;
-  left: 1rem;
-  cursor: pointer;
+    position: absolute;
+    transform: translate(50%, -50%);
+    top: 50%;
+    left: 1rem;
+    cursor: pointer;
 }
 
 /*
@@ -23,18 +23,42 @@
 } */
 .agency-properties,
 .agent-properties {
-  display: grid !important;
-  grid-template-columns: repeat(2, 1fr);
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 @media screen and (max-width: 767px) {
-  .agency-properties,
-  .agent-properties {
-    grid-template-columns: repeat(1, 1fr);
-  }
+    .agency-properties,
+    .agent-properties {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
+
 .rh-agent-name-and-avatar-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.rh-ultra-property-card .rh-ultra-prop-card-meta svg, .rh-ultra-property-card .rh-ultra-prop-card-meta img, .rh_prop_card_meta_wrap_ultra svg, .rh_prop_card_meta_wrap_ultra img {
+    height: 20px !important;
+    width: auto !important;
+}
+
+.card-flex-box {
+    width: calc(80% - 10px);
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+.rh-ultra-price-meta-box .price-box{
+    width: 20%;
+}
+@media screen and (max-width: 767px) {
+    .card-flex-box {
+        width: 100%;
+    }
+    .rh-ultra-price-meta-box .price-box{
+        width: 100%;
+    }
 }
