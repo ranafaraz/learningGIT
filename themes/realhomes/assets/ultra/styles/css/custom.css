@@ -45,20 +45,12 @@
     width: auto !important;
 }
 
-.card-flex-box {
-    width: calc(80% - 10px);
-    display: flex;
-    flex-wrap: wrap;
+.rh-properties-card-meta-ultra {
     row-gap: 10px;
 }
-.rh-ultra-price-meta-box .price-box{
-    width: 20%;
+.rh-ultra-price-meta-box, .rhea-ultra-price-meta-box {
+    flex-wrap: nowrap !important;
 }
-@media screen and (max-width: 767px) {
-    .card-flex-box {
-        width: 100%;
-    }
-    .rh-ultra-price-meta-box .price-box{
-        width: 100%;
-    }
+.rh_prop_card_meta_wrap_ultra, .rh-properties-card-meta-ultra {
+    justify-content: flex-start !important;
 }

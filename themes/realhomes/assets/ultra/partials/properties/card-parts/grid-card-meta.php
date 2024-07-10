@@ -13,36 +13,36 @@ $settings_to_keys = array(
         'icon' => 'ultra-bedrooms',
         'postfix' => ''
     ),
-    'bathrooms' => array(
-        'label' => get_option('inspiry_bathrooms_field_label') ? esc_html(get_option('inspiry_bathrooms_field_label')) : esc_html__('Bathrooms', 'framework'),
-        'key' => 'REAL_HOMES_property_bathrooms',
-        'icon' => 'ultra-bathrooms',
-        'postfix' => ''
-    ),
+//    'bathrooms' => array(
+//        'label' => get_option('inspiry_bathrooms_field_label') ? esc_html(get_option('inspiry_bathrooms_field_label')) : esc_html__('Bathrooms', 'framework'),
+//        'key' => 'REAL_HOMES_property_bathrooms',
+//        'icon' => 'ultra-bathrooms',
+//        'postfix' => ''
+//    ),
     'area' => array(
         'label' => get_option('inspiry_area_field_label') ? esc_html(get_option('inspiry_area_field_label')) : esc_html__('Area', 'framework'),
         'key' => 'REAL_HOMES_property_size',
         'icon' => 'ultra-area',
         'postfix' => 'REAL_HOMES_property_size_postfix'
     ),
-    'garage' => array(
-        'label' => get_option('inspiry_garages_field_label') ? esc_html(get_option('inspiry_garages_field_label')) : esc_html__('Garage', 'framework'),
-        'key' => 'REAL_HOMES_property_garage',
-        'icon' => 'ultra-garages',
-        'postfix' => ''
-    ),
+//    'garage' => array(
+//        'label' => get_option('inspiry_garages_field_label') ? esc_html(get_option('inspiry_garages_field_label')) : esc_html__('Garage', 'framework'),
+//        'key' => 'REAL_HOMES_property_garage',
+//        'icon' => 'ultra-garages',
+//        'postfix' => ''
+//    ),
     'year-built' => array(
         'label' => get_option('inspiry_year_built_field_label') ? esc_html(get_option('inspiry_year_built_field_label')) : esc_html__('Year', 'framework'),
         'key' => 'REAL_HOMES_property_year_built',
         'icon' => 'ultra-calender',
         'postfix' => ''
     ),
-    'lot-size' => array(
-        'label' => get_option('inspiry_lot_size_field_label') ? esc_html(get_option('inspiry_lot_size_field_label')) : esc_html__('Lot Size', 'framework'),
-        'key' => 'REAL_HOMES_property_lot_size',
-        'icon' => 'ultra-lot-size',
-        'postfix' => 'REAL_HOMES_property_lot_size_postfix'
-    ),
+//    'lot-size' => array(
+//        'label' => get_option('inspiry_lot_size_field_label') ? esc_html(get_option('inspiry_lot_size_field_label')) : esc_html__('Lot Size', 'framework'),
+//        'key' => 'REAL_HOMES_property_lot_size',
+//        'icon' => 'ultra-lot-size',
+//        'postfix' => 'REAL_HOMES_property_lot_size_postfix'
+//    ),
 );
 
 if (inspiry_is_rvr_enabled()) {
@@ -84,6 +84,23 @@ if (!empty($inspiry_meta_selection) && is_array($inspiry_meta_selection)) {
 
         do_action('card_inspiry_additional_property_meta_fields', $post_id);
         ?>
+        <div class="rh-ultra-prop-card-meta">
+            <div class="rh-ultra-meta-icon-wrapper">
+                    <span class="rh-ultra-meta-icon">
+                        <?php inspiry_safe_include_svg('/ultra/icons/location.svg', '/assets/'); ?>
+                    </span>
+                <span class="rh-ultra-meta-box">
+                        <span class="figure">
+                            <?php
+                            $propertyLocation = get_the_terms(get_the_ID(), "property-city");
+                            foreach ($propertyLocation as $location) {
+                                echo $location->name;
+                            }
+                            ?>
+                        </span>
+                    </span>
+            </div>
+        </div>
     </div>
     <?php
 }
