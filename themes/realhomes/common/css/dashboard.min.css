@@ -11930,5 +11930,9 @@ a.ui-button:active,
     display: none;
   }
 }
+.rh-user-account {
+  justify-content: space-between;
+  width: 100%;
+}
 
 /*# sourceMappingURL=dashboard.min.css.map */
