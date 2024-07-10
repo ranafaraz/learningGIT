@@ -51,6 +51,6 @@
 .rh-ultra-price-meta-box, .rhea-ultra-price-meta-box {
     flex-wrap: nowrap !important;
 }
-.rh_prop_card_meta_wrap_ultra {
-    justify-content: flex-end;
+.rh_prop_card_meta_wrap_ultra, .rh-properties-card-meta-ultra {
+    justify-content: flex-start !important;
 }
