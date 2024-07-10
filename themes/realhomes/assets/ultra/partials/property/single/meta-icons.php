@@ -54,7 +54,7 @@ $meta_to_display = array(
 		'id' => 'REAL_HOMES_property_lot_size',
 		'label' => 'inspiry_lot_size_field_label',
 		'default' => esc_html__('Lot Size', 'framework'),
-		'icon' => 'ultra-lot-size.svg',
+		'icon' => 'ultra-area.svg',
 		'post-fix' => 'REAL_HOMES_property_lot_size_postfix'
 	],
 	[
