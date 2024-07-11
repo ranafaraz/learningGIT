@@ -11931,8 +11931,12 @@ a.ui-button:active,
   }
 }
 .rh-user-account {
-  justify-content: space-between;
   width: 100%;
+}
+@media(max-width: 768px) {
+  .rh-user-account {
+    justify-content: space-between;
+  }
 }
 
 /*# sourceMappingURL=dashboard.min.css.map */
