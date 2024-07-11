@@ -134,7 +134,7 @@ $settings_to_keys = array(
             </div>
         </div>
         <?php
-        rhea_ultra_meta('', 'REAL_HOMES_property_lot_size', 'ultra-area', '');
+        rhea_ultra_meta('', 'REAL_HOMES_property_lot_size', 'ultra-lot-size', '');
         rhea_ultra_meta('', 'REAL_HOMES_property_floor', 'ultra-floor', '');
         do_action('card_inspiry_additional_property_meta_fields', $post_id);
         ?>
