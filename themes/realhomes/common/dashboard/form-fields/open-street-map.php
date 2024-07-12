@@ -39,14 +39,14 @@ if (realhomes_dashboard_edit_property()) {
 			<input type="text" class="required map-address" name="address" value="<?php echo esc_attr($property_address); ?>"
 				title="<?php esc_attr_e('* Please provide a property address!', 'framework'); ?>" required />
 			<?php /*
- <button class="btn btn-primary goto-address-button" type="button"
-	 value="address"><?php echo esc_html($find_address_btn_label); ?></button> */ ?>
+<button class="btn btn-primary goto-address-button" type="button"
+	value="address"><?php echo esc_html($find_address_btn_label); ?></button> */ ?>
 		</div>
 		<?php /*
 <div class="map-wrapper">
-	<div class="map-canvas"></div>
-	<input type="hidden" name="coordinates" class="map-coordinate"
-		value="<?php echo esc_attr($property_location); ?>" />
+<div class="map-canvas"></div>
+<input type="hidden" name="coordinates" class="map-coordinate"
+	value="<?php echo esc_attr($property_location); ?>" />
 </div> */ ?>
 	</div>
 	<?php
@@ -58,15 +58,16 @@ if (realhomes_dashboard_edit_property()) {
 			<label for="address"><?php echo esc_html($property_address_label); ?></label>
 			<input type="text" class="required map-address" name="address"
 				value="<?php echo esc_attr(get_option('theme_submit_default_address')); ?>"
-				title="<?php esc_attr_e('* Please provide a property address!', 'framework'); ?>" required />
+				title="<?php esc_attr_e('* Please provide a property address!', 'framework'); ?>" placeholder="כלנית 24"
+				required />
 			<?php /* <button class="btn btn-primary goto-address-button"
-		type="button"><?php echo esc_html($find_address_btn_label); ?></button> */ ?>
+	 type="button"><?php echo esc_html($find_address_btn_label); ?></button> */ ?>
 		</div>
 		<?php /*
 <div class="map-wrapper">
 <div class="map-canvas"></div>
 <input type="hidden" name="coordinates" class="map-coordinate"
-	value="<?php echo esc_attr(get_option('theme_submit_default_location')); ?>" />
+value="<?php echo esc_attr(get_option('theme_submit_default_location')); ?>" />
 </div> */ ?>
 	</div>
 	<?php

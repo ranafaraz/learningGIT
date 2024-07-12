@@ -17,5 +17,6 @@ if (empty($property_title_label)) {
 		global $target_property;
 		echo esc_attr($target_property->post_title);
 	}
-	?>" title="<?php esc_attr_e('* Please provide property title', 'framework'); ?>" autofocus required />
+	?>" placeholder="למכירה דירת גן 4 חדרים במחיר שלא תמצאו"
+		title="<?php esc_attr_e('* Please provide property title', 'framework'); ?>" autofocus required />
 </p>
