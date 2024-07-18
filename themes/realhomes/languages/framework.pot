@@ -13500,3 +13500,35 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "https://www.inspirythemes.com/"
 msgstr ""
+
+#: \themes\realhomes\framework\functions\dashboard.php
+msgid "Price field is required!"
+msgstr ""
+
+#: \themes\realhomes\common\dashboard\submit-post-form.php
+msgid "Please provide the name."
+msgstr ""
+
+#: \themes\realhomes\framework\functions\dashboard.php
+msgid "Picture is required!"
+msgstr ""
+
+#: \themes\realhomes\framework\functions\edit-profile-handler.php
+msgid "Profile image is required!"
+msgstr ""
+
+#: \themes\realhomes\common\dashboard\form-fields\property-status.php
+msgid "Please provide property status"
+msgstr ""
+
+#: \themes\realhomes\framework\functions\dashboard.php
+msgid "Property Status field is required!"
+msgstr ""
+
+#: \themes\realhomes\framework\functions\dashboard.php
+msgid "Agent Display field is required!"
+msgstr ""
+
+#: \themes\realhomes\framework\functions\dashboard.php
+msgid "You don't have permission to delete this property"
+msgstr ""
