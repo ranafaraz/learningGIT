@@ -13530,5 +13530,5 @@ msgid "Agent Display field is required!"
 msgstr ""
 
 #: \themes\realhomes\framework\functions\dashboard.php
-msgid "You don't have permission to delete this property"
+msgid "You don't have permission to delete this %s."
 msgstr ""
