@@ -759,11 +759,11 @@ if (!function_exists('realhomes_dashboard_header_menu')) {
 
         if (!empty($analytics_url)) {
           ?>
-                                                                                                              <a href="<?php echo esc_url($analytics_url); ?>">
-                                                                                                                  <i class="fas fa-chart-line"></i>
-                                                                                                                  <span><?php echo realhomes_dashboard_menu_item_label('analytics'); ?></span>
-                                                                                                              </a>
-                                                                                                              <?php
+                                                                                                                                  <a href="<?php echo esc_url($analytics_url); ?>">
+                                                                                                                                      <i class="fas fa-chart-line"></i>
+                                                                                                                                      <span><?php echo realhomes_dashboard_menu_item_label('analytics'); ?></span>
+                                                                                                                                  </a>
+                                                                                                                                  <?php
         }
       }
     }
@@ -776,11 +776,11 @@ if (!function_exists('realhomes_dashboard_header_menu')) {
 
       if (!empty($profile_url)) {
         ?>
-                                                                                        <a href="<?php echo esc_url($profile_url); ?>">
-                                                                                            <?php inspiry_safe_include_svg('images/icon-dash-profile.svg', '/common/'); ?>
-                                                                                            <span><?php echo realhomes_dashboard_menu_item_label('profile'); ?></span>
-                                                                                        </a>
-                                                                                        <?php
+                                                                                                        <a href="<?php echo esc_url($profile_url); ?>">
+                                                                                                            <?php inspiry_safe_include_svg('images/icon-dash-profile.svg', '/common/'); ?>
+                                                                                                            <span><?php echo realhomes_dashboard_menu_item_label('profile'); ?></span>
+                                                                                                        </a>
+                                                                                                        <?php
       }
     }
 
@@ -792,11 +792,11 @@ if (!function_exists('realhomes_dashboard_header_menu')) {
 
       if (!empty($my_properties_url) && inspiry_no_membership_disable_stuff()) {
         ?>
-                                                                                        <a href="<?php echo esc_url($my_properties_url); ?>">
-                                                                                            <?php inspiry_safe_include_svg('images/icon-dash-my-properties.svg', '/common/'); ?>
-                                                                                            <span><?php echo realhomes_dashboard_menu_item_label('properties'); ?></span>
-                                                                                        </a>
-                                                                                        <?php
+                                                                                                        <a href="<?php echo esc_url($my_properties_url); ?>">
+                                                                                                            <?php inspiry_safe_include_svg('images/icon-dash-my-properties.svg', '/common/'); ?>
+                                                                                                            <span><?php echo realhomes_dashboard_menu_item_label('properties'); ?></span>
+                                                                                                        </a>
+                                                                                                        <?php
       }
     }
 
@@ -808,11 +808,11 @@ if (!function_exists('realhomes_dashboard_header_menu')) {
 
       if (!empty($favorites_url)) {
         ?>
-                                                                                        <a href="<?php echo esc_url($favorites_url); ?>">
-                                                                                            <?php inspiry_safe_include_svg('images/icon-dash-favorite.svg', '/common/'); ?>
-                                                                                            <span><?php echo realhomes_dashboard_menu_item_label('favorites'); ?></span>
-                                                                                        </a>
-                                                                                        <?php
+                                                                                                        <a href="<?php echo esc_url($favorites_url); ?>">
+                                                                                                            <?php inspiry_safe_include_svg('images/icon-dash-favorite.svg', '/common/'); ?>
+                                                                                                            <span><?php echo realhomes_dashboard_menu_item_label('favorites'); ?></span>
+                                                                                                        </a>
+                                                                                                        <?php
       }
     }
 
@@ -824,11 +824,11 @@ if (!function_exists('realhomes_dashboard_header_menu')) {
 
       if (!empty($saved_searches_url)):
         ?>
-                                                                                        <a href="<?php echo esc_url($saved_searches_url); ?>">
-                                                                                            <?php inspiry_safe_include_svg('images/icon-dash-alert.svg', '/common/'); ?>
-                                                                                            <span><?php echo realhomes_dashboard_menu_item_label('saved-searches'); ?></span>
-                                                                                        </a>
-                                                                                    <?php
+                                                                                                        <a href="<?php echo esc_url($saved_searches_url); ?>">
+                                                                                                            <?php inspiry_safe_include_svg('images/icon-dash-alert.svg', '/common/'); ?>
+                                                                                                            <span><?php echo realhomes_dashboard_menu_item_label('saved-searches'); ?></span>
+                                                                                                        </a>
+                                                                                                    <?php
       endif;
     }
 
@@ -843,19 +843,19 @@ if (!function_exists('realhomes_dashboard_header_menu')) {
 
       if (!empty($is_memberships_enable) && !empty($membership_url)) {
         ?>
-                                                                                        <a href="<?php echo esc_url($membership_url); ?>">
-                                                                                            <?php inspiry_safe_include_svg('images/icon-membership.svg', '/common/'); ?>
-                                                                                            <span><?php echo realhomes_dashboard_menu_item_label('membership'); ?></span>
-                                                                                        </a>
-                                                                                        <?php
+                                                                                                        <a href="<?php echo esc_url($membership_url); ?>">
+                                                                                                            <?php inspiry_safe_include_svg('images/icon-membership.svg', '/common/'); ?>
+                                                                                                            <span><?php echo realhomes_dashboard_menu_item_label('membership'); ?></span>
+                                                                                                        </a>
+                                                                                                        <?php
       }
     }
     ?>
-                                            <a href="<?php echo esc_url(wp_logout_url(home_url())); ?>">
-                                                <?php inspiry_safe_include_svg('images/icon-dash-logout.svg', '/common/'); ?>
-                                                <span><?php echo realhomes_dashboard_menu_item_label('logout'); ?></span>
-                                            </a>
-                                            <?php
+                                                    <a href="<?php echo esc_url(wp_logout_url(home_url())); ?>">
+                                                        <?php inspiry_safe_include_svg('images/icon-dash-logout.svg', '/common/'); ?>
+                                                        <span><?php echo realhomes_dashboard_menu_item_label('logout'); ?></span>
+                                                    </a>
+                                                    <?php
   }
 }
 
@@ -954,14 +954,14 @@ if (!function_exists('realhomes_dashboard_no_items')) {
     }
 
     ?>
-                                            <div class="dashboard-no-items">
-                                                <div class="icon-wrap">
-                                                    <?php inspiry_safe_include_svg($icon, '/common/images/icons/'); ?>
-                                                </div>
-                                                <h3><?php echo esc_html($title); ?></h3>
-                                                <p><?php echo esc_html($message); ?></p>
-                                            </div>
-                                            <?php
+                                                    <div class="dashboard-no-items">
+                                                        <div class="icon-wrap">
+                                                            <?php inspiry_safe_include_svg($icon, '/common/images/icons/'); ?>
+                                                        </div>
+                                                        <h3><?php echo esc_html($title); ?></h3>
+                                                        <p><?php echo esc_html($message); ?></p>
+                                                    </div>
+                                                    <?php
   }
 }
 
@@ -1118,12 +1118,18 @@ if (!function_exists('realhomes_dashboard_submit_property')) {
       $confirmedAgentIds = [];
       foreach ($_POST['agent_id'] as $agent_id) {
         if (empty($agent_id) || !is_numeric($agent_id)) { // Skip empty or non-numeric agent id.
+          // Check ip
+          if ($_SERVER['REMOTE_ADDR'] === '176.228.121.152') {
+            echo 'Agent ID is empty or not numeric: ' . $agent_id . '<br>';
+          }
           continue;
         }
 
         $agentAgency = get_post_meta($agent_id, 'REAL_HOMES_agency', true);
         if ($agentAgency === $agency_id) {
           $confirmedAgentIds[] = $agent_id;
+        } else if ($_SERVER['REMOTE_ADDR'] === '176.228.121.152') {
+          echo 'Agent ID does not belong to the agency: ' . $agent_id . '<br>';
         }
       }
 
@@ -2357,199 +2363,199 @@ if (!function_exists('realhomes_dashboard_js_templates')) {
       return;
     }
     ?>
-                                            <script id="tmpl-floor-plan-clone" type="text/template">
-                                                <div class="inspiry-clone inspiry-group-clone" data-floor-plan="{{data}}">
-                                                    <div class="row">
-                                                        <div class="col-lg-6">
-                                                            <div class="inspiry-field">
-                                                                <label for="inspiry_floor_plan_name_{{data}}"><?php esc_html_e('Floor Name', 'framework'); ?></label>
-                                                                <input type="text" id="inspiry_floor_plan_name_{{data}}"
-                                                                       name="inspiry_floor_plans[{{data}}][inspiry_floor_plan_name]" value="">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6">
-                                                            <div class="inspiry-field inspiry-file-input-wrapper">
-                                                                <label><?php esc_html_e('Floor Plan Image', 'framework'); ?>
-                                                                    <span><?php esc_html_e('* Minimum width is 770px and height is flexible.', 'framework'); ?></span></label>
-                                                                <div class="inspiry-btn-group clearfix">
-                                                                    <input type="text" class="inspiry-file-input"
-                                                                           name="inspiry_floor_plans[{{data}}][inspiry_floor_plan_image]" value="">
-                                                                    <button id="inspiry-file-select-{{data}}"
-                                                                            class="inspiry-file-select real-btn btn btn-primary"><?php esc_html_e('Select Image', 'framework'); ?></button>
-                                                                    <button id="inspiry-file-remove-{{data}}"
-                                                                            class="inspiry-file-remove real-btn btn btn-secondary hidden"><?php esc_html_e('Remove', 'framework'); ?></button>
-                                                                </div>
-                                                            </div>
-                                                            <div class="errors-log"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-6">
-                                                            <div class="inspiry-field">
-                                                                <label for="inspiry_floor_plan_descr_{{data}}"><?php esc_html_e('Description', 'framework'); ?></label>
-                                                                <textarea id="inspiry_floor_plan_descr_{{data}}" class="inspiry-textarea"
-                                                                          name="inspiry_floor_plans[{{data}}][inspiry_floor_plan_descr]"></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6">
+                                                    <script id="tmpl-floor-plan-clone" type="text/template">
+                                                        <div class="inspiry-clone inspiry-group-clone" data-floor-plan="{{data}}">
                                                             <div class="row">
-                                                                <div class="col-sm-6">
+                                                                <div class="col-lg-6">
                                                                     <div class="inspiry-field">
-                                                                        <label for="inspiry_floor_plan_price_{{data}}"><?php esc_html_e('Floor Price', 'framework'); ?>
-                                                                            <span><?php esc_html_e('( Only digits )', 'framework'); ?></span></label>
-                                                                        <input type="text" id="inspiry_floor_plan_price_{{data}}"
-                                                                               name="inspiry_floor_plans[{{data}}][inspiry_floor_plan_price]" value="">
+                                                                        <label for="inspiry_floor_plan_name_{{data}}"><?php esc_html_e('Floor Name', 'framework'); ?></label>
+                                                                        <input type="text" id="inspiry_floor_plan_name_{{data}}"
+                                                                               name="inspiry_floor_plans[{{data}}][inspiry_floor_plan_name]" value="">
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-sm-6">
+                                                                <div class="col-lg-6">
+                                                                    <div class="inspiry-field inspiry-file-input-wrapper">
+                                                                        <label><?php esc_html_e('Floor Plan Image', 'framework'); ?>
+                                                                            <span><?php esc_html_e('* Minimum width is 770px and height is flexible.', 'framework'); ?></span></label>
+                                                                        <div class="inspiry-btn-group clearfix">
+                                                                            <input type="text" class="inspiry-file-input"
+                                                                                   name="inspiry_floor_plans[{{data}}][inspiry_floor_plan_image]" value="">
+                                                                            <button id="inspiry-file-select-{{data}}"
+                                                                                    class="inspiry-file-select real-btn btn btn-primary"><?php esc_html_e('Select Image', 'framework'); ?></button>
+                                                                            <button id="inspiry-file-remove-{{data}}"
+                                                                                    class="inspiry-file-remove real-btn btn btn-secondary hidden"><?php esc_html_e('Remove', 'framework'); ?></button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="errors-log"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-lg-6">
                                                                     <div class="inspiry-field">
-                                                                        <label for="inspiry_floor_plan_price_postfix_{{data}}"><?php esc_html_e('Price Postfix', 'framework'); ?></label>
-                                                                        <input type="text" id="inspiry_floor_plan_price_postfix_{{data}}"
-                                                                               name="inspiry_floor_plans[{{data}}][inspiry_floor_plan_price_postfix]"
-                                                                               value="">
+                                                                        <label for="inspiry_floor_plan_descr_{{data}}"><?php esc_html_e('Description', 'framework'); ?></label>
+                                                                        <textarea id="inspiry_floor_plan_descr_{{data}}" class="inspiry-textarea"
+                                                                                  name="inspiry_floor_plans[{{data}}][inspiry_floor_plan_descr]"></textarea>
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-sm-6">
-                                                                    <div class="inspiry-field">
-                                                                        <label for="inspiry_floor_plan_size_{{data}}"><?php esc_html_e('Floor Size', 'framework'); ?>
-                                                                            <span><?php esc_html_e('( Only digits )', 'framework'); ?></span></label>
-                                                                        <input type="text" id="inspiry_floor_plan_size_{{data}}"
-                                                                               name="inspiry_floor_plans[{{data}}][inspiry_floor_plan_size]" value="">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-sm-6">
-                                                                    <div class="inspiry-field">
-                                                                        <label for="inspiry_floor_plan_size_postfix_{{data}}"><?php esc_html_e('Size Postfix', 'framework'); ?></label>
-                                                                        <input type="text" id="inspiry_floor_plan_size_postfix_{{data}}"
-                                                                               name="inspiry_floor_plans[{{data}}][inspiry_floor_plan_size_postfix]"
-                                                                               value="">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-sm-6">
-                                                                    <div class="inspiry-field">
-                                                                        <label for="inspiry_floor_plan_bedrooms_{{data}}"><?php esc_html_e('Bedrooms', 'framework'); ?></label>
-                                                                        <input type="text" id="inspiry_floor_plan_bedrooms_{{data}}"
-                                                                               name="inspiry_floor_plans[{{data}}][inspiry_floor_plan_bedrooms]" value="">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-sm-6">
-                                                                    <div class="inspiry-field">
-                                                                        <label for="inspiry_floor_plan_bathrooms_{{data}}"><?php esc_html_e('Bathrooms', 'framework'); ?></label>
-                                                                        <input type="text" id="inspiry_floor_plan_bathrooms_{{data}}"
-                                                                               name="inspiry_floor_plans[{{data}}][inspiry_floor_plan_bathrooms]" value="">
+                                                                <div class="col-lg-6">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-6">
+                                                                            <div class="inspiry-field">
+                                                                                <label for="inspiry_floor_plan_price_{{data}}"><?php esc_html_e('Floor Price', 'framework'); ?>
+                                                                                    <span><?php esc_html_e('( Only digits )', 'framework'); ?></span></label>
+                                                                                <input type="text" id="inspiry_floor_plan_price_{{data}}"
+                                                                                       name="inspiry_floor_plans[{{data}}][inspiry_floor_plan_price]" value="">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+                                                                            <div class="inspiry-field">
+                                                                                <label for="inspiry_floor_plan_price_postfix_{{data}}"><?php esc_html_e('Price Postfix', 'framework'); ?></label>
+                                                                                <input type="text" id="inspiry_floor_plan_price_postfix_{{data}}"
+                                                                                       name="inspiry_floor_plans[{{data}}][inspiry_floor_plan_price_postfix]"
+                                                                                       value="">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+                                                                            <div class="inspiry-field">
+                                                                                <label for="inspiry_floor_plan_size_{{data}}"><?php esc_html_e('Floor Size', 'framework'); ?>
+                                                                                    <span><?php esc_html_e('( Only digits )', 'framework'); ?></span></label>
+                                                                                <input type="text" id="inspiry_floor_plan_size_{{data}}"
+                                                                                       name="inspiry_floor_plans[{{data}}][inspiry_floor_plan_size]" value="">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+                                                                            <div class="inspiry-field">
+                                                                                <label for="inspiry_floor_plan_size_postfix_{{data}}"><?php esc_html_e('Size Postfix', 'framework'); ?></label>
+                                                                                <input type="text" id="inspiry_floor_plan_size_postfix_{{data}}"
+                                                                                       name="inspiry_floor_plans[{{data}}][inspiry_floor_plan_size_postfix]"
+                                                                                       value="">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+                                                                            <div class="inspiry-field">
+                                                                                <label for="inspiry_floor_plan_bedrooms_{{data}}"><?php esc_html_e('Bedrooms', 'framework'); ?></label>
+                                                                                <input type="text" id="inspiry_floor_plan_bedrooms_{{data}}"
+                                                                                       name="inspiry_floor_plans[{{data}}][inspiry_floor_plan_bedrooms]" value="">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+                                                                            <div class="inspiry-field">
+                                                                                <label for="inspiry_floor_plan_bathrooms_{{data}}"><?php esc_html_e('Bathrooms', 'framework'); ?></label>
+                                                                                <input type="text" id="inspiry_floor_plan_bathrooms_{{data}}"
+                                                                                       name="inspiry_floor_plans[{{data}}][inspiry_floor_plan_bathrooms]" value="">
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
+                                                            <button type="button" class="inspiry-remove-clone"><i class="fas fa-minus"></i></button>
                                                         </div>
-                                                    </div>
-                                                    <button type="button" class="inspiry-remove-clone"><i class="fas fa-minus"></i></button>
-                                                </div>
-                                            </script>
-                                            <script id="tmpl-additional-details" type="text/template">
-                                                <div class="inspiry-detail">
-                                                    <div class="inspiry-detail-sort-handle"><i class="fas fa-grip-horizontal"></i></div>
-                                                    <div class="inspiry-detail-title">
-                                                        <input type="text" name="detail-titles[]" placeholder="<?php esc_attr_e('Title', 'framework'); ?>"/>
-                                                    </div>
-                                                    <div class="inspiry-detail-value">
-                                                        <input type="text" name="detail-values[]" placeholder="<?php esc_attr_e('Value', 'framework'); ?>"/>
-                                                    </div>
-                                                    <div class="inspiry-detail-remove-detail">
-                                                        <button class="remove-detail btn btn-primary"><i class="fas fa-trash-alt"></i></button>
-                                                    </div>
-                                                </div>
-                                            </script>
-                                            <script id="tmpl-dashboard-notice" type="text/template">
-                                                <div class="dashboard-notice {{ data.type }} is-dismissible">
-                                                    <p>{{ data.message }}</p>
-                                                    <button type="button" class="dashboard-notice-dismiss-button"><i class="fas fa-times"></i></button>
-                                                </div>
-                                            </script>
-                                            <script id="tmpl-video-group" type="text/template">
-                                                <?php
-                                                $inspiry_video_group_fields = array(
-                                                  array('name' => 'inspiry_video_group[{{data}}][inspiry_video_group_title]'),
-                                                  array('name' => 'inspiry_video_group[{{data}}][inspiry_video_group_url]')
-                                                );
-                                                inspiry_repeater_group($inspiry_video_group_fields, true);
-                                                ?>
-                                            </script>
-                                            <?php
-                                            if (inspiry_is_rvr_enabled()):
-                                              /**
-                                               * Js templates for RVR repeater fields.
-                                               *
-                                               * @since   3.13.0
-                                               * @updated 4.1.0
-                                               */
-                                              ?>
-                                                                  <script id="tmpl-rvr-reserve-booking-dates" type="text/template">
-                                                                      <?php
-                                                                      $rvr_reserve_booking_dates_fields = array(
-                                                                        array('name' => 'rvr_custom_reserved_dates[{{data}}][rvr_reserve_note]', 'class' => 'rvr_reserve_note'),
-                                                                        array('name' => 'rvr_custom_reserved_dates[{{data}}][rvr_reserve_start_date]', 'class' => 'rvr_reserve_start_date'),
-                                                                        array('name' => 'rvr_custom_reserved_dates[{{data}}][rvr_reserve_end_date]', 'class' => 'rvr_reserve_end_date')
-                                                                      );
-                                                                      inspiry_repeater_group($rvr_reserve_booking_dates_fields, true);
-                                                                      ?>
-                                                                  </script>
-                                                                  <script id="tmpl-rvr-seasonal-prices" type="text/template">
-                                                                      <?php
-                                                                      $rvr_custom_seasonal_prices_fields = array(
-                                                                        array('name' => 'rvr_custom_seasonal_prices[{{data}}][rvr_price_start_date]', 'class' => 'rvr_seasonal_start_date'),
-                                                                        array('name' => 'rvr_custom_seasonal_prices[{{data}}][rvr_price_end_date]', 'class' => 'rvr_seasonal_end_date'),
-                                                                        array('name' => 'rvr_custom_seasonal_prices[{{data}}][rvr_price_amount]', 'class' => 'rvr_seasonal_price')
-                                                                      );
-                                                                      inspiry_repeater_group($rvr_custom_seasonal_prices_fields, true);
-                                                                      ?>
-                                                                  </script>
-                                                                  <script id="tmpl-rvr-outdoor-features" type="text/template">
-                                                                      <?php
-                                                                      $rvr_outdoor_features_fields = array(array('name' => 'rvr_outdoor_features[]'));
-                                                                      inspiry_repeater_group($rvr_outdoor_features_fields, true);
-                                                                      ?>
-                                                                  </script>
-                                                                  <script id="tmpl-rvr-included" type="text/template">
-                                                                      <?php
-                                                                      $rvr_included_fields = array(array('name' => 'rvr_included[]'));
-                                                                      inspiry_repeater_group($rvr_included_fields, true);
-                                                                      ?>
-                                                                  </script>
-                                                                  <script id="tmpl-rvr-not-included" type="text/template">
-                                                                      <?php
-                                                                      $rvr_not_included_fields = array(array('name' => 'rvr_not_included[]'));
-                                                                      inspiry_repeater_group($rvr_not_included_fields, true);
-                                                                      ?>
-                                                                  </script>
-                                                                  <script id="tmpl-rvr-surroundings" type="text/template">
-                                                                      <?php
-                                                                      $rvr_surroundings_fields = array(
-                                                                        array('name' => 'rvr_surroundings[{{data}}][rvr_surrounding_point]'),
-                                                                        array('name' => 'rvr_surroundings[{{data}}][rvr_surrounding_point_distance]')
-                                                                      );
-                                                                      inspiry_repeater_group($rvr_surroundings_fields, true);
-                                                                      ?>
-                                                                  </script>
-                                                                  <script id="tmpl-rvr-policies" type="text/template">
-                                                                      <?php
-                                                                      $rvr_policies_fields = array(
-                                                                        array('name' => 'rvr_policies[{{data}}][rvr_policy_detail]'),
-                                                                        array('name' => 'rvr_policies[{{data}}][rvr_policy_icon]')
-                                                                      );
-                                                                      inspiry_repeater_group($rvr_policies_fields, true);
-                                                                      ?>
-                                                                  </script>
-                                                                  <script id="tmpl-rvr-icalendar" type="text/template">
-                                                                      <?php
-                                                                      $rvr_icalendar_fields = array(
-                                                                        array('name' => 'rvr_import_icalendar_feed_list[{{data}}][feed_name]'),
-                                                                        array('name' => 'rvr_import_icalendar_feed_list[{{data}}][feed_url]')
-                                                                      );
-                                                                      inspiry_repeater_group($rvr_icalendar_fields, true);
-                                                                      ?>
-                                                                  </script>
-                                                              <?php
-                                            endif;
+                                                    </script>
+                                                    <script id="tmpl-additional-details" type="text/template">
+                                                        <div class="inspiry-detail">
+                                                            <div class="inspiry-detail-sort-handle"><i class="fas fa-grip-horizontal"></i></div>
+                                                            <div class="inspiry-detail-title">
+                                                                <input type="text" name="detail-titles[]" placeholder="<?php esc_attr_e('Title', 'framework'); ?>"/>
+                                                            </div>
+                                                            <div class="inspiry-detail-value">
+                                                                <input type="text" name="detail-values[]" placeholder="<?php esc_attr_e('Value', 'framework'); ?>"/>
+                                                            </div>
+                                                            <div class="inspiry-detail-remove-detail">
+                                                                <button class="remove-detail btn btn-primary"><i class="fas fa-trash-alt"></i></button>
+                                                            </div>
+                                                        </div>
+                                                    </script>
+                                                    <script id="tmpl-dashboard-notice" type="text/template">
+                                                        <div class="dashboard-notice {{ data.type }} is-dismissible">
+                                                            <p>{{ data.message }}</p>
+                                                            <button type="button" class="dashboard-notice-dismiss-button"><i class="fas fa-times"></i></button>
+                                                        </div>
+                                                    </script>
+                                                    <script id="tmpl-video-group" type="text/template">
+                                                        <?php
+                                                        $inspiry_video_group_fields = array(
+                                                          array('name' => 'inspiry_video_group[{{data}}][inspiry_video_group_title]'),
+                                                          array('name' => 'inspiry_video_group[{{data}}][inspiry_video_group_url]')
+                                                        );
+                                                        inspiry_repeater_group($inspiry_video_group_fields, true);
+                                                        ?>
+                                                    </script>
+                                                    <?php
+                                                    if (inspiry_is_rvr_enabled()):
+                                                      /**
+                                                       * Js templates for RVR repeater fields.
+                                                       *
+                                                       * @since   3.13.0
+                                                       * @updated 4.1.0
+                                                       */
+                                                      ?>
+                                                                              <script id="tmpl-rvr-reserve-booking-dates" type="text/template">
+                                                                                  <?php
+                                                                                  $rvr_reserve_booking_dates_fields = array(
+                                                                                    array('name' => 'rvr_custom_reserved_dates[{{data}}][rvr_reserve_note]', 'class' => 'rvr_reserve_note'),
+                                                                                    array('name' => 'rvr_custom_reserved_dates[{{data}}][rvr_reserve_start_date]', 'class' => 'rvr_reserve_start_date'),
+                                                                                    array('name' => 'rvr_custom_reserved_dates[{{data}}][rvr_reserve_end_date]', 'class' => 'rvr_reserve_end_date')
+                                                                                  );
+                                                                                  inspiry_repeater_group($rvr_reserve_booking_dates_fields, true);
+                                                                                  ?>
+                                                                              </script>
+                                                                              <script id="tmpl-rvr-seasonal-prices" type="text/template">
+                                                                                  <?php
+                                                                                  $rvr_custom_seasonal_prices_fields = array(
+                                                                                    array('name' => 'rvr_custom_seasonal_prices[{{data}}][rvr_price_start_date]', 'class' => 'rvr_seasonal_start_date'),
+                                                                                    array('name' => 'rvr_custom_seasonal_prices[{{data}}][rvr_price_end_date]', 'class' => 'rvr_seasonal_end_date'),
+                                                                                    array('name' => 'rvr_custom_seasonal_prices[{{data}}][rvr_price_amount]', 'class' => 'rvr_seasonal_price')
+                                                                                  );
+                                                                                  inspiry_repeater_group($rvr_custom_seasonal_prices_fields, true);
+                                                                                  ?>
+                                                                              </script>
+                                                                              <script id="tmpl-rvr-outdoor-features" type="text/template">
+                                                                                  <?php
+                                                                                  $rvr_outdoor_features_fields = array(array('name' => 'rvr_outdoor_features[]'));
+                                                                                  inspiry_repeater_group($rvr_outdoor_features_fields, true);
+                                                                                  ?>
+                                                                              </script>
+                                                                              <script id="tmpl-rvr-included" type="text/template">
+                                                                                  <?php
+                                                                                  $rvr_included_fields = array(array('name' => 'rvr_included[]'));
+                                                                                  inspiry_repeater_group($rvr_included_fields, true);
+                                                                                  ?>
+                                                                              </script>
+                                                                              <script id="tmpl-rvr-not-included" type="text/template">
+                                                                                  <?php
+                                                                                  $rvr_not_included_fields = array(array('name' => 'rvr_not_included[]'));
+                                                                                  inspiry_repeater_group($rvr_not_included_fields, true);
+                                                                                  ?>
+                                                                              </script>
+                                                                              <script id="tmpl-rvr-surroundings" type="text/template">
+                                                                                  <?php
+                                                                                  $rvr_surroundings_fields = array(
+                                                                                    array('name' => 'rvr_surroundings[{{data}}][rvr_surrounding_point]'),
+                                                                                    array('name' => 'rvr_surroundings[{{data}}][rvr_surrounding_point_distance]')
+                                                                                  );
+                                                                                  inspiry_repeater_group($rvr_surroundings_fields, true);
+                                                                                  ?>
+                                                                              </script>
+                                                                              <script id="tmpl-rvr-policies" type="text/template">
+                                                                                  <?php
+                                                                                  $rvr_policies_fields = array(
+                                                                                    array('name' => 'rvr_policies[{{data}}][rvr_policy_detail]'),
+                                                                                    array('name' => 'rvr_policies[{{data}}][rvr_policy_icon]')
+                                                                                  );
+                                                                                  inspiry_repeater_group($rvr_policies_fields, true);
+                                                                                  ?>
+                                                                              </script>
+                                                                              <script id="tmpl-rvr-icalendar" type="text/template">
+                                                                                  <?php
+                                                                                  $rvr_icalendar_fields = array(
+                                                                                    array('name' => 'rvr_import_icalendar_feed_list[{{data}}][feed_name]'),
+                                                                                    array('name' => 'rvr_import_icalendar_feed_list[{{data}}][feed_url]')
+                                                                                  );
+                                                                                  inspiry_repeater_group($rvr_icalendar_fields, true);
+                                                                                  ?>
+                                                                              </script>
+                                                                          <?php
+                                                    endif;
   }
 
   add_action("wp_footer", "realhomes_dashboard_js_templates");
