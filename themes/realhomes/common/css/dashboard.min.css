@@ -6229,12 +6229,16 @@ code {
   color: #999
 }
 
-.dashboard label.error {
+.dashboard label.error, .dashboard label.warning {
   display: block;
   margin: 0;
   padding: 4px 0;
   font-size: 12px;
   color: red
+}
+
+.dashboard label.warning {
+  color: orange
 }
 
 .dashboard .label-boxed {
