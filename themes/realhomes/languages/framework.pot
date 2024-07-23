@@ -13532,3 +13532,15 @@ msgstr ""
 #: \themes\realhomes\framework\functions\dashboard.php
 msgid "You don't have permission to delete this %s."
 msgstr ""
+
+#: \themes\realhomes\framework\functions\dashboard.php
+msgid "You must be logged in to perform this action!"
+msgstr "עליך להיות מחובר כדי לבצע פעולה זו!"
+
+#: \themes\realhomes\framework\functions\dashboard.php
+msgid "Property id field is required!"
+msgstr "שדה מזהה נכס נדרש!"
+
+#: \themes\realhomes\framework\functions\dashboard.php
+msgid "Property with this ID already exists!"
+msgstr "נכס עם מזהה זה כבר קיים!"
