@@ -589,7 +589,7 @@ if (!function_exists('inspiry_insert_role_user')) {
 		$agency_id = get_post_meta($post_id, 'REAL_HOMES_agency', true);
 
 		$user_data = array(
-			'user_login' => $post->post_name,
+			'user_login' => $email_address,
 			'display_name' => $post->post_title,
 			'user_pass' => $user_pass,
 			'user_email' => $email_address,
