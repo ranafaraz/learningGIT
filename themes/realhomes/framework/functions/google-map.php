@@ -85,16 +85,8 @@ if (!function_exists('inspiry_enqueue_google_maps')) {
 				true
 			);
 
-			if (isset($_GET['debug']) == 'true') {
-				var_dump(is_singular('property'));
-			}
-
 			// Now we need to load JS files and Localized data based on the page visitor is on.
 			if (is_singular('property') && ('true' == get_option('theme_display_google_map'))) {
-				if (isset($_GET['debug']) == 'true') {
-					var_dump('is_singular(property) && true == get_option(theme_display_google_map)');
-				}
-
 				inspiry_enqueue_google_map_info_box();
 				inspiry_render_property_google_map();
 
@@ -546,10 +538,6 @@ if (!function_exists('inspiry_render_property_google_map')):
 	 */
 	function inspiry_render_property_google_map()
 	{
-		if (isset($_GET['debug']) == 'true') {
-			var_dump('inspiry_render_property_google_map');
-		}
-
 		wp_register_script('property-google-map', get_theme_file_uri('assets/' . INSPIRY_DESIGN_VARIATION . '/scripts/js/property-google-map.js'), array('jquery', 'google-map-api'), INSPIRY_THEME_VERSION, true);
 
 		$property_id = get_the_ID();
@@ -558,11 +546,6 @@ if (!function_exists('inspiry_render_property_google_map')):
 		$property_map = get_post_meta($property_id, 'REAL_HOMES_property_map', true);
 
 		if ($property_address && !empty($property_address) && (1 != $property_map)) {
-
-			if (isset($_GET['debug']) == 'true') {
-				var_dump('property_address && !empty(property_address) && (1 != property_map)');
-			}
-
 			$property_map_data = array();
 			$property_map_data['title'] = get_the_title();
 			$property_map_data['address'] = $property_address;
