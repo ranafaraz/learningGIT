@@ -7,8 +7,6 @@
   var mapContainer = document.getElementById("property_map");
 
   if (typeof propertyMapData !== "undefined" && mapContainer !== null) {
-    console.log("propertyMapData", propertyMapData);
-
     if (propertyMapData.address) {
       const API_KEY = "AIzaSyCa7WK1x4jTUzP1X6mnzJfC1ggUBzEdfWQ";
       const queryPrefix = "חריש,";
@@ -174,9 +172,5 @@
     //   infoBox.open(propertyMap, propertyMarker);
     // });
     // }
-  } else {
-    console.log("propertyMapData is not defined or map container is missing.");
-    console.log("propertyMapData", propertyMapData);
-    console.log("mapContainer", mapContainer);
   }
 })(jQuery);
