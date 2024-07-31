@@ -557,14 +557,11 @@ if (!function_exists('inspiry_render_property_google_map')):
 		$property_address = get_post_meta($property_id, 'REAL_HOMES_property_address', true);
 		$property_map = get_post_meta($property_id, 'REAL_HOMES_property_map', true);
 
+		if ($property_address && !empty($property_address) && (1 != $property_map)) {
 
-		if (isset($_GET['debug']) == 'true') {
-			echo 'Property ID: ' . $property_id . '<br>';
-			echo 'Property Location: ' . $property_location . '<br>';
-			echo 'Property Address: ' . $property_address . '<br>';
-		}
-
-		if ($property_address && !empty($property_location) && (1 != $property_map)) {
+			if (isset($_GET['debug']) == 'true') {
+				var_dump('property_address && !empty(property_address) && (1 != property_map)');
+			}
 
 			$property_map_data = array();
 			$property_map_data['title'] = get_the_title();
@@ -583,9 +580,11 @@ if (!function_exists('inspiry_render_property_google_map')):
 			}
 
 			// Property Latitude and Longitude
-			$lat_lng = explode(',', $property_location);
-			$property_map_data['lat'] = $lat_lng[0];
-			$property_map_data['lng'] = $lat_lng[1];
+			if (!empty($property_location)) {
+				$lat_lng = explode(',', $property_location);
+				$property_map_data['lat'] = $lat_lng[0];
+				$property_map_data['lng'] = $lat_lng[1];
+			}
 
 			// Property thumbnail
 			if (!empty(get_the_post_thumbnail())) {
