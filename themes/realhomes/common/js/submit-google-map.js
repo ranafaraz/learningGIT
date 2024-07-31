@@ -44,6 +44,8 @@
         iframe.style.border = "0";
         iframe.style.height = "calc(100% - 9rem)";
         iframe.allowFullscreen = false;
+        iframe.loading = "lazy";
+        iframe.referrerPolicy = "no-referrer-when-downgrade";
 
         const mapCanvas = document.querySelector(".map-canvas");
         mapCanvas.innerHTML = "";

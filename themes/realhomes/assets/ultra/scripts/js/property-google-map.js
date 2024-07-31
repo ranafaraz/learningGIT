@@ -20,6 +20,8 @@
       iframe.style.border = "0";
       iframe.style.height = "100%";
       iframe.allowFullscreen = false;
+      iframe.loading = "lazy";
+      iframe.referrerPolicy = "no-referrer-when-downgrade";
 
       mapContainer.innerHTML = "";
       mapContainer.appendChild(iframe);
