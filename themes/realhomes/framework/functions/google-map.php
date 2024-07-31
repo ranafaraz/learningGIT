@@ -85,7 +85,7 @@ if (!function_exists('inspiry_enqueue_google_maps')) {
 				true
 			);
 
-			if ($_GET['debug'] == 'true') {
+			if (isset($_GET['debug']) == 'true') {
 				var_dump(is_singular('property'));
 			}
 
