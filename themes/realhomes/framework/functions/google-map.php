@@ -557,6 +557,13 @@ if (!function_exists('inspiry_render_property_google_map')):
 		$property_address = get_post_meta($property_id, 'REAL_HOMES_property_address', true);
 		$property_map = get_post_meta($property_id, 'REAL_HOMES_property_map', true);
 
+
+		if (isset($_GET['debug']) == 'true') {
+			echo 'Property ID: ' . $property_id . '<br>';
+			echo 'Property Location: ' . $property_location . '<br>';
+			echo 'Property Address: ' . $property_address . '<br>';
+		}
+
 		if ($property_address && !empty($property_location) && (1 != $property_map)) {
 
 			$property_map_data = array();
