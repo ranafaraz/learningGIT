@@ -174,5 +174,9 @@
     //   infoBox.open(propertyMap, propertyMarker);
     // });
     // }
+  } else {
+    console.log("propertyMapData is not defined or map container is missing.");
+    console.log("propertyMapData", propertyMapData);
+    console.log("mapContainer", mapContainer);
   }
 })(jQuery);
