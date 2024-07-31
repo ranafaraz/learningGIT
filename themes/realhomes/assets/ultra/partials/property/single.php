@@ -23,6 +23,7 @@ if (!function_exists('elementor_theme_do_location') || !elementor_theme_do_locat
 		// Property detail page sections
 		$sortable_property_sections = array(
 			'content' => 'true',
+			'map' => get_option('theme_display_google_map', 'true'),
 			'additional-details' => 'true',
 			'common-note' => get_option('theme_display_common_note', 'true'),
 			'entry-date' => 'true',
@@ -31,7 +32,6 @@ if (!function_exists('elementor_theme_do_location') || !elementor_theme_do_locat
 			'floor-plans' => 'true',
 			'video' => get_option('theme_display_video', 'true'),
 			'virtual-tour' => get_option('inspiry_display_virtual_tour', 'false'),
-			'map' => get_option('theme_display_google_map', 'true'),
 			'walkscore' => get_option('inspiry_display_walkscore', 'false'),
 			'yelp-nearby-places' => get_option('inspiry_display_yelp_nearby_places', 'false'),
 			'energy-performance' => get_option('inspiry_display_energy_performance', 'true'),
