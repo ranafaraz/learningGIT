@@ -85,6 +85,10 @@ if (!function_exists('inspiry_enqueue_google_maps')) {
 				true
 			);
 
+			if ($_GET['debug'] == 'true') {
+				var_dump(is_singular('property'));
+			}
+
 			// Now we need to load JS files and Localized data based on the page visitor is on.
 			if (is_singular('property') && ('true' == get_option('theme_display_google_map'))) {
 
