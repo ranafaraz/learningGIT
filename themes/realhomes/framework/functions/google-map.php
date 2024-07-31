@@ -91,6 +91,9 @@ if (!function_exists('inspiry_enqueue_google_maps')) {
 
 			// Now we need to load JS files and Localized data based on the page visitor is on.
 			if (is_singular('property') && ('true' == get_option('theme_display_google_map'))) {
+				if (isset($_GET['debug']) == 'true') {
+					var_dump('is_singular(property) && true == get_option(theme_display_google_map)');
+				}
 
 				inspiry_enqueue_google_map_info_box();
 				inspiry_render_property_google_map();
@@ -543,6 +546,9 @@ if (!function_exists('inspiry_render_property_google_map')):
 	 */
 	function inspiry_render_property_google_map()
 	{
+		if (isset($_GET['debug']) == 'true') {
+			var_dump('inspiry_render_property_google_map');
+		}
 
 		wp_register_script('property-google-map', get_theme_file_uri('assets/' . INSPIRY_DESIGN_VARIATION . '/scripts/js/property-google-map.js'), array('jquery', 'google-map-api'), INSPIRY_THEME_VERSION, true);
 
