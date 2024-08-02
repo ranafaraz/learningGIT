@@ -106,31 +106,113 @@ if ($user_role === 'agency' && $user_post_id) {
 	);
 }
 
-$property_status_filter = realhomes_dashboard_properties_status_filter();
-if ('-1' !== $property_status_filter) {
-	$properties_args['tax_query'] = array(
-		array(
-			'taxonomy' => 'property-status',
-			'field' => 'slug',
-			'terms' => $property_status_filter
-		)
-	);
-}
+// $property_status_filter = realhomes_dashboard_properties_status_filter();
+// if ('-1' !== $property_status_filter) {
+// 	$properties_args['tax_query'] = array(
+// 		array(
+// 			'taxonomy' => 'property-status',
+// 			'field' => 'slug',
+// 			'terms' => $property_status_filter
+// 		)
+// 	);
+// }
 
 // Add searched parameter
+// if (isset($_GET['posts_search']) && 'show' == get_option('inspiry_my_properties_search', 'show')) {
+// 	$properties_args['s'] = sanitize_text_field($_GET['posts_search']);
+// 	printf('<div class="dashboard-notice"><p>%s <strong>%s</strong></p></div>', esc_html__('Search results for: ', 'framework'), esc_html($_GET['posts_search']));
+// }
+
+// $dashboard_posts_query = new WP_Query(apply_filters('realhomes_my_properties', $properties_args));
+
+// Use sql query to get the properties instead of WP_Query
+$query = 'SELECT * FROM ' . $wpdb->prefix . 'posts WHERE post_type = "property" AND post_status IN ("publish", "private", "draft", "pending", "future") AND post_author = ' . $current_user->ID;
+
 if (isset($_GET['posts_search']) && 'show' == get_option('inspiry_my_properties_search', 'show')) {
-	$properties_args['s'] = sanitize_text_field($_GET['posts_search']);
+	$search_query = sanitize_text_field($_GET['posts_search']);
+	$search_query = '%' . $search_query . '%';
+
+	// Search in post title, content, and meta value (REAL_HOMES_property_address or REAL_HOMES_property_id)
+	$query .= ' AND (post_title LIKE ' . $wpdb->prepare('%s', $search_query) . ' OR post_content LIKE ' . $wpdb->prepare('%s', $search_query) . ' OR ID IN (SELECT post_id FROM ' . $wpdb->prefix . 'postmeta WHERE meta_key = "REAL_HOMES_property_address" AND meta_value LIKE ' . $wpdb->prepare('%s', $search_query) . ') OR ID IN (SELECT post_id FROM ' . $wpdb->prefix . 'postmeta WHERE meta_key = "REAL_HOMES_property_id" AND meta_value LIKE ' . $wpdb->prepare('%s', $search_query) . '))';
+
 	printf('<div class="dashboard-notice"><p>%s <strong>%s</strong></p></div>', esc_html__('Search results for: ', 'framework'), esc_html($_GET['posts_search']));
 }
 
-$dashboard_posts_query = new WP_Query(apply_filters('realhomes_my_properties', $properties_args));
+$property_status_filter = realhomes_dashboard_properties_status_filter();
+if ('-1' !== $property_status_filter) {
+	$query .= $wpdb->prepare(' AND ID IN (SELECT object_id FROM ' . $wpdb->prefix . 'term_relationships WHERE term_taxonomy_id IN (SELECT term_taxonomy_id FROM ' . $wpdb->prefix . 'term_taxonomy WHERE taxonomy = "property-status" AND term_id IN (SELECT term_id FROM ' . $wpdb->prefix . 'terms WHERE slug = %s)))', $property_status_filter);
+}
+
+if (isset($properties_args['meta_query'])) {
+	$query .= ' AND ID IN (SELECT post_id FROM ' . $wpdb->prefix . 'postmeta WHERE meta_key = "REAL_HOMES_agents" AND meta_value = ' . $user_post_id . ')';
+}
+
+$query .= ' ORDER BY post_date DESC';
+
+$query_without_pagination = $query;
+$query_without_pagination = preg_replace('/^SELECT \* FROM/', 'SELECT COUNT(*) FROM', $query_without_pagination);
+
+// Add pagination
+if ($paged > 1) {
+	$offset = ($paged - 1) * $posts_per_page;
+	$query .= $wpdb->prepare(' LIMIT %d, %d', $offset, $posts_per_page);
+} else {
+	$query .= $wpdb->prepare(' LIMIT %d', $posts_per_page);
+}
+
+$dashboard_posts = $wpdb->get_results($query);
+$dashboard_posts_count = $wpdb->get_var($query_without_pagination);
+
+// var_dump($dashboard_posts);
+class PostQuery
+{
+	public $found_posts;
+	public $max_num_pages;
+	public $post_count;
+	public $query_vars;
+
+	public function __construct($args)
+	{
+		foreach ($args as $key => $value) {
+			$this->$key = $value;
+		}
+	}
+	public function have_posts()
+	{
+		return !empty($dashboard_posts);
+	}
+}
+$dashboard_posts_query = new PostQuery([
+	'found_posts' => $dashboard_posts_count,
+	'max_num_pages' => ceil($dashboard_posts_count / $posts_per_page),
+	'post_count' => count($dashboard_posts),
+	'query_vars' => [
+		'posts_per_page' => $posts_per_page,
+		'paged' => $paged,
+		'post_status' => $property_statuses,
+	],
+]);
+
+// $dashboard_posts_query = new stdClass();
+// $dashboard_posts_query->found_posts = $dashboard_posts_count;
+// $dashboard_posts_query->max_num_pages = ceil($dashboard_posts_count / $posts_per_page);
+// $dashboard_posts_query->post_count = count($dashboard_posts);
+// $dashboard_posts_query->query_vars = [
+// 	'posts_per_page' => $posts_per_page,
+// 	'paged' => $paged,
+// 	'post_status' => $property_statuses,
+// ];
+// $dashboard_posts_query->have_posts = function () use ($dashboard_posts) {
+// 	return !empty($dashboard_posts);
+// };
 
 do_action('inspiry_before_my_properties_page_render', get_the_ID());
 ?>
 <div id="property-message"></div>
 
 <?php
-if ($dashboard_posts_query->have_posts()) {
+// if ($dashboard_posts_query->have_posts()) {
+if (!empty($dashboard_posts)) {
 	?>
 	<div id="dashboard-properties" class="dashboard-properties dashboard-content-inner">
 		<?php
@@ -141,8 +223,9 @@ if ($dashboard_posts_query->have_posts()) {
 			<?php get_template_part('common/dashboard/property-columns'); ?>
 			<div class="dashboard-posts-list-body">
 				<?php
-				while ($dashboard_posts_query->have_posts()) {
-					$dashboard_posts_query->the_post();
+				foreach ($dashboard_posts as $dashboard_post) {
+					$post = get_post($dashboard_post->ID);
+					setup_postdata($post);
 					get_template_part('common/dashboard/property-card');
 				}
 				wp_reset_postdata();
