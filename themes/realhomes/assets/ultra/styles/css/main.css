@@ -9050,7 +9050,7 @@ p.rh-sat-select-field .bootstrap-select.dropup span.caret {
 }
 
 .rh-ultra-property-card-thumb {
-  min-width:300px
+  min-width: 300px;
 }
 
 .rh-ultra-property-card-thumb img {
@@ -11236,6 +11236,14 @@ div.leaflet-container a.leaflet-popup-close-button {
 .agent-details,
 .agency-details {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.agency-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
 }
 .agent-card-header,
 .agency-card-header {
@@ -11352,6 +11360,7 @@ div.leaflet-container a.leaflet-popup-close-button {
   align-items: center;
   justify-content: space-between;
   gap: 15px;
+  padding-bottom: 0 !important;
 }
 .agent-social-links,
 .agency-social-links {
@@ -13372,6 +13381,7 @@ body .rh_wrapper_language_switcher.parent_open .inspiry-language-switcher {
 .woocommerce .widget_price_filter .price_slider_wrapper .ui-widget-content {
   background-color: var(--rh-global-color-secondary);
 }
-.post-type-archive-agency .rh-custom-search-form-wrapper, .single-agency .rh-custom-search-form-wrapper{
+.post-type-archive-agency .rh-custom-search-form-wrapper,
+.single-agency .rh-custom-search-form-wrapper {
   display: none;
 }
