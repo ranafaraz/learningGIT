@@ -82,57 +82,57 @@ if (!function_exists('inspiry_post_nav')) {
                 $icon = ('prev' == $key) ? 'angle-left' : 'angle-right';
 
                 ?>
-                <a class="inspiry-post-nav inspiry-post-<?php echo esc_attr($key) . ' ' . esc_attr($class); ?>"
-                   href="<?php echo esc_url($link); ?>">
-                    <span class="label"><i class="fas fa-<?php echo esc_attr($icon); ?>"></i></span>
-                    <span class="entry-info-wrap">
-																																				<span class="entry-info">
-																																						<?php
-                                                                                                                                                        if ('prev' == $key) {
-                                                                                                                                                            ?>
-                                                                                                                                                            <span class="entry-title"><?php echo esc_html($the_title); ?></span>
-																																														<?php
-                                                                                                                                                            if ($image) {
-                                                                                                                                                                ?>
-                                                                                                                                                                <span class="entry-image">
-																																																								<?php echo get_the_post_thumbnail($entry, 'thumbnail'); ?>
-																																																						</span>
-                                                                                                                                                                <?php
-                                                                                                                                                            } else {
-                                                                                                                                                                ?>
-                                                                                                                                                                <span class="entry-image">
-																																																								<img src="<?php echo esc_url(get_inspiry_image_placeholder_url('thumbnail')); ?>"
-                                                                                                                                                                                                                                     alt="<?php echo esc_attr($the_title); ?>">
-																																																						</span>
-                                                                                                                                                                <?php
-                                                                                                                                                            }
-                                                                                                                                                        } else {
-                                                                                                                                                            if ($image) {
-                                                                                                                                                                ?>
-                                                                                                                                                                <span class="entry-image">
-																																																								<?php echo get_the_post_thumbnail($entry, 'thumbnail'); ?>
-																																																						</span>
-                                                                                                                                                                <?php
-                                                                                                                                                            } else {
-                                                                                                                                                                ?>
-                                                                                                                                                                <span class="entry-image">
-																																																								<img src="<?php echo esc_url(get_inspiry_image_placeholder_url('thumbnail')); ?>"
-                                                                                                                                                                                                                                     alt="<?php echo esc_attr($the_title); ?>">
-																																																						</span>
-                                                                                                                                                                <?php
-                                                                                                                                                            }
-                                                                                                                                                            ?>
+                                                                                                                <a class="inspiry-post-nav inspiry-post-<?php echo esc_attr($key) . ' ' . esc_attr($class); ?>"
+                                                                                                                   href="<?php echo esc_url($link); ?>">
+                                                                                                                    <span class="label"><i class="fas fa-<?php echo esc_attr($icon); ?>"></i></span>
+                                                                                                                    <span class="entry-info-wrap">
+                                                                                                                                                                                                                                                <span class="entry-info">
+                                                                                                                                                                                                                                                        <?php
+                                                                                                                                                                                                                                                        if ('prev' == $key) {
+                                                                                                                                                                                                                                                            ?>
+                                                                                                                                                                                                                                                                                    <span class="entry-title"><?php echo esc_html($the_title); ?></span>
+                                                                                                                                                                                                                                                                                                                <?php
+                                                                                                                                                                                                                                                                                                                if ($image) {
+                                                                                                                                                                                                                                                                                                                    ?>
+                                                                                                                                                                                                                                                                                                                <span class="entry-image">
+                                                                                                                                                                                                                                                                                                                                                                                <?php echo get_the_post_thumbnail($entry, 'thumbnail'); ?>
+                                                                                                                                                                                                                                                                                                                                                                        </span>
+                                                                                                                                                                                                                                                                                                                <?php
+                                                                                                                                                                                                                                                                                                                } else {
+                                                                                                                                                                                                                                                                                                                    ?>
+                                                                                                                                                                                                                                                                                                                <span class="entry-image">
+                                                                                                                                                                                                                                                                                                                                                                                <img src="<?php echo esc_url(get_inspiry_image_placeholder_url('thumbnail')); ?>"
+                                                                                                                                                                                                                                                                                                                                                                                     alt="<?php echo esc_attr($the_title); ?>">
+                                                                                                                                                                                                                                                                                                                                                                        </span>
+                                                                                                                                                                                                                                                                                                                <?php
+                                                                                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                        } else {
+                                                                                                                                                                                                                                                            if ($image) {
+                                                                                                                                                                                                                                                                ?>
+                                                                                                                                                                                                                                                                                                                <span class="entry-image">
+                                                                                                                                                                                                                                                                                                                                                                                <?php echo get_the_post_thumbnail($entry, 'thumbnail'); ?>
+                                                                                                                                                                                                                                                                                                                                                                        </span>
+                                                                                                                                                                                                                                                                                                                <?php
+                                                                                                                                                                                                                                                            } else {
+                                                                                                                                                                                                                                                                ?>
+                                                                                                                                                                                                                                                                                                                <span class="entry-image">
+                                                                                                                                                                                                                                                                                                                                                                                <img src="<?php echo esc_url(get_inspiry_image_placeholder_url('thumbnail')); ?>"
+                                                                                                                                                                                                                                                                                                                                                                                     alt="<?php echo esc_attr($the_title); ?>">
+                                                                                                                                                                                                                                                                                                                                                                        </span>
+                                                                                                                                                                                                                                                                                                                <?php
+                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                            ?>
 
 
 
-                                                                                                                                                            <span class="entry-title"><?php echo esc_html($the_title); ?></span>
-                                                                                                                                                            <?php
-                                                                                                                                                        }
-                                                                                                                                                        ?>
-																																				</span>
-																																		</span>
-                </a>
-                <?php
+                                                                                                                                                                                                                                                                                    <span class="entry-title"><?php echo esc_html($the_title); ?></span>
+                                                                                                                                                                                                                                                                                    <?php
+                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                        ?>
+                                                                                                                                                                                                                                                </span>
+                                                                                                                                                                                                                                        </span>
+                                                                                                                </a>
+                                                                                                                <?php
             }
         }
     }
@@ -1100,9 +1100,9 @@ if (!function_exists('inspiry_get_exploded_heading')) {
 
             if (!empty($page_title) && (1 < count($page_title))) {
                 ?>
-                <span class="sub"><?php echo esc_html($page_title[0]); ?></span><span
-                        class="title"><?php echo esc_html($page_title[1]); ?></span>
-                <?php
+                                                                                                                <span class="sub"><?php echo esc_html($page_title[0]); ?></span><span
+                                                                                                                        class="title"><?php echo esc_html($page_title[1]); ?></span>
+                                                                                                                <?php
             } else {
                 ?><span class="title"><?php echo esc_html($page_title[0]); ?></span><?php
             }
@@ -1261,7 +1261,7 @@ if (!function_exists('inspiry_show_rvr_availability_calendar')) {
     {
 
         // Get property statuses to show availability calendar.
-        $property_statuses = (array)get_option('inspiry_statuses_to_show_availability_calendar', array());
+        $property_statuses = (array) get_option('inspiry_statuses_to_show_availability_calendar', array());
         $property_statuses = array_filter($property_statuses);
         if (!empty($property_statuses)) {
 
@@ -2639,30 +2639,30 @@ if (!function_exists('rh_stylish_meta')) {
 
         if (isset($post_meta) && !empty($post_meta)) {
             ?>
-            <div class="rh_prop_card__meta">
-                <?php
-                if ($label) {
-                    ?>
-                    <span class="rh_meta_titles"><?php echo esc_html($label); ?></span>
-                    <?php
-                }
-                ?>
-                <div class="rh_meta_icon_wrapper">
-                    <?php realhomes_property_meta_icon($post_meta_key, '/icons/' . $icon . '.svg'); ?>
-                    <span class="figure"><?php echo esc_html($post_meta); ?></span>
-                    <?php
-                    if (!empty($postfix)) {
-                        $get_postfix = get_post_meta($property_id, $postfix, true);
-                        if (!empty($get_postfix)) {
-                            ?>
-                            <span class="label"><?php echo esc_html($get_postfix); ?></span>
-                            <?php
-                        }
-                    }
-                    ?>
-                </div>
-            </div>
-            <?php
+                                                                                    <div class="rh_prop_card__meta">
+                                                                                        <?php
+                                                                                        if ($label) {
+                                                                                            ?>
+                                                                                                                    <span class="rh_meta_titles"><?php echo esc_html($label); ?></span>
+                                                                                                                    <?php
+                                                                                        }
+                                                                                        ?>
+                                                                                        <div class="rh_meta_icon_wrapper">
+                                                                                            <?php realhomes_property_meta_icon($post_meta_key, '/icons/' . $icon . '.svg'); ?>
+                                                                                            <span class="figure"><?php echo esc_html($post_meta); ?></span>
+                                                                                            <?php
+                                                                                            if (!empty($postfix)) {
+                                                                                                $get_postfix = get_post_meta($property_id, $postfix, true);
+                                                                                                if (!empty($get_postfix)) {
+                                                                                                    ?>
+                                                                                                                                                    <span class="label"><?php echo esc_html($get_postfix); ?></span>
+                                                                                                                                                    <?php
+                                                                                                }
+                                                                                            }
+                                                                                            ?>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <?php
         }
     }
 }
@@ -2674,31 +2674,31 @@ if (!function_exists('rh_stylish_meta_smart')) {
         $get_postfix = get_post_meta(get_the_ID(), $postfix, true);
         if (isset($post_meta) && !empty($post_meta)) {
             ?>
-            <div class="rh_prop_card__meta">
-                <?php
-                if ($label) {
-                    ?>
-                    <span class="rh_meta_titles"><?php echo esc_html($label); ?></span>
-                    <?php
-                }
-                ?>
-                <div class="rh_meta_icon_wrapper">
-																												<span data-tooltip="<?php echo esc_html($label) ?>">
-																							<?php
-                                                                                            if ($icon) {
-                                                                                                include INSPIRY_THEME_DIR . '/icons/' . $icon . '.svg';
-                                                                                            }
+                                                                                    <div class="rh_prop_card__meta">
+                                                                                        <?php
+                                                                                        if ($label) {
                                                                                             ?>
-																												</span>
-                    <span class="rh_meta_smart_box">
-																														<span class="figure"><?php echo esc_html($post_meta); ?></span>
-																								<?php if (isset($postfix) && !empty($postfix) && !empty($get_postfix)) { ?>
-                                                                                                    <span class="label"><?php echo esc_html(get_post_meta(get_the_ID(), $postfix, true)); ?></span>
-                                                                                                <?php } ?>
-																												</span>
-                </div>
-            </div>
-            <?php
+                                                                                                                    <span class="rh_meta_titles"><?php echo esc_html($label); ?></span>
+                                                                                                                    <?php
+                                                                                        }
+                                                                                        ?>
+                                                                                        <div class="rh_meta_icon_wrapper">
+                                                                                                                                                                                        <span data-tooltip="<?php echo esc_html($label) ?>">
+                                                                                                                                                                    <?php
+                                                                                                                                                                    if ($icon) {
+                                                                                                                                                                        include INSPIRY_THEME_DIR . '/icons/' . $icon . '.svg';
+                                                                                                                                                                    }
+                                                                                                                                                                    ?>
+                                                                                                                                                                                        </span>
+                                                                                            <span class="rh_meta_smart_box">
+                                                                                                                                                                                                <span class="figure"><?php echo esc_html($post_meta); ?></span>
+                                                                                                                                                                        <?php if (isset($postfix) && !empty($postfix) && !empty($get_postfix)) { ?>
+                                                                                                                                                                                                    <span class="label"><?php echo esc_html(get_post_meta(get_the_ID(), $postfix, true)); ?></span>
+                                                                                                                                                                        <?php } ?>
+                                                                                                                                                                                        </span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <?php
         }
     }
 }
@@ -2725,8 +2725,8 @@ if (!function_exists('rh_lightbox_data_attributes')) {
 
             if (!empty($property_location) && $REAL_HOMES_property_map !== '1') {
                 ?>
-                class="rhea_trigger_map rhea_facnybox_trigger-<?php echo esc_attr($widget_id . ' ' . $classes); ?>"data-rhea-map-source="rhea-map-source-<?php echo esc_attr($widget_id); ?>"data-rhea-map-location="<?php echo esc_attr($property_location); ?>"data-rhea-map-title="<?php echo esc_attr(get_the_title()); ?>"data-rhea-map-price="<?php echo esc_attr(ere_get_property_price()); ?>"data-rhea-map-thumb="<?php echo esc_attr($current_property_data) ?>"
-                <?php
+                                                                                                                class="rhea_trigger_map rhea_facnybox_trigger-<?php echo esc_attr($widget_id . ' ' . $classes); ?>"data-rhea-map-source="rhea-map-source-<?php echo esc_attr($widget_id); ?>"data-rhea-map-location="<?php echo esc_attr($property_location); ?>"data-rhea-map-title="<?php echo esc_attr(get_the_title()); ?>"data-rhea-map-price="<?php echo esc_attr(ere_get_property_price()); ?>"data-rhea-map-thumb="<?php echo esc_attr($current_property_data) ?>"
+                                                                                                                <?php
             }
         }
     }
@@ -2775,50 +2775,50 @@ if (!function_exists('rh_rvr_rating_average')) {
 
             $avg = round(array_sum($ratings) / count($ratings), 2);
             ?>
-            <div class="rh_rvr_ratings">
-                <div class="rh_stars_avg_rating"
-                     title="<?php echo esc_attr($avg) . ' / ' . esc_html__('5 based on', 'framework') . ' ' . esc_html($count) . ' ' . esc_html__('reviews', 'framework'); ?>">
-                    <?php echo wp_kses(rhea_rating_stars($avg), $allowed_html); ?>
+                                                                                    <div class="rh_rvr_ratings">
+                                                                                        <div class="rh_stars_avg_rating"
+                                                                                             title="<?php echo esc_attr($avg) . ' / ' . esc_html__('5 based on', 'framework') . ' ' . esc_html($count) . ' ' . esc_html__('reviews', 'framework'); ?>">
+                                                                                            <?php echo wp_kses(rhea_rating_stars($avg), $allowed_html); ?>
 
-                    <div class="rh_wrapper_rating_info">
-                        <?php
-                        $i = 5;
-                        while ($i > 0) {
-                            ?>
-                            <p class="rh_rating_percentage">
-																																								<span class="rh_rating_sorting_label">
-																																										<?php
-                                                                                                                                                                        printf(_nx('%s Star', '%s Stars', $i, 'Rating Stars', 'framework'), number_format_i18n($i));
-                                                                                                                                                                        ?>
-																																								</span>
-                                <?php
-                                if (isset($values_count[$i]) && !empty($values_count[$i])) {
-                                    $stars = round(($values_count[$i] / (count($ratings))) * 100);
-                                } else {
-                                    $stars = 0;
-                                }
-                                ?>
+                                                                                            <div class="rh_wrapper_rating_info">
+                                                                                                <?php
+                                                                                                $i = 5;
+                                                                                                while ($i > 0) {
+                                                                                                    ?>
+                                                                                                                            <p class="rh_rating_percentage">
+                                                                                                                                                                                                                                                                <span class="rh_rating_sorting_label">
+                                                                                                                                                                                                                                                                        <?php
+                                                                                                                                                                                                                                                                        printf(_nx('%s Star', '%s Stars', $i, 'Rating Stars', 'framework'), number_format_i18n($i));
+                                                                                                                                                                                                                                                                        ?>
+                                                                                                                                                                                                                                                                </span>
+                                                                                                                                <?php
+                                                                                                                                if (isset($values_count[$i]) && !empty($values_count[$i])) {
+                                                                                                                                    $stars = round(($values_count[$i] / (count($ratings))) * 100);
+                                                                                                                                } else {
+                                                                                                                                    $stars = 0;
+                                                                                                                                }
+                                                                                                                                ?>
 
-                                <span class="rh_rating_line">
-																																										<span class="rh_rating_line_inner"
-                                                                                                                                                                              style="width: <?php echo esc_attr($stars); ?>%"></span>
-																																								</span>
+                                                                                                                                <span class="rh_rating_line">
+                                                                                                                                                                                                                                                                        <span class="rh_rating_line_inner"
+                                                                                                                                                                                                                                                                              style="width: <?php echo esc_attr($stars); ?>%"></span>
+                                                                                                                                                                                                                                                                </span>
 
-                                <span class="rh_rating_text">
-																																										<span class="rh_rating_text_inner">
-																																												<?php echo esc_html($stars) . '%' ?>
-																																										</span>
-																																								</span>
-                            </p>
-                            <?php
+                                                                                                                                <span class="rh_rating_text">
+                                                                                                                                                                                                                                                                        <span class="rh_rating_text_inner">
+                                                                                                                                                                                                                                                                                <?php echo esc_html($stars) . '%' ?>
+                                                                                                                                                                                                                                                                        </span>
+                                                                                                                                                                                                                                                                </span>
+                                                                                                                            </p>
+                                                                                                                            <?php
 
-                            $i--;
-                        }
-                        ?>
-                    </div>
-                </div>
-            </div>
-            <?php
+                                                                                                                            $i--;
+                                                                                                }
+                                                                                                ?>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <?php
         }
     }
 }
@@ -2853,21 +2853,21 @@ if (!function_exists('realhomes_property_agent_contact_methods')) {
                 $args['text'] = sprintf(esc_html__("Hello, I'm interested in [%s] %s", 'framework'), esc_html($property_title), esc_url(get_the_permalink($property_id)));
             }
             ?>
-            <a class="btn-whatsapp-chat <?php echo esc_attr($btn_class); ?>"
-               href="<?php echo esc_url(add_query_arg($args, 'https://api.whatsapp.com/send')); ?>" target="_blank">
-                <?php inspiry_safe_include_svg('/images/icon-whatsapp.svg', '/common/'); ?>
-                <span class="btn-text"><?php echo esc_html(realhomes_get_agent_whatsapp_button_label()); ?></span>
-            </a>
-            <?php
-            if (!empty($contact_number)):
-                ?>
-                <a class="btn-call-now <?php echo esc_attr($btn_class); ?>"
-                   href="tel:<?php echo esc_attr($contact_number); ?>">
-                    <?php inspiry_safe_include_svg('/images/icon-phone.svg', '/common/'); ?>
-                    <span class="btn-text"><?php echo esc_html(realhomes_get_agent_callnow_button_label()); ?></span>
-                </a>
-            <?php
-            endif;
+                                                                                    <a class="btn-whatsapp-chat <?php echo esc_attr($btn_class); ?>"
+                                                                                       href="<?php echo esc_url(add_query_arg($args, 'https://api.whatsapp.com/send')); ?>" target="_blank">
+                                                                                        <?php inspiry_safe_include_svg('/images/icon-whatsapp.svg', '/common/'); ?>
+                                                                                        <span class="btn-text"><?php echo esc_html(realhomes_get_agent_whatsapp_button_label()); ?></span>
+                                                                                    </a>
+                                                                                    <?php
+                                                                                    if (!empty($contact_number)):
+                                                                                        ?>
+                                                                                                                <a class="btn-call-now <?php echo esc_attr($btn_class); ?>"
+                                                                                                                   href="tel:<?php echo esc_attr($contact_number); ?>">
+                                                                                                                    <?php inspiry_safe_include_svg('/images/icon-phone.svg', '/common/'); ?>
+                                                                                                                    <span class="btn-text"><?php echo esc_html(realhomes_get_agent_callnow_button_label()); ?></span>
+                                                                                                                </a>
+                                                                                                            <?php
+                                                                                    endif;
         }
     }
 }
@@ -2892,6 +2892,7 @@ if (!function_exists('realhomes_property_agent_sticky_bar')) {
 
         // Display content if the agent related options are enabled.
         if (('true' === $display_agent_info) && ('none' != $agent_display_option)) {
+            $user_post_id = null;
 
             // Collect agent information.
             $agent_args = array('agent_id' => '');
@@ -2903,6 +2904,13 @@ if (!function_exists('realhomes_property_agent_sticky_bar')) {
                 $agent_args['profile_image_id'] = intval(get_the_author_meta('profile_image_id'));
                 $agent_args['agent_mobile'] = get_the_author_meta('mobile_number');
                 $agent_args['agent_whatsapp'] = get_the_author_meta('mobile_whatsapp');
+
+                $user_post_id = get_user_meta($agent_args['author_id'], 'inspiry_role_post_id', true);
+                if ($user_post_id) {
+                    $agent_args['agent_title_text'] = esc_html(get_the_title($user_post_id));
+                }
+
+                var_dump($agent_args);
             } else {
                 $property_agents = get_post_meta($property_id, 'REAL_HOMES_agents');
 
@@ -2928,97 +2936,97 @@ if (!function_exists('realhomes_property_agent_sticky_bar')) {
 
             $agent_id = $agent_args['agent_id'];
             ?>
-            <div id="property-agent-contact-methods-wrapper" class="property-agent-contact-methods-wrapper">
-                <div class="property-agent-details">
-                    <?php
-                    if (isset($agent_args['display_author']) && ($agent_args['display_author'])) {
-                        if (isset($agent_args['profile_image_id']) && (0 < $agent_args['profile_image_id'])) {
-                            echo wp_get_attachment_image($agent_args['profile_image_id'], 'agent-image');
-                        } else if (isset($agent_args['agent_email'])) {
-                            echo get_avatar($agent_args['agent_email'], '210');
-                        }
-                    } else {
-                        if (isset($agent_id) && has_post_thumbnail($agent_id)) {
-                            ?>
-                            <a class="agent-thumb" href="<?php echo esc_url(get_permalink($agent_id)); ?>">
-                                <?php
-                                echo get_the_post_thumbnail($agent_id, 'agent-image');
-                                if (0 < intval($agent_id)) {
-                                    realhomes_verification_badge('agent', $agent_id);
-                                }
-                                ?>
-                            </a>
-                            <?php
-                        }
-                    }
+                                                                                    <div id="property-agent-contact-methods-wrapper" class="property-agent-contact-methods-wrapper">
+                                                                                        <div class="property-agent-details">
+                                                                                            <?php
+                                                                                            if (isset($agent_args['display_author']) && ($agent_args['display_author'])) {
+                                                                                                if (isset($agent_args['profile_image_id']) && (0 < $agent_args['profile_image_id'])) {
+                                                                                                    echo wp_get_attachment_image($agent_args['profile_image_id'], 'agent-image');
+                                                                                                } else if (isset($agent_args['agent_email'])) {
+                                                                                                    echo get_avatar($agent_args['agent_email'], '210');
+                                                                                                }
+                                                                                            } else {
+                                                                                                if (isset($agent_id) && has_post_thumbnail($agent_id)) {
+                                                                                                    ?>
+                                                                                                                                                    <a class="agent-thumb" href="<?php echo esc_url(get_permalink($agent_id)); ?>">
+                                                                                                                                                        <?php
+                                                                                                                                                        echo get_the_post_thumbnail($agent_id, 'agent-image');
+                                                                                                                                                        if (0 < intval($agent_id)) {
+                                                                                                                                                            realhomes_verification_badge('agent', $agent_id);
+                                                                                                                                                        }
+                                                                                                                                                        ?>
+                                                                                                                                                    </a>
+                                                                                                                                                    <?php
+                                                                                                }
+                                                                                            }
 
-                    if (isset($agent_args['agent_title_text']) && !empty($agent_args['agent_title_text'])): ?>
-                        <h4 class="property-agent-name">
-                            <a href="<?php echo esc_url(get_permalink($agent_id)); ?>">
-                                <?php echo esc_html($agent_args['agent_title_text']); ?>
-                            </a>
-                        </h4>
-                    <?php
-                    endif;
-                    ?>
-                </div><!-- .property-agent-details -->
+                                                                                            if (isset($agent_args['agent_title_text']) && !empty($agent_args['agent_title_text'])): ?>
+                                                                                                                        <h4 class="property-agent-name">
+                                                                                                                        <a href="<?php echo $agent_id ? esc_url(get_permalink($agent_id)) : ($user_post_id ? esc_url(get_permalink($user_post_id)) : '#'); ?>">
+                                                                                                                                <?php echo esc_html($agent_args['agent_title_text']); ?>
+                                                                                                                            </a>
+                                                                                                                        </h4>
+                                                                                                                    <?php
+                                                                                            endif;
+                                                                                            ?>
+                                                                                        </div><!-- .property-agent-details -->
 
-                <div class="property-agent-contact-methods">
-                    <?php
-                    $agent_contact_form = get_option('inspiry_property_agent_form', 'true');
-                    if (!empty($agent_id) && 'true' === $agent_contact_form):
-                        ?>
-                        <a id="scroll-to-property-agent-form"
-                           class="agent-contact-method-btn agent-contact-method-mail-btn"
-                           href="#<?php echo esc_attr('agent-form-id' . $agent_id); ?>">
-                            <?php inspiry_safe_include_svg('/images/icon-mail.svg', '/common/'); ?>
-                        </a>
-                    <?php
-                    endif;
+                                                                                        <div class="property-agent-contact-methods">
+                                                                                            <?php
+                                                                                            $agent_contact_form = get_option('inspiry_property_agent_form', 'true');
+                                                                                            if (!empty($agent_id) && 'true' === $agent_contact_form):
+                                                                                                ?>
+                                                                                                                        <a id="scroll-to-property-agent-form"
+                                                                                                                           class="agent-contact-method-btn agent-contact-method-mail-btn"
+                                                                                                                           href="#<?php echo esc_attr('agent-form-id' . $agent_id); ?>">
+                                                                                                                            <?php inspiry_safe_include_svg('/images/icon-mail.svg', '/common/'); ?>
+                                                                                                                        </a>
+                                                                                                                    <?php
+                                                                                            endif;
 
-                    $contact_number = '';
-                    $whatsapp_number = '';
-                    if (isset($agent_args['agent_mobile'])) {
-                        $contact_number = $agent_args['agent_mobile'];
-                    }
-                    if (isset($agent_args['agent_whatsapp'])) {
-                        $whatsapp_number = $agent_args['agent_whatsapp'];
-                    }
+                                                                                            $contact_number = '';
+                                                                                            $whatsapp_number = '';
+                                                                                            if (isset($agent_args['agent_mobile'])) {
+                                                                                                $contact_number = $agent_args['agent_mobile'];
+                                                                                            }
+                                                                                            if (isset($agent_args['agent_whatsapp'])) {
+                                                                                                $whatsapp_number = $agent_args['agent_whatsapp'];
+                                                                                            }
 
-                    if (!empty($contact_number) || !empty($whatsapp_number)):
+                                                                                            if (!empty($contact_number) || !empty($whatsapp_number)):
 
-                        if (empty($whatsapp_number)) {
-                            $whatsapp_number = $contact_number;
-                        }
+                                                                                                if (empty($whatsapp_number)) {
+                                                                                                    $whatsapp_number = $contact_number;
+                                                                                                }
 
-                        $args = array(
-                            'phone' => esc_html($whatsapp_number)
-                        );
+                                                                                                $args = array(
+                                                                                                    'phone' => esc_html($whatsapp_number)
+                                                                                                );
 
-                        $property_title = get_the_title($property_id);
-                        if (!empty($property_title)) {
-                            $args['text'] = sprintf(esc_html__("Hello, I'm interested in [%s] %s", 'framework'), esc_html($property_title), esc_url(get_the_permalink($property_id)));
-                        }
-                        ?>
-                        <a class="agent-contact-method-btn agent-contact-method-whatsapp-btn"
-                           href="<?php echo esc_url(add_query_arg($args, 'https://api.whatsapp.com/send')); ?>"
-                           target="_blank">
-                            <?php inspiry_safe_include_svg('/images/icon-whatsapp.svg', '/common/'); ?>
-                        </a>
-                        <?php
-                        if (!empty($contact_number)):
-                            ?>
-                            <a class="agent-contact-method-btn agent-contact-method-call-btn"
-                               href="tel:<?php echo esc_attr($contact_number); ?>">
-                                <?php inspiry_safe_include_svg('/images/icon-phone.svg', '/common/'); ?>
-                            </a>
-                        <?php
-                        endif;
-                    endif;
-                    ?>
-                </div><!-- .property-agent-contact-methods -->
-            </div>
-            <?php
+                                                                                                $property_title = get_the_title($property_id);
+                                                                                                if (!empty($property_title)) {
+                                                                                                    $args['text'] = sprintf(esc_html__("Hello, I'm interested in [%s] %s", 'framework'), esc_html($property_title), esc_url(get_the_permalink($property_id)));
+                                                                                                }
+                                                                                                ?>
+                                                                                                                        <a class="agent-contact-method-btn agent-contact-method-whatsapp-btn"
+                                                                                                                           href="<?php echo esc_url(add_query_arg($args, 'https://api.whatsapp.com/send')); ?>"
+                                                                                                                           target="_blank">
+                                                                                                                            <?php inspiry_safe_include_svg('/images/icon-whatsapp.svg', '/common/'); ?>
+                                                                                                                        </a>
+                                                                                                                        <?php
+                                                                                                                        if (!empty($contact_number)):
+                                                                                                                            ?>
+                                                                                                                                                    <a class="agent-contact-method-btn agent-contact-method-call-btn"
+                                                                                                                                                       href="tel:<?php echo esc_attr($contact_number); ?>">
+                                                                                                                                                        <?php inspiry_safe_include_svg('/images/icon-phone.svg', '/common/'); ?>
+                                                                                                                                                    </a>
+                                                                                                                                                <?php
+                                                                                                                        endif;
+                                                                                            endif;
+                                                                                            ?>
+                                                                                        </div><!-- .property-agent-contact-methods -->
+                                                                                    </div>
+                                                                                    <?php
         }
     }
 
@@ -3043,27 +3051,27 @@ if (!function_exists('rh_ultra_meta')) {
 
         if (!empty($post_meta)) {
             ?>
-            <div class="rh-ultra-prop-card-meta">
-                <div class="rh-ultra-meta-icon-wrapper">
-                    <span class="rh-ultra-meta-icon" data-tooltip="<?php echo esc_html($label) ?>">
-                        <?php realhomes_property_meta_icon($post_meta_key, '/ultra/icons/' . $icon . '.svg', '/assets/'); ?>
-                    </span>
-                    <span class="rh-ultra-meta-box">
-                        <span class="figure"><?php echo esc_html($post_meta); ?></span>
-                        <?php
-                        if (!empty($postfix)) {
-                            $get_postfix = get_post_meta($property_id, $postfix, true);
-                            if (!empty($get_postfix)) {
-                                ?>
-                                <span class="label"><?php echo esc_html($get_postfix); ?></span>
-                                <?php
-                            }
-                        }
-                        ?>
-                    </span>
-                </div>
-            </div>
-            <?php
+                                                                                    <div class="rh-ultra-prop-card-meta">
+                                                                                        <div class="rh-ultra-meta-icon-wrapper">
+                                                                                            <span class="rh-ultra-meta-icon" data-tooltip="<?php echo esc_html($label) ?>">
+                                                                                                <?php realhomes_property_meta_icon($post_meta_key, '/ultra/icons/' . $icon . '.svg', '/assets/'); ?>
+                                                                                            </span>
+                                                                                            <span class="rh-ultra-meta-box">
+                                                                                                <span class="figure"><?php echo esc_html($post_meta); ?></span>
+                                                                                                <?php
+                                                                                                if (!empty($postfix)) {
+                                                                                                    $get_postfix = get_post_meta($property_id, $postfix, true);
+                                                                                                    if (!empty($get_postfix)) {
+                                                                                                        ?>
+                                                                                                                                                        <span class="label"><?php echo esc_html($get_postfix); ?></span>
+                                                                                                                                                        <?php
+                                                                                                    }
+                                                                                                }
+                                                                                                ?>
+                                                                                            </span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <?php
         }
     }
 }
@@ -3120,10 +3128,10 @@ if (!function_exists('realhomes_agent_verification_badge')) {
 
                 if ($agent_verification) {
                     ?>
-                    <span class="rh_agent_verification__icon">
-																																										<?php inspiry_safe_include_svg('/icons/verified-check.svg', '/common/images'); ?>
-																																								</span>
-                    <?php
+                                                                                                                                            <span class="rh_agent_verification__icon">
+                                                                                                                                                                                                                                                                                                <?php inspiry_safe_include_svg('/icons/verified-check.svg', '/common/images'); ?>
+                                                                                                                                                                                                                                                                                        </span>
+                                                                                                                                            <?php
                 }
 
             }
@@ -3173,10 +3181,10 @@ if (!function_exists('realhomes_verification_badge')) {
 
                 if ($agent_verification) {
                     ?>
-                    <span class="rh_main_verification__icon">
-																																										<?php inspiry_safe_include_svg('/icons/verified-check.svg', '/common/images'); ?>
-																																								</span>
-                    <?php
+                                                                                                                                            <span class="rh_main_verification__icon">
+                                                                                                                                                                                                                                                                                                <?php inspiry_safe_include_svg('/icons/verified-check.svg', '/common/images'); ?>
+                                                                                                                                                                                                                                                                                        </span>
+                                                                                                                                            <?php
                 }
             }
         }
@@ -3262,12 +3270,12 @@ if (!function_exists('realhomes_contents_area_loop')) {
             while (have_posts()) {
                 the_post();
                 ?>
-                <div class="rh_content rh_content_above_footer  <?php if (get_the_content()) {
-                    echo esc_attr('rh_page__content');
-                } ?>">
-                    <?php the_content(); ?>
-                </div><!-- /.rh-content -->
-                <?php
+                                                                                                                <div class="rh_content rh_content_above_footer  <?php if (get_the_content()) {
+                                                                                                                    echo esc_attr('rh_page__content');
+                                                                                                                } ?>">
+                                                                                                                    <?php the_content(); ?>
+                                                                                                                </div><!-- /.rh-content -->
+                                                                                                                <?php
 
             }
         }
@@ -3312,10 +3320,10 @@ if (!function_exists('realhomes_print_no_result')) {
             $no_result = esc_html($custom_no_result_text);
         }
         ?>
-        <div class="rh-alert-wrapper">
-            <h4 class="no-results"><?php echo esc_html($no_result); ?></h4>
-        </div>
-        <?php
+                                                        <div class="rh-alert-wrapper">
+                                                            <h4 class="no-results"><?php echo esc_html($no_result); ?></h4>
+                                                        </div>
+                                                        <?php
 
     }
 }
@@ -3513,22 +3521,22 @@ if (!function_exists('realhomes_print_property_images')) {
         // Property gallery image(s).
         if ('gallery-images' === get_option('realhomes_property_media_in_print', 'gallery-images') && !empty($properties_images) && (count($properties_images) > 1)) {
             ?>
-            <div class="print-property-gallery only-for-print">
-                <?php
-                foreach ($properties_images as $property_image) {
-                    echo '<img src="' . esc_url($property_image['url']) . '" alt="' . esc_attr($property_image['title']) . '" />';
-                }
-                ?>
-            </div>
-            <?php
+                                                                                    <div class="print-property-gallery only-for-print">
+                                                                                        <?php
+                                                                                        foreach ($properties_images as $property_image) {
+                                                                                            echo '<img src="' . esc_url($property_image['url']) . '" alt="' . esc_attr($property_image['title']) . '" />';
+                                                                                        }
+                                                                                        ?>
+                                                                                    </div>
+                                                                                    <?php
         } else {
             // Property featured image.
             if (has_post_thumbnail()) {
                 ?>
-                <div class="print-property-featured-image only-for-print">
-                    <?php echo '<img src="' . esc_url(wp_get_attachment_url(get_post_thumbnail_id())) . '" alt="' . the_title_attribute('echo=0') . '" />'; ?>
-                </div>
-                <?php
+                                                                                                                <div class="print-property-featured-image only-for-print">
+                                                                                                                    <?php echo '<img src="' . esc_url(wp_get_attachment_url(get_post_thumbnail_id())) . '" alt="' . the_title_attribute('echo=0') . '" />'; ?>
+                                                                                                                </div>
+                                                                                                                <?php
             }
         }
     }
@@ -3705,7 +3713,7 @@ if (!function_exists('realhomes_get_current_user_role_option')) {
                 }
 
                 // Getting the roles list user is associated with
-                $roles = (array)$current_user->roles;
+                $roles = (array) $current_user->roles;
 
                 // Making sure that we get no error if index of this array is moved while updating the user roles from profile
                 $current_role = reset($roles);
@@ -3886,11 +3894,11 @@ if (!function_exists('realhomes_generate_properties_stats_chart')) {
             // Return at this point if no agents or error
             if (is_wp_error($agency_agents) || 1 > count($agency_agents)) {
                 ?>
-                <div class="stats-wrap no-stats">
-                    <p><?php esc_html_e('No Stats Available!', 'framework'); ?></p>
-                </div>
-                <?php
-                return;
+                                                                                                                <div class="stats-wrap no-stats">
+                                                                                                                    <p><?php esc_html_e('No Stats Available!', 'framework'); ?></p>
+                                                                                                                </div>
+                                                                                                                <?php
+                                                                                                                return;
             }
 
             foreach ($agency_agents as $agent) {
@@ -3971,33 +3979,33 @@ if (!function_exists('realhomes_generate_properties_stats_chart')) {
 
         if (0 < count($info_stats) && 0 < count($chart_stats)) {
             ?>
-            <div class="stats-wrap">
-                <div class="chart-wrapper">
-                    <canvas id="chart-stats-<?php echo esc_attr($taxonomy_name); ?>" class="tax-stats-chart"
-                            data-chart-stats='<?php echo json_encode($chart_stats); ?>' width="110px"
-                            height="110px"></canvas>
-                </div>
-                <ul class="stats-<?php echo esc_attr($taxonomy_name); ?>">
-                    <?php
-                    foreach ($info_stats as $stat) {
-                        ?>
-                        <li>
-                            <i <?php echo !empty($stat['color']) ? 'style="background-color: ' . esc_attr($stat['color']) . '"' : ''; ?>></i>
-                            <strong><?php echo esc_html(round($stat['percent'])); ?>
-                                %</strong> <?php echo esc_html($stat['term_name']); ?>
-                        </li>
-                        <?php
-                    }
-                    ?>
-                </ul>
-            </div>
-            <?php
+                                                                                    <div class="stats-wrap">
+                                                                                        <div class="chart-wrapper">
+                                                                                            <canvas id="chart-stats-<?php echo esc_attr($taxonomy_name); ?>" class="tax-stats-chart"
+                                                                                                    data-chart-stats='<?php echo json_encode($chart_stats); ?>' width="110px"
+                                                                                                    height="110px"></canvas>
+                                                                                        </div>
+                                                                                        <ul class="stats-<?php echo esc_attr($taxonomy_name); ?>">
+                                                                                            <?php
+                                                                                            foreach ($info_stats as $stat) {
+                                                                                                ?>
+                                                                                                                        <li>
+                                                                                                                            <i <?php echo !empty($stat['color']) ? 'style="background-color: ' . esc_attr($stat['color']) . '"' : ''; ?>></i>
+                                                                                                                            <strong><?php echo esc_html(round($stat['percent'])); ?>
+                                                                                                                                %</strong> <?php echo esc_html($stat['term_name']); ?>
+                                                                                                                        </li>
+                                                                                                                        <?php
+                                                                                            }
+                                                                                            ?>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                    <?php
         } else {
             ?>
-            <div class="stats-wrap no-stats">
-                <p><?php esc_html_e('No Stats Available!', 'framework'); ?></p>
-            </div>
-            <?php
+                                                                                    <div class="stats-wrap no-stats">
+                                                                                        <p><?php esc_html_e('No Stats Available!', 'framework'); ?></p>
+                                                                                    </div>
+                                                                                    <?php
         }
 
     }
