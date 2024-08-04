@@ -11239,7 +11239,8 @@ div.leaflet-container a.leaflet-popup-close-button {
   display: flex;
   flex-direction: column;
 }
-.agency-content {
+.agency-content,
+.agent-content {
   display: flex;
   flex-direction: column;
   flex: 1;
