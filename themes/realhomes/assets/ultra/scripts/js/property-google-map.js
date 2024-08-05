@@ -12,7 +12,7 @@
       const queryPrefix = "חריש,";
 
       const iframe = document.createElement("iframe");
-      iframe.src = `https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(
+      iframe.src = `//www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(
         `${queryPrefix}${propertyMapData.address}`
       )}&zoom=17&language=he&region=il`;
       iframe.width = "100%";

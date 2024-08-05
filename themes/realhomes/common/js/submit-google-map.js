@@ -36,7 +36,7 @@
         const API_KEY = "AIzaSyCa7WK1x4jTUzP1X6mnzJfC1ggUBzEdfWQ";
 
         const iframe = document.createElement("iframe");
-        iframe.src = `https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(
+        iframe.src = `//www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${encodeURIComponent(
           `${this.queryPrefix}${this.query}`
         )}&zoom=17&language=he&region=il`;
         iframe.width = "100%";
