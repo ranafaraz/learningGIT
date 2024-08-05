@@ -42,10 +42,13 @@ if ('1' !== get_post_meta(get_queried_object_id(), 'REAL_HOMES_hide_advance_sear
 			$mainPart = explode('/', $currentPath)[1];
 			$location = preg_replace('/דירות-בחריש-בשכונת-/', '', $mainPart);
 			$_GET['location'] = [$location];
-		} else if (str_ends_with($currentPath, '-חדרים-בחריש/') && count(explode('/', $currentPath)) >= 2) {
-			$mainPart = explode('/', $currentPath)[1];
-			$rooms = preg_replace('/-/', '.', preg_replace('/-חדרים-בחריש/', '', preg_replace('/דירות-/', '', $mainPart)));
-			$_GET['bedrooms'] = $rooms;
+		} else if (str_contains($currentPath, '-חדרים-בחריש/') && count(explode('/', $currentPath)) >= 2) {
+			$parts = explode('/', $currentPath);
+			$mainPart = str_contains($parts[count($parts) - 1], '-חדרים-בחריש') ? $parts[count($parts) - 1] : (count($parts) >= 3 ? $parts[count($parts) - 2] : null);
+			if ($mainPart) {
+				$rooms = preg_replace('/-/', '.', preg_replace('/-חדרים-בחריש/', '', preg_replace('/דירות-/', '', $mainPart)));
+				$_GET['bedrooms'] = $rooms;
+			}
 		} else {
 			$parts = explode('/', $currentPath);
 			if (count($parts) >= 2) {
