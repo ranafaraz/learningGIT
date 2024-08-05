@@ -31,6 +31,10 @@ $search_args = sort_properties($search_args);
 
 // Echo query for debugging.
 if (isset($_GET['debug'])) {
+	echo '<pre>';
+	print_r($search_args);
+	echo '</pre>';
+
 	function inspiry_echo_search_query($request)
 	{
 		echo '<pre>';
