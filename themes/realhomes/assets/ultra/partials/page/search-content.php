@@ -28,6 +28,21 @@ $search_args = array(
 // Apply properties filter.
 $search_args = apply_filters('real_homes_search_parameters', $search_args);
 $search_args = sort_properties($search_args);
+
+// Echo query for debugging.
+if (isset($_GET['debug'])) {
+	function inspiry_echo_search_query($request)
+	{
+		echo '<pre>';
+		print_r($request);
+		echo '</pre>';
+
+		return $request;
+	}
+
+	add_filter('posts_request', 'inspiry_echo_search_query', 9999);
+}
+
 $search_query = new WP_Query($search_args);
 
 $page_layout = $args['page_layout'];
@@ -66,10 +81,14 @@ do_action('inspiry_before_page_contents');
 		<?php
 		get_template_part('assets/ultra/partials/page-head');
 
-		get_template_part('assets/ultra/partials/properties/search/page-stats', '', array(
-			'paged' => $paged,
-			'listing_query' => $search_query
-		));
+		get_template_part(
+			'assets/ultra/partials/properties/search/page-stats',
+			'',
+			array(
+				'paged' => $paged,
+				'listing_query' => $search_query
+			)
+		);
 		?>
 	</div>
 	<div class="rh-ultra-sorting-side">
