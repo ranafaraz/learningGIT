@@ -28,25 +28,6 @@ $search_args = array(
 // Apply properties filter.
 $search_args = apply_filters('real_homes_search_parameters', $search_args);
 $search_args = sort_properties($search_args);
-
-// Echo query for debugging.
-if (isset($_GET['debug'])) {
-	echo '<pre>';
-	print_r($search_args);
-	echo '</pre>';
-
-	function inspiry_echo_search_query($request)
-	{
-		echo '<pre>';
-		print_r($request);
-		echo '</pre>';
-
-		return $request;
-	}
-
-	add_filter('posts_request', 'inspiry_echo_search_query', 9999);
-}
-
 $search_query = new WP_Query($search_args);
 
 $page_layout = $args['page_layout'];
