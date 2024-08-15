@@ -29,11 +29,24 @@ if (!empty($REAL_HOMES_search_form_margin_bottom)) {
 } else {
 	$margin_bottom = 'initial';
 }
+
+if (!function_exists('dirabe_handle_problematic_location_name')) {
+	function dirabe_handle_problematic_location_name($location)
+	{
+		$problematic_locations = [
+			'מעוף' => 'מעו׳׳ף',
+		];
+
+		return $problematic_locations[$location] ?? $location;
+	}
+}
+
 if ('1' !== get_post_meta(get_queried_object_id(), 'REAL_HOMES_hide_advance_search', true) && inspiry_show_header_search_form()) {
 	if (class_exists('RHEA_Elementor_Search_Form') && (!empty($realhomes_custom_search_form) || (!empty($REAL_HOMES_custom_search_form) && 'default' !== $REAL_HOMES_custom_search_form))) {
 		// Set search parameters based on url
 		$currentPath = $_SERVER['REQUEST_URI'];
 		$currentPath = urldecode($currentPath);
+
 		if (str_starts_with($currentPath, '/למכירה-דירות-בחריש/')) {
 			$_GET['status'] = ['למכירה'];
 		} else if (str_starts_with($currentPath, '/להשכרה-דירות-בחריש/')) {
@@ -41,6 +54,7 @@ if ('1' !== get_post_meta(get_queried_object_id(), 'REAL_HOMES_hide_advance_sear
 		} else if (str_starts_with($currentPath, '/דירות-בחריש-בשכונת-') && count(explode('/', $currentPath)) >= 2) {
 			$mainPart = explode('/', $currentPath)[1];
 			$location = preg_replace('/דירות-בחריש-בשכונת-/', '', $mainPart);
+			$location = dirabe_handle_problematic_location_name($location);
 			$_GET['location'] = [$location];
 		} else if (str_contains($currentPath, '-חדרים-בחריש/') && count(explode('/', $currentPath)) >= 2) {
 			$parts = explode('/', $currentPath);
