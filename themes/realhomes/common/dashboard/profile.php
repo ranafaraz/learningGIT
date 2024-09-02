@@ -3,6 +3,7 @@ $current_user      = wp_get_current_user();
 $author_data       = get_userdata( $current_user->ID );
 $current_user_meta = get_user_meta( $current_user->ID );
 $current_user_role = realhomes_get_user_role();
+$getUserRole =  get_user_meta( $current_user->ID , 'inspiry_user_role' , true);
 
 do_action( 'inspiry_before_edit_profile_page_render', get_the_ID() );
 ?>
@@ -84,7 +85,7 @@ do_action( 'inspiry_before_edit_profile_page_render', get_the_ID() );
                     </div>
                 </div>
             </div>
-
+        <?php if( !empty($getUserRole) && $getUserRole != "owner" ): ?>
             <div class="form-fields">
                 <div class="row">
                     <div class="col-lg-6">
@@ -280,7 +281,7 @@ do_action( 'inspiry_before_edit_profile_page_render', get_the_ID() );
 
                 </div>
             </div>
-
+        <?php endif; ?>
             <div class="form-fields">
                 <div class="row">
                     <div class="col-lg-6">
