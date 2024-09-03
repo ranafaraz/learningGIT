@@ -116,7 +116,8 @@ if (!function_exists('inspiry_auth_user_login')):
 				)
 			);
 		} else {
-
+			wp_set_current_user($user_signon->ID);
+			
 			if ( empty( $is_first_login ) &&  ( $trimmed_user_role === "owner" )){
 				update_user_meta($user_signon->ID, 'has_logged_in', true);
 				$redirect_to = strpos($redirect_to, '?') === false ? "{$redirect_to}?module=profile" : "{$redirect_to}&module=profile";
