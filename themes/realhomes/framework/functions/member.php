@@ -102,7 +102,7 @@ if (!function_exists('inspiry_auth_user_login')):
 		$info['user_login'] = $user_login;
 		$info['user_password'] = $password;
 		$info['remember'] = true;
-		$redirect_to = $_POST['redirect_to'];
+		$redirect_to = isset($_POST['redirect_to']) ? $_POST['redirect_to'] : '';
 		$user_signon = wp_signon($info, true);
 		$user_role = get_user_meta($user_signon->ID, 'inspiry_user_role', true);
 		$trimmed_user_role = !empty($user_role) ? trim($user_role) : '';
