@@ -4,7 +4,7 @@ $author_data       = get_userdata( $current_user->ID );
 $current_user_meta = get_user_meta( $current_user->ID );
 $current_user_role = realhomes_get_user_role();
 $user_role =  get_user_meta( $current_user->ID , 'inspiry_user_role' , true);
-$trimmed_user_role = trim( $user_role );
+$trimmed_user_role = !empty( $user_role ) ? trim( $user_role ) : '';
 
 do_action( 'inspiry_before_edit_profile_page_render', get_the_ID() );
 ?>
