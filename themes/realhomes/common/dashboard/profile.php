@@ -3,6 +3,8 @@ $current_user      = wp_get_current_user();
 $author_data       = get_userdata( $current_user->ID );
 $current_user_meta = get_user_meta( $current_user->ID );
 $current_user_role = realhomes_get_user_role();
+$user_role =  get_user_meta( $current_user->ID , 'inspiry_user_role' , true);
+$trimmed_user_role = !empty( $user_role ) ? trim( $user_role ) : '';
 
 do_action( 'inspiry_before_edit_profile_page_render', get_the_ID() );
 ?>
@@ -38,7 +40,7 @@ do_action( 'inspiry_before_edit_profile_page_render', get_the_ID() );
                     <div id="errors-log" class="errors-log"></div>
                 </div>
             </div>
-
+        <?php if ( !empty( $trimmed_user_role ) && strlen( $trimmed_user_role ) > 0 && $trimmed_user_role !== "owner" ): ?>
             <div class="form-fields">
                 <div class="row">
                     <div class="col-lg-3">
@@ -65,7 +67,28 @@ do_action( 'inspiry_before_edit_profile_page_render', get_the_ID() );
                     </div>
                 </div>
             </div>
-
+        <?php else: ?>
+            <div class="form-fields">
+                <div class="row">
+                   <div class="col-lg-6">
+                        <p>
+                            <label for="first-name"><?php esc_html_e( 'First Name', 'framework' ); ?></label>
+                            <input name="first-name" type="text" id="first-name" placeholder="<?php esc_attr_e( 'Enter your first name', 'framework' ); ?>" value="<?php if ( isset( $current_user_meta['first_name'] ) ) {
+                                echo esc_attr( $current_user_meta['first_name'][0] );
+                            } ?>" autofocus />
+                        </p>
+                    </div>
+                   <div class="col-lg-6">
+                        <p>
+                            <label for="last-name"><?php esc_html_e( 'Last Name', 'framework' ); ?></label>
+                            <input name="last-name" type="text" id="last-name" placeholder="<?php esc_attr_e( 'Enter your last name', 'framework' ); ?>" value="<?php if ( isset( $current_user_meta['last_name'] ) ) {
+                                echo esc_attr( $current_user_meta['last_name'][0] );
+                            } ?>" />
+                        </p>
+                    </div>
+                </div>
+            </div>
+        <?php endif; ?>
             <div class="form-fields">
                 <div class="row">
                     <div class="col-lg-6">
@@ -84,7 +107,7 @@ do_action( 'inspiry_before_edit_profile_page_render', get_the_ID() );
                     </div>
                 </div>
             </div>
-
+        <?php if ( !empty( $trimmed_user_role ) && strlen( $trimmed_user_role ) > 0 && $trimmed_user_role !== "owner" ): ?>
             <div class="form-fields">
                 <div class="row">
                     <div class="col-lg-6">
@@ -280,7 +303,7 @@ do_action( 'inspiry_before_edit_profile_page_render', get_the_ID() );
 
                 </div>
             </div>
-
+        <?php endif; ?>
             <div class="form-fields">
                 <div class="row">
                     <div class="col-lg-6">

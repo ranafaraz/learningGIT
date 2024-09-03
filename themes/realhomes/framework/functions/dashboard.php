@@ -1097,6 +1097,14 @@ if (!function_exists('realhomes_dashboard_submit_property')) {
 
     $user_id = get_current_user_id();
     $user_role = get_user_meta($user_id, 'inspiry_user_role', true);
+    $user_phone  = get_user_meta($user_id, 'mobile_number', true);
+
+    if ( empty($user_phone) ) {
+
+      $response['message'] = esc_html__('Phone field is required!', 'framework');
+      wp_send_json_error($response);
+    }
+
     if (
       $_POST['action'] == 'add_property' &&
       (!isset($_POST['agent_display_option']) || empty(sanitize_text_field(trim($_POST['agent_display_option']))) ||
