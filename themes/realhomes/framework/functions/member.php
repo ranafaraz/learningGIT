@@ -59,7 +59,7 @@ if (!function_exists('inspiry_ajax_login')):
 	 * AJAX login request handler
 	 */
 	function inspiry_ajax_login()
-	{
+	{ 
 		// First check the nonce, if it fails return false
 		$nonce_verified = check_ajax_referer('inspiry-ajax-login-nonce', 'inspiry-secure-login', false);
 		if (!$nonce_verified) {
@@ -98,13 +98,15 @@ if (!function_exists('inspiry_auth_user_login')):
 	 */
 	function inspiry_auth_user_login($user_login, $password, $login)
 	{
-
 		$info = array();
 		$info['user_login'] = $user_login;
 		$info['user_password'] = $password;
 		$info['remember'] = true;
-
+		$redirect_to = $_POST['redirect_to'];
 		$user_signon = wp_signon($info, true);
+		$user_role = get_user_meta($user_signon->ID, 'inspiry_user_role', true);
+		$trimmed_user_role = !empty($user_role) ? trim($user_role) : '';
+		$is_first_login = get_user_meta($user_signon->ID, 'has_logged_in', true);
 
 		if (is_wp_error($user_signon)) {
 			echo json_encode(
@@ -114,14 +116,20 @@ if (!function_exists('inspiry_auth_user_login')):
 				)
 			);
 		} else {
-			wp_set_current_user($user_signon->ID);
-			echo json_encode(
-				array(
-					'success' => true,
-					'message' => $login . ' ' . esc_html__('successful. Redirecting...', 'framework'),
-					'redirect' => $_POST['redirect_to']
-				)
-			);
+
+			if ( empty( $is_first_login ) &&  ( $trimmed_user_role === "owner" )){
+				update_user_meta($user_signon->ID, 'has_logged_in', true);
+				$redirect_to = strpos($redirect_to, '?') === false ? "{$redirect_to}?module=profile" : "{$redirect_to}&module=profile";
+			}
+		     
+		    echo json_encode(
+		        array(
+		            'success' => true,
+		            'message' => $login . ' ' . esc_html__('successful. Redirecting...', 'framework'),
+		            'redirect' => $redirect_to
+		        )
+		    );
+		    
 		}
 
 		die();
