@@ -1099,7 +1099,7 @@ if (!function_exists('realhomes_dashboard_submit_property')) {
     $user_role = get_user_meta($user_id, 'inspiry_user_role', true);
     $user_phone  = get_user_meta($user_id, 'mobile_number', true);
 
-    if ( empty($user_phone) || !isset($user_phone)) {
+    if ( empty($user_phone) ) {
 
       $response['message'] = esc_html__('Phone field is required!', 'framework');
       wp_send_json_error($response);
