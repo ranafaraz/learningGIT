@@ -13544,3 +13544,7 @@ msgstr "שדה מזהה נכס נדרש!"
 #: \themes\realhomes\framework\functions\dashboard.php
 msgid "Property with this ID already exists!"
 msgstr "נכס עם מזהה זה כבר קיים!"
+
+#: \themes\realhomes\framework\functions\dashboard.php
+msgid "You must fill in a phone number on the profile page"
+msgstr "חובה למלא טלפון בדף הפרופיל"
