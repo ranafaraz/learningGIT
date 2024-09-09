@@ -80,6 +80,19 @@
         }
     }
 
+    /**
+     * Adds css class in nav to align right.
+     *
+     * @since 3.14
+     */
+    function navHandler() {
+        if (767 > $(window).width()) {
+            $('.hc-offcanvas-nav').removeClass('nav-position-left');
+            $('.hc-offcanvas-nav').addClass('nav-position-right');
+        }        
+    }
+    
+
     $(document).ready(function () {
 
         var $window = $(window),
@@ -88,6 +101,7 @@
 
         similarPropertiesFilters();
         agentStickyBarHandler();
+        navHandler();
 
         // TODO: need to find a way to run this code only on property single page.
         $window.on('resize', function () {

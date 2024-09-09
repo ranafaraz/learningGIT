@@ -8,6 +8,7 @@
  */
 ?>
 <div class="rh-responsive-header">
+	<a class="rh-responsive-toggle" href="#"><span></span></a>
 	<?php
 	$theme_sitelogo_mobile        = get_option( 'theme_sitelogo_mobile' );
 	$theme_sitelogo_retina_mobile = get_option( 'theme_sitelogo_retina_mobile' );
@@ -22,6 +23,5 @@
 		<?php get_template_part( 'assets/ultra/partials/header/user-phone' ); ?>
 		<?php get_template_part( 'assets/ultra/partials/header/user-menu' ); ?>
 		<?php get_template_part( 'assets/ultra/partials/header/submit-property' ); ?>
-        <a class="rh-responsive-toggle" href="#"><span></span></a>
     </div>
 </div><!-- /.rh-header -->
