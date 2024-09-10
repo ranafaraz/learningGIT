@@ -2634,10 +2634,14 @@ nav.hc-offcanvas-nav li {
     text-align: right;
 }
 .hc-offcanvas-nav li.nav-parent .nav-item-link:last-child {
-    padding-right: 100px !important;
+        text-align: center;
 }
 .nav-back {
     margin-right: 86px;
+}
+.hc-offcanvas-nav .nav-back span, .hc-offcanvas-nav .nav-close-button span, .hc-offcanvas-nav .nav-parent .nav-next {
+     right: unset !important;
+     left:  1 !important  ;
 }
 
   body .hc-offcanvas-nav .nav-back a, body .hc-offcanvas-nav .nav-content>.nav-close:first-child a, body .hc-offcanvas-nav .nav-title+.nav-close a.has-label, body .hc-offcanvas-nav li.nav-close a {
