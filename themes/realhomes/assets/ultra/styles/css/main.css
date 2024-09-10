@@ -2113,7 +2113,7 @@ div.wpforms-container .wpforms-form .wpforms-page-button:hover {
 .rh-responsive-header .hc-nav-trigger span::before {
   height: 2px;
 /*  background: var(--rh-global-color-secondary);*/
-  background: var(--rh-color-white);
+  background: #000;
 }
 
 nav.hc-offcanvas-nav {
@@ -2619,21 +2619,38 @@ nav.hc-offcanvas-nav li {
 }
 @media (max-width: 767px) {
   .rh-ultra-submit a {
-  border: 2px solid var(--rh-color-white);
-  color: var(--rh-color-white);
+  border: 2px solid #000;
+  color: #000;
 }
   .rh-ultra-footer-help {
     display: none;
   }
-   body .hc-offcanvas-nav .nav-container, body .hc-offcanvas-nav .nav-wrapper, body .hc-offcanvas-nav ul ,  body .hc-offcanvas-nav .nav-item-link , body offcanvas-nav .nav-content>.nav-close:first-child a{
-      background-color: #000000 !important;
-      border-bottom-color: #000000 !important;
-  }
-body .hc-offcanvas-nav .nav-back a, body .hc-offcanvas-nav .nav-content>.nav-close:first-child a, body .hc-offcanvas-nav .nav-title+.nav-close a.has-label, body .hc-offcanvas-nav li.nav-close a {
-    background-color: #000000 !important;
-    border-top-color: #000000 !important;
-    border-bottom-color: #000000 !important;
+ body .hc-offcanvas-nav .nav-container, body .hc-offcanvas-nav .nav-wrapper, body .hc-offcanvas-nav ul ,  body .hc-offcanvas-nav .nav-item-link , body offcanvas-nav .nav-content>.nav-close:first-child a{
+    background-color: #fff !important;
+    border-bottom-color: #fff !important;
+    color: #000000;
 }
+.nav-content {
+    text-align: right;
+}
+.hc-offcanvas-nav li.nav-parent .nav-item-link:last-child {
+    padding-right: 100px !important;
+}
+.nav-back {
+    margin-right: 86px;
+}
+
+  body .hc-offcanvas-nav .nav-back a, body .hc-offcanvas-nav .nav-content>.nav-close:first-child a, body .hc-offcanvas-nav .nav-title+.nav-close a.has-label, body .hc-offcanvas-nav li.nav-close a {
+     background-color: #fff !important ;
+     border-top-color: #fff !important;
+        border-bottom-color: #fff !important ;
+        color: #000000 !important;
+  }
+  .hc-offcanvas-nav .nav-next span::before{
+    border-top: 2px solid #000 !important;
+    border-left: 2px solid #000 !important;
+  }
+
   .rh-ultra-logo {
         margin: 0 auto !important; 
     }
