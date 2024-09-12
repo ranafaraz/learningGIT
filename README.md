@@ -1,2 +1,0 @@
-# learningGIT
-For Internees
